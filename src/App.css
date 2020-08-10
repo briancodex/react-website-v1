@@ -8,10 +8,7 @@
 .home,
 .services,
 .products,
-.contact-us,
-.sign-up,
-.marketing,
-.consulting {
+.sign-up {
   display: flex;
   height: 90vh;
   align-items: center;
@@ -19,17 +16,8 @@
   font-size: 3rem;
 }
 
-.home {
-  background-image: url('./images/img-1.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
-}
-
 .services {
-  background-image: url('./images/img-2.jpg');
+  background-image: url('/images/img-2.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -38,7 +26,7 @@
 }
 
 .products {
-  background-image: url('./images/img-3.jpg');
+  background-image: url('/images/img-1.jpg');
   background-position: center;
   background-size: fill;
   background-repeat: no-repeat;
@@ -46,36 +34,9 @@
   font-size: 100px;
 }
 
-.contact-us {
-  background-image: url('./images/img-4.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
-}
-
 .sign-up {
-  background-image: url('./images/img-7.jpg');
+  background-image: url('/images/img-8.jpg');
   background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
-}
-
-.marketing {
-  background-image: url('./images/img-6.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
-}
-
-.consulting {
-  background-image: url('./images/img-5.jpg');
-  background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
