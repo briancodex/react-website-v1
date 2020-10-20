@@ -1,0 +1,340 @@
+:root {
+  --maincolour: #2af598;
+  --maincolourdark: #28d386;
+  --maincolour2: #2af5f5;
+  --maincolour2dark: #26d6d6;
+}
+
+.form-container {
+  margin: 10px auto;
+  width: 600px;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  border-radius: 10px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.close-btn {
+  position: absolute;
+  top: 2%;
+  right: 3%;
+  font-size: 1.5rem;
+  z-index: 1;
+  color: #fff;
+  cursor: pointer;
+}
+
+.form-content-left {
+  background: linear-gradient(90deg, var(--maincolour), var(--maincolourdark));
+  border-radius: 10px 0 0 10px;
+  position: relative;
+}
+
+.form-img {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+}
+.form-img:hover {
+  width: 100%;
+  height: 100%;
+  transition: ease-in-out 0.4s, ease-out 0.5s;
+  border-radius: 0px;
+}
+.form-img-2 {
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-success {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 80px;
+  color: #fff;
+}
+
+.form-content-right {
+  border-radius: 0 10px 10px 0;
+  position: relative;
+  background: linear-gradient(90deg, rgb(40, 40, 40) 0%, rgb(17, 17, 17) 100%);
+}
+
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form h1 {
+  font-size: 1rem;
+  text-align: start;
+  width: 80%;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.form-inputs {
+  margin-bottom: 0.5rem;
+  width: 80%;
+}
+
+.form-inputs p {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  color: #f00e0e;
+}
+
+.form-label {
+  display: inline-block;
+  font-size: 0.8rem;
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+.form-input {
+  display: block;
+  padding-left: 10px;
+  outline: none;
+  border-radius: 2px;
+  height: 40px;
+  width: 100%;
+  border: none;
+}
+
+.form-input::placeholder {
+  color: #595959;
+  font-size: 12px;
+}
+
+.form-input-btn {
+  width: 80%;
+  height: 50px;
+  margin-top: 10px;
+  border-radius: 2px;
+  background: linear-gradient(70deg, var(--maincolour), var(--maincolourdark));
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.form-input-btn:hover {
+  cursor: pointer;
+  background: linear-gradient(
+    70deg,
+    var(--maincolour2),
+    var(--maincolour2dark)
+  );
+  transition: all 0.4s ease-out;
+}
+
+.form-input-login {
+  font-size: 0.8rem;
+  margin-top: 10px;
+  color: #fff;
+  width: 80%;
+  text-align: center;
+}
+
+.form-input-login a {
+  text-decoration: none;
+  color: var(--maincolour);
+  font-weight: 600;
+}
+
+.form-input-login:hover a {
+  text-decoration: none;
+  color: var(--maincolour2);
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 960px) {
+  .form-container {
+    margin: 10px 5px;
+    width: auto;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+    border-radius: 10px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 2%;
+    right: 3%;
+    font-size: 1.5rem;
+    z-index: 1;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .form-content-left {
+    background: linear-gradient(
+      90deg,
+      var(--maincolour),
+      var(--maincolourdark)
+    );
+    border-radius: 10px 0 0 10px;
+    position: relative;
+  }
+
+  .form-img {
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+  }
+  .form-img:hover {
+    width: 100%;
+    height: 100%;
+    transition: ease-in-out 0.4s, ease-out 0.5s;
+    border-radius: 0px;
+  }
+  .form-img-2 {
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .form-success {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 80px;
+    color: #fff;
+  }
+
+  .form-content-right {
+    border-radius: 0 10px 10px 0;
+    position: relative;
+    background: linear-gradient(
+      90deg,
+      rgb(40, 40, 40) 0%,
+      rgb(17, 17, 17) 100%
+    );
+  }
+
+  .form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form h1 {
+    font-size: 1rem;
+    text-align: start;
+    width: 80%;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+
+  .form-inputs {
+    margin-bottom: 0.5rem;
+    width: 80%;
+  }
+
+  .form-inputs p {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    color: #f00e0e;
+  }
+
+  .form-label {
+    display: inline-block;
+    font-size: 0.8rem;
+    margin-bottom: 6px;
+    color: #fff;
+  }
+
+  .form-input {
+    display: block;
+    padding-left: 10px;
+    outline: none;
+    border-radius: 2px;
+    height: 40px;
+    width: 100%;
+    border: none;
+  }
+
+  .form-input::placeholder {
+    color: #595959;
+    font-size: 12px;
+  }
+
+  .form-input-btn {
+    width: 80%;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 2px;
+    background: linear-gradient(
+      70deg,
+      var(--maincolour),
+      var(--maincolourdark)
+    );
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+  }
+
+  .form-input-btn:hover {
+    cursor: pointer;
+    background: linear-gradient(
+      70deg,
+      var(--maincolour2),
+      var(--maincolour2dark)
+    );
+    transition: all 0.4s ease-out;
+  }
+
+  .form-input-login {
+    font-size: 0.8rem;
+    margin-top: 10px;
+    color: #fff;
+    width: 80%;
+    text-align: center;
+  }
+
+  .form-input-login a {
+    text-decoration: none;
+    color: var(--maincolour);
+    font-weight: 600;
+  }
+
+  .form-input-login:hover a {
+    text-decoration: none;
+    color: var(--maincolour2);
+    font-weight: 600;
+  }
+}
