@@ -9,6 +9,31 @@ function hasOwn(obj, prop) {
   return Object.prototype.hasOwnProperty.call(obj, prop);
 }
 
+const getOwnPropertyDescriptors = typeof Object.getOwnPropertyDescriptors === "function" ?
+  Object.getOwnPropertyDescriptors :
+  // Polyfill exists until we require Node.js v8.x
+  // https://tc39.github.io/ecma262/#sec-object.getownpropertydescriptors
+  obj => {
+    if (obj === undefined || obj === null) {
+      throw new TypeError("Cannot convert undefined or null to object");
+    }
+    obj = Object(obj);
+    const ownKeys = Reflect.ownKeys(obj);
+    const descriptors = {};
+    for (const key of ownKeys) {
+      const descriptor = Reflect.getOwnPropertyDescriptor(obj, key);
+      if (descriptor !== undefined) {
+        Reflect.defineProperty(descriptors, key, {
+          value: descriptor,
+          writable: true,
+          enumerable: true,
+          configurable: true
+        });
+      }
+    }
+    return descriptors;
+  };
+
 const wrapperSymbol = Symbol("wrapper");
 const implSymbol = Symbol("impl");
 const sameObjectCaches = Symbol("SameObject caches");
@@ -77,6 +102,7 @@ const namedDelete = Symbol("named property delete");
 module.exports = exports = {
   isObject,
   hasOwn,
+  getOwnPropertyDescriptors,
   wrapperSymbol,
   implSymbol,
   getSameObject,
