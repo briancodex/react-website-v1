@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 function Footer() {
   return (
     <div className='footer-container'>
-      <section className='footer-subscription'>
+      {/* <section className='footer-subscription'>
         <p className='footer-subscription-heading'>
-          Join the Adventure newsletter to receive our best vacation deals
+          Subscribe:
         </p>
         <p className='footer-subscription-text'>
           You can unsubscribe at any time.
@@ -24,8 +24,8 @@ function Footer() {
             <Button buttonStyle='btn--outline'>Subscribe</Button>
           </form>
         </div>
-      </section>
-      <div class='footer-links'>
+      </section> */}
+      {/* <div class='footer-links'>
         <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
             <h2>About Us</h2>
@@ -34,15 +34,15 @@ function Footer() {
             <Link to='/'>Careers</Link>
             <Link to='/'>Investors</Link>
             <Link to='/'>Terms of Service</Link>
-          </div>
-          <div class='footer-link-items'>
+          </div> */}
+          {/* <div class='footer-link-items'>
             <h2>Contact Us</h2>
             <Link to='/'>Contact</Link>
             <Link to='/'>Support</Link>
             <Link to='/'>Destinations</Link>
             <Link to='/'>Sponsorships</Link>
-          </div>
-        </div>
+          </div> */}
+        {/* </div>
         <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
             <h2>Videos</h2>
@@ -59,57 +59,30 @@ function Footer() {
             <Link to='/'>Twitter</Link>
           </div>
         </div>
-      </div>
+      </div> */}
       <section class='social-media'>
         <div class='social-media-wrap'>
           <div class='footer-logo'>
             <Link to='/' className='social-logo'>
-              TRVL
-              <i class='fab fa-typo3' />
+              THC
+              <i class="fas fa-dharmachakra"></i>
             </Link>
           </div>
-          <small class='website-rights'>TRVL © 2020</small>
+          <small class='website-rights'>THC © 2020</small>
           <div class='social-icons'>
-            <Link
+            {/* <Link
               class='social-icon-link facebook'
               to='/'
               target='_blank'
               aria-label='Facebook'
             >
-              <i class='fab fa-facebook-f' />
-            </Link>
-            <Link
-              class='social-icon-link instagram'
-              to='/'
-              target='_blank'
-              aria-label='Instagram'
-            >
-              <i class='fab fa-instagram' />
-            </Link>
-            <Link
-              class='social-icon-link youtube'
-              to='/'
-              target='_blank'
-              aria-label='Youtube'
-            >
-              <i class='fab fa-youtube' />
-            </Link>
-            <Link
-              class='social-icon-link twitter'
-              to='/'
-              target='_blank'
-              aria-label='Twitter'
-            >
-              <i class='fab fa-twitter' />
-            </Link>
-            <Link
-              class='social-icon-link twitter'
-              to='/'
-              target='_blank'
-              aria-label='LinkedIn'
-            >
-              <i class='fab fa-linkedin' />
-            </Link>
+              
+            </Link> */}
+            <a href='https://www.facebook.com/ErikErikErikErik/' target="_blank" class='social-icon-link facebook'><i class='fab fa-facebook-f' /></a>
+            <a href='https://www.instagram.com/e.a_burdett/' target="_blank" class='social-icon-link instagram'><i class='fab fa-instagram'/></a>
+            <a href='https://www.youtube.com/channel/UCjzWZfWIL6mNqP870g0sM3g' target="_blank" class='social-icon-link youtube'><i class='fab fa-youtube'/></a>
+            <a href='https://twitter.com/telephoneheater' target="_blank" class='social-icon-link twitter'><i class='fab fa-twitter'/></a>
+            <a href='https://www.linkedin.com/in/eaburdett/' target="_blank" class='social-icon-link linkedin'><i class='fab fa-linkedin'/></a>
           </div>
         </div>
       </section>
