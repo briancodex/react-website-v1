@@ -1,0 +1,35 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.queryAllByAltText = queryAllByAltText;
+exports.findByAltText = exports.findAllByAltText = exports.getAllByAltText = exports.getByAltText = exports.queryByAltText = void 0;
+
+var _allUtils = require("./all-utils");
+
+function queryAllByAltText(container, alt, {
+  exact = true,
+  collapseWhitespace,
+  trim,
+  normalizer
+} = {}) {
+  const matcher = exact ? _allUtils.matches : _allUtils.fuzzyMatches;
+  const matchNormalizer = (0, _allUtils.makeNormalizer)({
+    collapseWhitespace,
+    trim,
+    normalizer
+  });
+  return Array.from(container.querySelectorAll('img,input,area')).filter(node => matcher(node.getAttribute('alt'), node, alt, matchNormalizer));
+}
+
+const getMultipleError = (c, alt) => `Found multiple elements with the alt text: ${alt}`;
+
+const getMissingError = (c, alt) => `Unable to find an element with the alt text: ${alt}`;
+
+const [queryByAltText, getAllByAltText, getByAltText, findAllByAltText, findByAltText] = (0, _allUtils.buildQueries)(queryAllByAltText, getMultipleError, getMissingError);
+exports.findByAltText = findByAltText;
+exports.findAllByAltText = findAllByAltText;
+exports.getByAltText = getByAltText;
+exports.getAllByAltText = getAllByAltText;
+exports.queryByAltText = queryByAltText;

@@ -17,7 +17,7 @@
 }
 
 .services {
-  background-image: url('/images/img-2.jpg');
+  background-image: url('https://photos.smugmug.com/photos/i-qjT64nb/0/5b9966b1/X3/i-qjT64nb-X3.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -26,7 +26,7 @@
 }
 
 .products {
-  background-image: url('/images/img-1.jpg');
+  background-image: url('https://photos.smugmug.com/Bad-Film/i-KFFrXbx/0/25f7ce34/XL/36706560185-XL.jpg');
   background-position: center;
   background-size: fill;
   background-repeat: no-repeat;
@@ -35,10 +35,19 @@
 }
 
 .sign-up {
-  background-image: url('/images/img-8.jpg');
+  background-image: url('https://photos.smugmug.com/Bad-Film/i-KFFrXbx/0/25f7ce34/XL/36706560185-XL.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
   font-size: 100px;
+  
+}
+
+.sign-up, .button-text, a{
+  color: white;
+}
+
+a:hover{
+  color:blue;
 }
