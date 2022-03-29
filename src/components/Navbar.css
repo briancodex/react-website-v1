@@ -1,3 +1,16 @@
+.navbar {
+  background-image: url('./fond1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-position: 0 28%;
+  height: 40vh;
+}
+
+
+.navbar .nav-link {
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+}
 /* .navbar {
   background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
   height: 80px;

@@ -6,7 +6,7 @@ import ScrollDownButton from './ScrollDownButton';
 
 function HeroSection() {
   return (
-    <div className='jumbotron position-absolute t-0'>
+    <header className='jumbotron'>
       <div class="container">
         <h1>Créatrice de décors personnalisés</h1>
         <div className='hero-btns'>
@@ -20,7 +20,7 @@ function HeroSection() {
           <ScrollDownButton/>
         </div>
       </div>
-    </div>
+    </header>
   );
 }
 

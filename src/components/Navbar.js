@@ -26,8 +26,8 @@ function Navbar() {
 
   return (
     <>
-      <nav className='navbar navbar-expand navbar-light bg-light flex-column'>
-        <Link to='/' onClick={closeMobileMenu}>
+      <nav className='navbar navbar-expand navbar-light  flex-column'>
+        <Link to='/' onClick={closeMobileMenu} >
           <a className='navbar-brand mx-auto'>
             <img src='images/logo2png.png' width="180" height="150" className="d-inline-block align-top" alt="" />
           </a>
@@ -35,8 +35,8 @@ function Navbar() {
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse">
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="navbar-collapse collapse">
-          <ul className='navbar-nav'>
+        <div class="navbar-collapse collapse flex-shrink-1">
+          <ul className='navbar-nav' >
             <li className='nav-item ml-2 mr-3'>
               <Link
                 to='/'

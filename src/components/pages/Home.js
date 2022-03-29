@@ -8,7 +8,7 @@ import Slider from '../Slider';
 function Home() {
   return (
     <>
-      <HeroSection />
+      {/* <HeroSection /> */}
       <Slider/>
       <Footer />
     </>
