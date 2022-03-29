@@ -1,3 +1,18 @@
+.jumbotron {
+  background-image: url('./fond1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-position: top;
+  height: 70vh;
+}
+
+.jumbotron h1{
+  margin-top: 170px;
+  color: rgba(0,0,0,.7);
+  font-size: 2.2rem;
+}
+
 video {
   object-fit: cover;
   width: 100%;
@@ -7,7 +22,7 @@ video {
 }
 
 .hero-container {
-  /* background: url('/images/img-home.jpg') center center/cover no-repeat; */
+ background: url('/images/img-home.jpg') center center/cover no-repeat; 
   height: 100vh;
   width: 100%;
   display: flex;
@@ -33,7 +48,7 @@ video {
 }
 
 .hero-btns {
-  margin-top: 32px;
+  margin-top: 62px;
 }
 
 .hero-btns .btn {
@@ -70,3 +85,4 @@ video {
     width: 100%;
   }
 }
+

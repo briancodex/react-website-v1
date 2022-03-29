@@ -3,8 +3,8 @@
 }
 
 .btn {
-  padding: 8px 20px;
-  border-radius: 2px;
+  padding: 6px 12px;
+  border-radius: 3px;
   outline: none;
   border: none;
   cursor: pointer;
@@ -16,8 +16,8 @@
   border: 1px solid var(--primary);
 }
 
-.btn--outline {
-  background-color: transparent;
+.btn--outline {  
+  background-color: rgba(0,0,0,0.3);
   color: #fff;
   padding: 8px 20px;
   border: 1px solid var(--primary);
@@ -40,4 +40,8 @@
   background: #fff;
   color: #242424;
   transition: 250ms;
+}
+
+.btn--outline:hover {
+  border-color: #242424; 
 }

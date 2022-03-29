@@ -26,51 +26,53 @@ function Navbar() {
 
   return (
     <>
-      <nav className='navbar'>
-        <div className='navbar-container'>
-          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            TRVL
-            <i class='fab fa-typo3' />
-          </Link>
-          <div className='menu-icon' onClick={handleClick}>
-            <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-          </div>
-          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-            <li className='nav-item'>
-              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                Home
+      <nav className='navbar navbar-expand navbar-light bg-light flex-column'>
+        <Link to='/' onClick={closeMobileMenu}>
+          <a className='navbar-brand mx-auto'>
+            <img src='images/logo2png.png' width="180" height="150" className="d-inline-block align-top" alt="" />
+          </a>
+        </Link>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse">
+          <ul className='navbar-nav'>
+            <li className='nav-item ml-2 mr-3'>
+              <Link
+                to='/'
+                className='nav-link'
+                onClick={closeMobileMenu}>
+                Accueil
               </Link>
             </li>
-            <li className='nav-item'>
+            <li className='nav-item mr-3'>
               <Link
-                to='/services'
-                className='nav-links'
+                to='/mariage'
+                className='nav-link'
                 onClick={closeMobileMenu}
               >
-                Services
+                Mariage
               </Link>
             </li>
-            <li className='nav-item'>
+            <li className='nav-item mr-3'>
               <Link
-                to='/products'
-                className='nav-links'
+                to='/decoration'
+                className='nav-link'
                 onClick={closeMobileMenu}
               >
-                Products
+                Decoration
               </Link>
             </li>
-
-            <li>
+            <li className='nav-item mr-2'>
               <Link
-                to='/sign-up'
-                className='nav-links-mobile'
+                to='/contact'
+                className='nav-link'
                 onClick={closeMobileMenu}
               >
-                Sign Up
+                Contact
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
         </div>
       </nav>
     </>

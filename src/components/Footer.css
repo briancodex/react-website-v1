@@ -45,6 +45,17 @@
   border: 1px solid #fff;
 }
 
+
+.footer-logo a{
+  height:80px;
+  display: table-cell;
+  vertical-align: middle; /* this is a table cell so it works! */
+}
+.footer-logo  img
+{
+    display:inline-block;
+}
+
 .footer-links {
   width: 100%;
   max-width: 1000px;
@@ -108,16 +119,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
+  width: 50%;
   max-width: 1000px;
   margin: 40px auto 0 auto;
 }
 
 .social-icons {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  width: 240px;
+  width: 150px;
 }
 
 .social-logo {
@@ -134,7 +145,6 @@
 
 .website-rights {
   color: #fff;
-  margin-bottom: 16px;
 }
 
 @media screen and (max-width: 820px) {
