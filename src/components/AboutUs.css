@@ -1,0 +1,12 @@
+.AboutUs{
+    background-color: #fff;
+}
+
+.AboutUs-container{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    object-fit: contain;
+    justify-content: center;
+    align-items: center;
+}
