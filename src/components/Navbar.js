@@ -29,8 +29,8 @@ function Navbar() {
       <nav className='navbar'>
         <div className='navbar-container align-middle'>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            <i className='fab fa-typo3 mr-2' />
-            Bomba
+            <i className='fab fa-typo3 mr-3 mb-lg-3' />
+            <div className='mb-lg-3'>Bomba</div> 
           </Link>
           <div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
