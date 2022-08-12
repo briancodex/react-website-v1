@@ -1,15 +1,18 @@
 import React from 'react';
 import '../App.css';
-import { Button } from './Button';
 import './HeroSection.css';
+import Fade from 'react-reveal/Fade';
 
 function HeroSection() {
   return (
     <div className='hero-container'>
       <video src='/videos/video-1.mp4' autoPlay loop muted />
-      <h1>ADVENTURE AWAITS</h1>
-      <p>What are you waiting for?</p>
-      <div className='hero-btns'>
+      <Fade delay={1500} duration={2000} top>
+        <h1>SELAMAT DATANG</h1>
+        <p>di Laman Resmi Desa Bomba</p>
+      </Fade>
+      
+      {/* <div className='hero-btns'>
         <Button
           className='btns'
           buttonStyle='btn--outline'
@@ -25,7 +28,7 @@ function HeroSection() {
         >
           WATCH TRAILER <i className='far fa-play-circle' />
         </Button>
-      </div>
+      </div> */}
     </div>
   );
 }
