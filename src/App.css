@@ -34,11 +34,71 @@
   font-size: 100px;
 }
 
-.sign-up {
+.sign-up-card {
   background-image: url('/images/img-8.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
+  height: 90vh;
+padding: 2rem;
   font-size: 100px;
+}
+
+.sign-up-form {
+  border-radius: 7px;
+  border: 1px solid grey;
+  max-width: 600px;
+  width: 30%;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 2px 4px 4px rgba(0,0,0,0.09);
+  /* margin-top: 2rem; */
+}
+
+.sign-up-form h2 {
+  font-size: 30px;
+  color:black;
+  font-weight: 500;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.each-input {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+  font-weight: 100;
+}
+
+.each-input label {
+  font-size: 18px;
+  color: black;
+}
+
+.each-input input {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid grey;
+  
+}
+
+.submit-button button{
+  background-color:black;
+  color: white;
+  border-radius: 40rem;
+  width: 60%;
+  margin: 0 auto;
+  font-size: 25px;
+  padding: 8px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.submit-button {
+  text-align: center;
+  margin: 0 auto;
 }
