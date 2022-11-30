@@ -1,10 +1,10 @@
 .picture11{
     height:38rem;
-    width:25rem;
+    width:31rem;
   }
   .picture12 {
     height: 30rem;
-    width: 45rem;
+    width: 70rem;
   }
   .Apicture12 {
     height: 38rem;
@@ -14,4 +14,15 @@
   .b_flex {
     display:flex;   
   }
+/* Why MYOB*/
+  .header {
+    padding-left: 363px;
+    font-size: 30px;
+  }
+
+  /*text below whymyob*/
+   .label {
+   position: center;
+  }
+
   /*  */
