@@ -1,0 +1,31 @@
+.contact1 {
+    height: 200px;
+    background-color: #4D096D;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 300px;
+    color: white;
+    padding-top: 20px;
+}
+
+.cc {
+    padding-bottom: 10px;
+}
+
+.socialIcon {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #4D096D;
+    color: white;
+    padding-top: 30px;
+    height: 30px;
+    padding-left: 300px;
+}
+
+.rightccd {
+    text-align:left;
+}
+
+.leftlogo {
+    text-align:left;
+}
