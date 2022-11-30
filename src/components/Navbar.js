@@ -3,6 +3,7 @@ import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
+
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
@@ -29,50 +30,50 @@ function Navbar() {
       <nav className='navbar'>
         <div className='navbar-container'>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            TRVL
-            <i class='fab fa-typo3' />
+            <img src="/images/myob new4.jpg" className="photo" alt=""></img>
+        
           </Link>
           <div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
           </div>
+
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
               <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                Home
+                ABOUT US
               </Link>
             </li>
             <li className='nav-item'>
-              <Link
-                to='/services'
-                className='nav-links'
-                onClick={closeMobileMenu}
+              <Link to='/services' className='nav-links' onClick={closeMobileMenu}
               >
-                Services
+                BLOG
               </Link>
             </li>
             <li className='nav-item'>
-              <Link
-                to='/products'
-                className='nav-links'
-                onClick={closeMobileMenu}
+              <Link to='/products' className='nav-links' onClick={closeMobileMenu}
               >
-                Products
+                SOFTWARES
               </Link>
             </li>
 
-            <li>
-              <Link
-                to='/sign-up'
-                className='nav-links-mobile'
-                onClick={closeMobileMenu}
+            <li className='nav-item'>
+              <Link to='/products' className='nav-links' onClick={closeMobileMenu}
               >
-                Sign Up
+                SUPPORT
               </Link>
             </li>
+            <li className='nav-item'>
+              <Link to='/products' className='nav-links' onClick={closeMobileMenu}
+              >
+              <i class="fa-solid fa-cart-shopping fa-2x"></i>
+              </Link>
+            </li>
+
           </ul>
-          {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+          {button && <Button buttonStyle='btn--outline'>LOG IN > </Button>}
         </div>
       </nav>
+  
     </>
   );
 }

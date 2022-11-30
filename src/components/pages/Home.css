@@ -1,0 +1,195 @@
+* {
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+}
+
+/* top part css */
+.a_flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 100px;  
+    background-color: lightgrey;
+  
+  
+  }
+  
+  
+  .top_part {
+    font-size: 25px;
+    left: 0%;
+    padding-top: 50px;
+    text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
+  }
+  
+   
+  
+  .bottom_part {
+  
+    font-size: 25px;
+    font-weight:100;
+    padding-right:100px;
+  }
+  
+  .try_button {
+    font-size: 20px;
+    padding: 0.6rem;
+    border-radius: 2rem;
+    background-color: mediumpurple;
+    color: white;
+    
+  }
+  .button {
+    padding-top: 70px;
+  }
+  
+  .left_row {
+    position: center;
+  }
+  
+  .picture12 {
+    height: 30rem;
+    width: 45rem;
+  }
+  
+  /* trusted us css */
+  .top {
+    padding-left: 700px;
+  
+    font-size: 20px;
+  }
+  
+  .picture13 {
+    padding-left: 60px;
+    width: 1450px;
+    height: 150px;
+  }
+
+  /* Video css */
+  .vidt {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom:170px;
+}
+
+.left1 {
+    
+    padding-top: 50px;
+}
+
+.right1{
+    padding-top: 50px;
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 100px;
+    padding-top: 300px;
+    text-align: left;
+
+}
+
+.desp {
+    padding-top: 40px;
+    font-size: 20px;
+  
+    text-align: left;
+   
+    position:relative;
+}
+
+.kid {
+    color: purple;
+}
+
+.picture14 {
+    height: 700px;
+    width: 800px;
+    position: absolute;
+    padding-bottom: 100px;
+}
+
+.picture15{
+    width: 700px;
+    height: 525px;
+    position:relative;
+    padding-left: 500px;
+    margin-left: 150px;
+    margin-top: 100px;
+   
+}
+
+/* icon css */
+.H4{
+    text-align:center;
+    font-size: 25px;
+    
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    text-align: center;
+    padding-top: 50px;
+    column-gap:150px;
+    row-gap: 50px;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 50px;
+}
+
+.fa-solid{
+    width: 50px;
+    height: 50px;
+    color: #9812D7;
+}
+
+
+/* demo class css */
+.desp1 {
+    display: grid;
+    grid-template-columns: 1fr 0fr;
+    height: 450px;
+    background-color: #d1d1d1;
+
+}
+
+.picbottom {
+   padding-right:0px;
+  
+}
+
+.ity {
+    height:450px;
+    width: 450px;
+}
+
+.para {
+    font-size: 20px;
+    padding-top: 100px;
+    padding-left:200px;
+    
+
+}
+
+.acc {
+    color:purple;
+}
+
+.textbox1 {
+    padding-left:10px;
+    padding-bottom:10px;
+    width: 60%;
+    padding-top: 10px;
+    border-radius: 15px;
+}
+
+.em {
+    padding-top: 50px;
+}
+
+.demobtn {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: 20%;
+    border-radius: 15px;
+    background-color: #4D096D;
+    color: white;
+}
