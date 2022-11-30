@@ -114,7 +114,7 @@ function Home() {
                   <div className="picbottom">
                       <img src="/images/bottompic2.jpg" alt="" className="ity"></img>
                   </div>
-
+                  
               </div>
             </section>
 
