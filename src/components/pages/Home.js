@@ -70,7 +70,7 @@ function Home() {
                     <i class="fa-solid fa-users fa-3x"></i>
                     <h2>Multi-User</h2>
                     <p>Allows multiple user access the MYOB file simultaneously.</p>
-                </div>
+                </div>  
 
                 <div className="item">
                     <i class="fa-solid fa-briefcase fa-3x"></i>

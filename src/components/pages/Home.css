@@ -162,7 +162,7 @@
 }
 
 .para {
-    font-size: 20px;
+    font-size: 25px;
     padding-top: 100px;
     padding-left:200px;
     
@@ -171,6 +171,7 @@
 
 .acc {
     color:purple;
+    
 }
 
 .textbox1 {
@@ -183,6 +184,7 @@
 
 .em {
     padding-top: 50px;
+    font-size: 20px;
 }
 
 .demobtn {
