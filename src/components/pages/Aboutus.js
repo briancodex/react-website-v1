@@ -15,7 +15,6 @@ function AboutUs() {
           <div className="left_row">
             <img src="/images/AboutUsMYob.JPG" alt="" className="picture11"></img>
 
-
           </div>
           <div className="right_row">
             <img src="/images/Aboutus.png" alt="" className="Apicture12"></img>
@@ -25,13 +24,14 @@ function AboutUs() {
       </section>
     </><section className="header">
         <div className="header">
-          <div className="text"><h2>Why MYOB?</h2>
+          <div className="text"><h1>Why MYOB?</h1>
+          <div className="label">
+                <label>Because you didn't start a business to do the books.</label>
+                        </div>                       
+        </div>
           </div>
 
-          <div className="label">
-                            <label>Because you didn't start a business to do the books.</label>
-                        </div>
-        </div>
+          
       </section></>
   );
 }
