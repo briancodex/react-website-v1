@@ -23,9 +23,25 @@
 
   /*text below whymyob*/
   .label{
-    font-size: 25px;
+    font-size: 30px;
     padding-left: 5px;
-    
+}
+.para{
+  padding-left: 100px;
+    font-size: 5px;
+
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  padding-top: 50px;
+  column-gap:150px;
+  row-gap: 50px;
+  padding-left: 100px;
+  padding-right: 150px;
+  padding-bottom: 20px;
 }
 
   /*  */
