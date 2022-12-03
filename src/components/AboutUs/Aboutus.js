@@ -10,13 +10,13 @@ function AboutUs() {
       <hr style={{ background: 'black', color: 'black', borderColor: 'black', margin: 0 }} />
       {/* Section for flex display picture and paragraph */}
 
-      <section className="picture">
+      <section className="picturex">
         <div class="container b_flex">
-          <div className="left_row">
+          <div className="left_row1">
             <img src="/images/AboutUsMYob.JPG" alt="" className="picture11"></img>
 
           </div>
-          <div className="right_row">
+          <div className="right_row1">
             <img src="/images/Aboutus.png" alt="" className="Apicture12"></img>
           </div>
         </div>
@@ -24,7 +24,7 @@ function AboutUs() {
       </section>
     </><section className="header">
         <div className="header">
-          <div className="text"><h1>Why MYOB?</h1>
+          <div className="text1"><h1>Why MYOB?</h1>
             <div className="label">
               <label>Because you didn't start a business to do the books.</label>
 
@@ -35,7 +35,7 @@ function AboutUs() {
         </div>
 
       </section></><section className="icons">
-        <div className="grid">
+        <div className="grid1">
           <div className="item">
             <i class="fa-solid fa-chart fa-3x">
             </i>
@@ -52,7 +52,7 @@ function AboutUs() {
 
 
 
-          );
+          
 
         </section></>
 

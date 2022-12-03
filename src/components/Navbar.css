@@ -88,3 +88,38 @@
   color: black;
   height: 20px;
 }
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-content {
+  display: none;
+  position: absolute;
+
+
+}
+
+.menu-content a{
+  color: black;
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.dropdown:hover .menu-content {
+  display: block;
+  background-color: white;
+  text-decoration: none;
+  height: 130px;
+  border-radius: 0rem 0rem 1rem 1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.list_try {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}

@@ -2,10 +2,7 @@
     height:38rem;
     width:31rem;
   }
-  .picture12 {
-    height: 30rem;
-    width: 70rem;
-  }
+
   .Apicture12 {
     height: 38rem;
     width: 81.6rem;
@@ -15,7 +12,7 @@
     display:flex;   
   }
 /* Why MYOB*/
-  .header {
+  .text1 {
     padding-left: 363px;
     font-size: 30px;
   }
@@ -32,7 +29,7 @@
 
 }
 
-.grid {
+.grid1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
