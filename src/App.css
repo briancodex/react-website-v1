@@ -4,3 +4,7 @@ body, html {
     margin-right: 0px;
     
 }
+
+.footer{
+    position: absolute;
+}

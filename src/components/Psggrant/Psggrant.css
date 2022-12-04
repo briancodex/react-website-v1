@@ -49,7 +49,8 @@
 }
 /*PSG Guide*/
 .whatispsgsec{
-    padding-top: 55px
+    padding-top: 55px;
+    padding-bottom: 20px;
 }
 .psgleft2{
     padding-top: 300px;
@@ -73,3 +74,30 @@
     padding-top: 300px;
 }
 
+.psgcrossShape {
+    position: absolute;
+    height: 56%;
+    width: 80%;
+}
+
+.contactinfo {
+    position: relative;
+    text-align: left;
+    padding-left: 54%;
+    padding-right: 100px;
+
+
+}
+
+.box {
+    
+    background-color: lightgrey;
+    border-radius: 2rem;
+    padding-left: 23px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+.psgShape {
+    padding-bottom: 50px;
+}

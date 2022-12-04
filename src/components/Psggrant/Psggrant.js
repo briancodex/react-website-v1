@@ -54,16 +54,12 @@ function PsgGrant() {
     </section>
 
     <section className='psgShape'>
-      <div className='crossShape'>
+    <div className='crossShape'>
         <img src="/images/psgpattern.PNG" alt="" className="psgcrossShape"></img>
       </div>
-    </section>
-      
-      {/* (Contactinfo Section)
-    <section className='psgContactinfo'>
+   
       <div className='contactinfo'>
-        <div className='right3'>
-          <div className='contactNumber'>
+        <div className='box'>
             <h3 className='callforinfo'>Kindly give us a call to find out more information <br></br>on MYOB Software or PSG. <br></br>
             <br></br><li>Brian Ng – 8268 2809</li>
             <br></br><li>Johnny Kwok – 9816 7953</li>
@@ -74,10 +70,12 @@ function PsgGrant() {
             <br></br><li>Laura Tan – 8589 0829</li>
             </h3>
           </div>
-        </div>
       </div>
+
+
+
     </section>
-*/}
+
       
       
       </>
