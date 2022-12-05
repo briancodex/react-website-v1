@@ -23,7 +23,7 @@ export default function Blog() {
       <section className='shouldI'>
 
         <div className='rectangle'>
-          <img src='/images/Blog accounting.png' alt='' className="accounting"></img>
+          <img src='/images/update1.jpg' alt='' className="accounting"></img>
           <div className="abss">
             <b>Should I upgrade by ABSS (fka MYOB) Accounting Software?</b>
           </div>
@@ -37,7 +37,7 @@ export default function Blog() {
       <section className='xero'>
 
         <div className='rectangle'>
-          <img src='/images/quick.png' alt='' className="xerovs"></img>
+          <img src='/images/Xero1.jpg' alt='' className="xerovs"></img>
           <div className="best">
             <b>Xero vs. Quickbooks vs. MYOB - Which is the best accounting software?</b>
           </div>
@@ -51,7 +51,7 @@ export default function Blog() {
       <section className='psg'>
 
         <div className='rectangle'>
-          <img src='/images/psg1.png' alt='' className="psgpic"></img>
+          <img src='/images/psg2.png' alt='' className="psgpic"></img>
           <div className="productivity">
             <b>Productivity Solutions Grant (PSG) for ABSS Accounting Software - FKA MYOB</b>
           </div>

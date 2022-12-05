@@ -28,7 +28,7 @@
 }
 
 .accounting{
-    height:40rem;
+    height:50rem;
     width:132rem;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .xerovs{
-    height:40rem;
+    height:50rem;
     width:132rem;
 }
 
@@ -70,6 +70,7 @@
 
 .psg{
     padding-top: 200px;
+    padding-bottom: 100px;
 }
 
 .psgpic{
