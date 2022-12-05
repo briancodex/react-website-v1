@@ -28,7 +28,7 @@ export default function Blog() {
             <b>Should I upgrade by ABSS (fka MYOB) Accounting Software?</b>
           </div>
           <div className="read-morelink">
-            <a href='https://myobsingapore.com/blog.php?id=20'><u>Read More > </u></a>
+            <a href='https://myobsingapore.com/blog.php?id=20'><u>Read More {'>'} </u></a>
           </div>
         </div>
 
@@ -56,7 +56,7 @@ export default function Blog() {
             <b>Productivity Solutions Grant (PSG) for ABSS Accounting Software - FKA MYOB</b>
           </div>
           <div className="readmore-link">
-            <Link to='/Psggrant'><u>Read More > </u></Link>
+            <Link to='/Psggrant'><u>Read More {'>'} </u></Link>
           </div>
         </div>
 
