@@ -42,7 +42,7 @@ export default function Blog() {
             <b>Xero vs. Quickbooks vs. MYOB - Which is the best accounting software?</b>
           </div>
           <div className="readmore">
-            <a href='https://myobsingapore.com/blog.php?id=19'><u>Read More > </u></a>
+            <a href='https://myobsingapore.com/blog.php?id=19'><u>Read More {'>'} </u></a>
           </div>
         </div>
 
