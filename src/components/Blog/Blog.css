@@ -1,0 +1,39 @@
+*{
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+}
+
+.a_flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 100px;  
+    background-color: lightgrey;
+  
+  
+  }
+/*Top Banner*/
+.top_Pic{
+    left: 0%;
+}
+
+.blog_pic{
+    height:20rem;
+    width:132rem;
+  }
+
+.blogheader{
+    text-align:center;
+    font-size: 45px;
+    padding-top: 40px;
+}
+
+.accounting{
+    height:40rem;
+    width:132rem;
+}
+
+.abss{
+    text-align:left;
+    font-size: 45px;
+    padding-top: 40px;
+}
