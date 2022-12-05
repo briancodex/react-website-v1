@@ -13,8 +13,8 @@
 }
 
 .blog_pic{
-    height:20rem;
-    width:132rem;
+    height:100%;
+    width: 100%;
   }
 
 .blogheader{
@@ -28,8 +28,8 @@
 }
 
 .accounting{
-    height:50rem;
-    width:132rem;
+    height: 100%;
+    width: 100%;
 }
 
 .abss{
@@ -51,8 +51,8 @@
 }
 
 .xerovs{
-    height:50rem;
-    width:132rem;
+    height: 100%;
+    width: 100%;
 }
 
 .best{
@@ -74,8 +74,8 @@
 }
 
 .psgpic{
-    height:50rem;
-    width:132rem;
+    height:100%;
+    width: 100%;
 }
 
 .productivity{
@@ -90,3 +90,14 @@
     font-size: 20px;
     padding-right: 30px;
 }
+
+@media only screen and (max-width: 1024px) {
+    body {
+      background: blue;
+    }
+
+    .blogheader {
+        font-size: 25px;
+    }
+}
+/* Show lecturer media query */
