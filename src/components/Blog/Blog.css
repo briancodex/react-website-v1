@@ -2,15 +2,11 @@
     font-family: 'IBM Plex Sans Devanagari', sans-serif;
 }
 
-.a_flex{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding-left: 100px;  
-    background-color: lightgrey;
-  
-  
-  }
+.rectangle{
+
+    background-color: #f3f0f0;
+}
+
 /*Top Banner*/
 .top_Pic{
     left: 0%;
@@ -27,6 +23,10 @@
     padding-top: 40px;
 }
 
+.shouldI{
+    padding-top: 50px;
+}
+
 .accounting{
     height:40rem;
     width:132rem;
@@ -35,5 +35,57 @@
 .abss{
     text-align:left;
     font-size: 45px;
-    padding-top: 40px;
+    padding-left: 20px;
+}
+
+.read-morelink{
+    color: #86B8F9;
+    text-align:right;
+    font-size: 20px;
+    padding-right: 30px;
+}
+
+.xero{
+
+    padding-top: 200px;
+}
+
+.xerovs{
+    height:40rem;
+    width:132rem;
+}
+
+.best{
+    text-align:left;
+    font-size: 45px;
+    padding-left: 20px;
+}
+
+.readmore{
+    color: #86B8F9;
+    text-align:right;
+    font-size: 20px;
+    padding-right: 30px;
+}
+
+.psg{
+    padding-top: 200px;
+}
+
+.psgpic{
+    height:50rem;
+    width:132rem;
+}
+
+.productivity{
+    text-align:left;
+    font-size: 45px;
+    padding-left: 20px;
+}
+
+.readmore-link{
+    color: #86B8F9;
+    text-align:right;
+    font-size: 20px;
+    padding-right: 30px;
 }
