@@ -3,23 +3,38 @@
     background-color: #4D096D;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-left: 300px;
     color: white;
     padding-top: 20px;
+    column-gap: 800px;
+    
 }
 
 .cc {
-    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+.contact_details {
+    font-size: 15px;
 }
 
 .socialIcon {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     background-color: #4D096D;
-    color: white;
-    padding-top: 30px;
+    
     height: 30px;
-    padding-left: 300px;
+    margin: 10px;
+    
+   
+}
+
+.socialIcon:hover {
+    cursor: pointer;
+}
+
+.footerlink {
+    color: white;
+    text-decoration: none;
+    padding: 4px;
 }
 
 .rightccd {
@@ -28,4 +43,26 @@
 
 .leftlogo {
     text-align:left;
+}
+
+.contact {
+    padding-left: 150px;
+    padding-right: 150px;
+    background-color: #4D096D;
+}
+
+.socialIcon1 {
+    display: flex;
+    column-gap: 640px;
+    padding-top: 10px;
+}
+
+.FIL {
+    color: white;
+    
+    
+}
+
+.fa-brands {
+    padding: 6px;
 }

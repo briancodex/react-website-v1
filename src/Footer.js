@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="rightccd">
             <h3 className="cc">Contact Us</h3>
         
-            <p>
+            <p className="contact_details">
             Call: +65 9864 1234 <br></br>
             Email: Example@email.com <br></br>
             Head Office(Singapore): <br></br>
@@ -22,10 +22,21 @@ const Footer = () => {
             </p>
             </div>
     </div>
-    <hr style={{ background: 'black', color: 'black', borderColor: 'black', margin:0 }} />
+    <hr className="borderclas" style={{background: 'white', color: 'white', borderColor: 'white', margin:0, }} />
     <div className="socialIcon1">
 
-        <div className="socialIcon">Terms & Conditions   |   Private Policy   |   Security   </div>
+        <div className="socialIcon">
+          <a href="/" className="footerlink">Terms & Conditions        |</a> 
+          <a href="/" className="footerlink">Private Policy        |</a> 
+          <a href="/" className="footerlink">Security  </a>
+        </div>
+
+        <div className="FIL">
+            <i class="fa-brands fa-square-facebook fa-2x">   </i>
+           <i class="fa-brands fa-square-instagram fa-2x">   </i>
+           <i class="fa-brands fa-linkedin fa-2x">   </i>
+           <i class="fa-brands fa-square-youtube fa-2x">    </i>
+        </div>
 
     </div>
 </div>
