@@ -1,44 +1,128 @@
 .picture11{
-    height:38rem;
-    width:31rem;
-  }
-
-  .Apicture12 {
-    height: 38rem;
-    width: 81.6rem;
-  }
-
-  .b_flex {
-    display:flex;   
-  }
-/* Why MYOB*/
-  .text1 {
-    padding-left: 363px;
-    font-size: 30px;
-  }
-
-
-  /*text below whymyob*/
-  .label{
-    font-size: 30px;
-    padding-left: 5px;
+  height:38rem;
+  width:31rem;
 }
-.paragraph{
+
+.Apicture12 {
+  height: 38rem;
+  width: 81.6rem;
+}
+
+.c_flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 100px; 
+}
+
+.right_row1{
+  position: center;
+  
+}
+
+.left_row1{
+  text-align: left;
+  padding-right: 600px;
+  padding-top: 100px;
   padding-left: 100px;
-    font-size: 5px;
+  width: 500px;
+  
+}
+
+.top_part1{
+  position: center;
+  font-size: 25px;
+}
+
+.bottom_part1{
+  position: center;
+}
+
+.b_flex {
+  display:flex;   
+}
+/* Why MYOB*/
+.text1 {
+  text-align: center;
+  font-size: 30px;
+}
+
+
+/*text below whymyob*/
+.label{
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.header {
+  background-color: #fcfcfc;
+}
+
+.icons
+{
+  background-color: rgb(231, 231, 231);
+}
+
+.paragraph{
+margin-left: 25%;
+margin-right:25%;
+text-align: center;
+font-family: "Lucida Console", "Courier New", monospace;
+font-size: 25px;
 
 }
 
 .grid1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  text-align: center;
-  padding-top: 50px;
-  column-gap:150px;
-  row-gap: 50px;
-  padding-left: 100px;
-  padding-right: 150px;
-  padding-bottom: 20px;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+text-align: center;
+padding-top: 50px;
+column-gap:150px;
+row-gap: 50px;
+padding-left: 100px;
+padding-right: 150px;
+padding-bottom: 20px;
 }
 
-  /*  */
+.pictureAbtus {
+  height:35rem;
+  width:50rem;
+}
+
+.last_row1{
+  text-align: left;
+  padding-right: 600px;
+  padding-top: 100px;
+  padding-left: 100px;
+  width: 500px;
+  font-size: 25px;
+}
+.lastbottom_part1{
+  position: center;
+  text-align: left;
+  padding-right: 600px;
+  padding-top: 2px;
+  padding-left: 100px;
+  width: 500px;
+}
+
+.picturelast{
+  height:35rem;
+  width:50rem;
+}
+.rightpicture_row1{
+  position: center;
+  display: flex;
+  padding-left: 650px; 
+}
+.pictureright{
+  padding-bottom: 600px;
+}
+
+
+
+
+
+
+/*  */
