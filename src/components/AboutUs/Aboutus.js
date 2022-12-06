@@ -77,26 +77,22 @@ function AboutUs() {
             <div class="last_row1">
                 <div class="last_part1">
                   <b>
-                    <h1>
+                    <h2 className="paraheader1">
                       Building better digital experiences
-                    </h1>
+                    </h2>
                   </b>
+            
+                    <label className="para9">
+                      At MYOB we recognise that we, and the software industry at large, need to focus on creating only good digitisation for our customers and partners - where apps work in union, where the work just happens, and the tech almost goes unnoticed.
+                    </label>
+                  </div>
+          
+                <div class="container r_flex">
+                  <div class="rightpicture_row1">
+                    <img src="/images/MYOBEssentials.JPG" alt="" className="picturelast"></img>
+                  </div>
                 </div>
-                </div>
-
-                <div class="lastbottom_part1">
-                  <label>
-                    At MYOB we recognise that we, and the software industry at large, need to focus on creating only good digitisation for our customers and partners - where apps work in union, where the work just happens, and the tech almost goes unnoticed.
-                  </label>
-                </div>
-
-                <section className="pictureright">
-            <div class="container r_flex">
-              <div class="rightpicture_row1">
-                <img src="/images/MYOBEssentials.JPG" alt="" className="picturelast"></img>
-              </div>
-              </div>
-          </section>
+            </div>
           
           </section>
       </>
