@@ -78,7 +78,7 @@ function Navbar() {
 
           </ul>
           {button && <Button buttonStyle='btn--outline'>
-          <Link to='/Psggrant' className='nav-links' onClick={closeMobileMenu}>
+          <Link to='/Psggrant' className='nav-links1' onClick={closeMobileMenu}>
           LOG IN </Link></Button>}
 
 

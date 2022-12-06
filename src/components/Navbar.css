@@ -123,3 +123,8 @@
   padding: 0; /* Remove padding */
   margin: 0; /* Remove margins */
 }
+
+.nav-links1 {
+  text-decoration: none;
+  color: black;
+}
