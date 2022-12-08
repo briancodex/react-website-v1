@@ -1,0 +1,27 @@
+*{
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+}
+
+.topcart_Pic{
+    left: 0%;
+}
+
+.cart_pic{
+    height:100%;
+    width: 100%;
+  }
+.carticon{
+   position: relative;
+   right: 150px;
+}
+
+.cartheader{
+    text-align:center;
+    font-size: 45px;
+    padding-top: 10px;
+}
+
+.rectangle{
+    background: #F7FAFC;
+    border-radius: 10px;
+}

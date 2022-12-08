@@ -10,6 +10,7 @@ import Aboutus from './components/AboutUs/Aboutus';
 import Footer from './Footer';
 import SupportVideo from './components/SupportVideo/SupportVideo';
 import SupportNote from './components/SupportNote/SupportNote';
+import Cart from './components/Cart/Cart';
 import Psggrant from './components/Psggrant/Psggrant';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path='/Support' component={Support} />
           <Route path='/SupportNote' component={SupportNote} />
           <Route path='/SupportVideo' component={SupportVideo} />
+          <Route path='/Cart' component={Cart}/>
           <Route path='/Psggrant' component={Psggrant} />
         </Switch>
         <Footer/>
