@@ -1,6 +1,6 @@
 import React from 'react';
 import './Cart.css';
-import {FaShoppingCart} from 'react-icons/fa'
+
 import { Link } from 'react-router-dom';
 
 export default function Cart() {
@@ -17,7 +17,7 @@ export default function Cart() {
       </section>
     
       <section className='mycart'>
-        <div className="cartheader"><FaShoppingCart/>&nbsp;<b>My Cart</b>
+        <div className="cartheader"><i class="fa-solid fa-cart-shopping"></i>&nbsp;<b>My Cart</b>
         </div>
       </section>
 
