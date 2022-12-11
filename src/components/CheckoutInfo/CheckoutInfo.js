@@ -15,7 +15,17 @@ export default function CheckoutInfo() {
           </div>
         </section>
 
-        
+        <section className='checkoutinfo'>
+          <div className="rectangle">
+            <div className='checkout_text'>
+                <p style={{color: '#3182CE'}}>Information</p>
+                <hr style={{background: 'black', color: '000000', borderColor: '000000', height: '1px', width:"2%", }}/>
+                <i class="fa-solid fa-circle-check" style={{color: 'black'}}></i>
+            </div>
+            
+
+          </div>
+        </section>
 
       </>
     );

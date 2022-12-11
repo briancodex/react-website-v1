@@ -33,7 +33,7 @@
 }
 .cartgrid{
     display: flex;
-    grid-template-columns: 2fr 2fr 2fr 100px;
+    grid-template-columns: 2fr 2fr 2fr;
     padding-top: 50px;
     column-gap: 85px;
     padding-left: 530px;
@@ -41,6 +41,17 @@
     font-family: 'Inter';
     font-style: normal;
     text-align: right;
+}
+
+.text{
+    position: relative;
+    padding-left: 1270px;
+}
+
+.total{
+    padding-top: 30px;
+    padding-left: 1270px;
+    font-size: 18px;
 }
 
 .align-line{
@@ -55,7 +66,7 @@
     display: flex;
     grid-template-columns: 2fr 2fr 2fr;
     column-gap:100px;
-    padding-top: 300px;
+    padding-top: 100px;
     padding-left: 100px;
     padding-right: 100px;
     padding-bottom: 300px;
@@ -64,5 +75,5 @@
 .cartbutton{
     position: absolute;
     right: 150px;
-    top: 430px;    
+    top: 400px;    
 }
