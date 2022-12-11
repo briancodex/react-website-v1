@@ -11,6 +11,7 @@ import Footer from './Footer';
 import SupportVideo from './components/SupportVideo/SupportVideo';
 import SupportNote from './components/SupportNote/SupportNote';
 import Cart from './components/Cart/Cart';
+import CheckoutInfo from './components/CheckoutInfo/CheckoutInfo';
 import Psggrant from './components/Psggrant/Psggrant';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path='/SupportNote' component={SupportNote} />
           <Route path='/SupportVideo' component={SupportVideo} />
           <Route path='/Cart' component={Cart}/>
+          <Route path='/CheckoutInfo' component={CheckoutInfo}/>
           <Route path='/Psggrant' component={Psggrant} />
         </Switch>
         <Footer/>

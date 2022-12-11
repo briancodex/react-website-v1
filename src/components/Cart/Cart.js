@@ -1,12 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './Cart.css';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 
 export default function Cart() {
-  const [active, setActive] = useState(false);
-  const handleClick = () => {
-    setActive(!active);
-  };
 
   return (
     
@@ -16,7 +13,7 @@ export default function Cart() {
       
       <section className='cartPic'>
           <div className="topcart_Pic">
-            <img src="/images/cart.jpg" alt="" className="cart_pic"></img>
+            <img src="/images/cart.png" alt="" className="cart_pic"></img>
           </div>
       </section>
     
@@ -39,7 +36,11 @@ export default function Cart() {
             <hr style={{ background: 'grey', color: '000000', borderColor: '000000', height: '2px', width:"90%", }}/>
             <hr style={{ background: 'grey', color: '000000', borderColor: '000000', height: '2px', width:"40%", }}/>
             <div className='cartbutton'>
-              <Button> Process to Checkout </Button>
+              <Link to='/CheckoutInfo'>
+                <Button style={{ color: 'white', width:'350px',  height: '50px', borderColor: 'white', borderRadius:'10px', backgroundColor:'#6A00BF', fontSize:'17px'}}>
+                  Process to Checkout
+                </Button>
+              </Link>
             </div>
 
           </div>

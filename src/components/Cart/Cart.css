@@ -23,7 +23,7 @@
 
 .rectangle{
     background: #F7FAFC;
-    border-radius: 10px;
+    border-radius: 20px;
     width: 96%;
     height: 500px;
     bottom: 10%;
@@ -62,17 +62,7 @@
 }
 
 .cartbutton{
-    color: cadetblue;
     position: absolute;
     right: 150px;
-    top: 430px;
-}
-Button{
-    color: white;
-    width: 350px;
-    height: 50px;
-    font-size: 15px;
-    border-radius: 10px;
-    border-color: white;
-    background-color:#6A00BF;
+    top: 430px;    
 }
