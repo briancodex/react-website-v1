@@ -11,8 +11,8 @@
     width: 100%;
   }
 .carticon{
-   position: relative;
-   right: 150px;
+    position: relative;
+    right: 150px;
 }
 
 .cartheader{
@@ -24,4 +24,55 @@
 .rectangle{
     background: #F7FAFC;
     border-radius: 10px;
+    width: 96%;
+    height: 500px;
+    bottom: 10%;
+    left: 2%;
+    right: 2%;
+    position:relative;
+}
+.cartgrid{
+    display: flex;
+    grid-template-columns: 2fr 2fr 2fr 100px;
+    padding-top: 50px;
+    column-gap: 85px;
+    padding-left: 530px;
+    font-size: 18px;
+    font-family: 'Inter';
+    font-style: normal;
+    text-align: right;
+}
+
+.align-line{
+    display: flex;
+    grid-template-columns: 2fr 2fr 2fr;
+    column-gap:100px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.alignline{
+    display: flex;
+    grid-template-columns: 2fr 2fr 2fr;
+    column-gap:100px;
+    padding-top: 300px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 300px;
+}
+
+.cartbutton{
+    color: cadetblue;
+    position: absolute;
+    right: 150px;
+    top: 430px;
+}
+Button{
+    color: white;
+    width: 350px;
+    height: 50px;
+    font-size: 15px;
+    border-radius: 10px;
+    border-color: white;
+    background-color:#6A00BF;
 }
