@@ -150,3 +150,18 @@
   width: 50%; /* Could be more or less, depending on screen size */
   border-radius: 2rem;
 }
+
+.modal.footer {
+  padding-top: 20px;
+}
+
+.loginbtn {
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 0.5rem;
+}
+
+.loginbtn:hover {
+  cursor: pointer;
+}
