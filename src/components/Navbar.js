@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import Modal from 'react-bootstrap/Modal';
 
 
 function Navbar() {
@@ -10,6 +12,11 @@ function Navbar() {
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   const showButton = () => {
     if (window.innerWidth <= 960) {
@@ -74,20 +81,39 @@ function Navbar() {
               >
               <i class="fa-solid fa-cart-shopping fa-2x"></i>
               </Link>
-            </li>
+            </li> 
+              
 
           </ul>
-          {button && <Button buttonStyle='btn--outline'>
-          <Link to='/' className='nav-links1' onClick={closeMobileMenu}>
-          LOG IN </Link></Button>}
+          <Button variant="primary" onClick={handleShow} className="loginbtn">LOGIN</Button>
 
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Modal heading</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+              <Form>
+                
+              </Form>
+          </Modal.Body>
 
+            <Modal.Footer>
+              <Button variant="secondary" onClick={handleClose}>
+                Close
+              </Button>
+              <Button variant="primary" onClick={handleClose}>
+                Save Changes
+              </Button>
+            </Modal.Footer>
+        </Modal>
         </div>
-
       </nav>
+
   
+
     </>
   );
 }
 
 export default Navbar;
+

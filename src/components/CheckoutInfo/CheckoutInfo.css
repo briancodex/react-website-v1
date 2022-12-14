@@ -1,0 +1,34 @@
+*{
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+}
+
+.topcheckout_Pic{
+    left: 0%;
+}
+
+.checkout_pic{
+    height:100%;
+    width: 100%;
+}
+
+.rectangle{
+    background: #F7FAFC;
+    border-radius: 20px;
+    width: 96%;
+    height: 500px;
+    bottom: 10%;
+    left: 2%;
+    right: 2%;
+    position:relative;
+}
+
+.checkout_text{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    padding-top: 50px;
+    padding-left: 50px;
+    font-size: 18px;
+    font-family: 'Inter';
+    font-style: normal;
+    text-align: right;
+}
