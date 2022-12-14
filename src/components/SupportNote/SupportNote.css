@@ -1,0 +1,15 @@
+.SNPic{
+  height:100%;
+  width: 100%px;
+}
+
+/*SupportNotes*/
+.snhead{
+    text-align: center;
+    font-size:400px;
+}
+
+.snlabel{
+    text-align: center;
+  font-size: 15px;
+}
