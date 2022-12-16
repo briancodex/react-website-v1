@@ -88,22 +88,42 @@ function Navbar() {
           <Button variant="primary" onClick={handleShow} className="loginbtn">LOGIN</Button>
 
         <Modal show={show} onHide={handleClose}>
-          <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
-          </Modal.Header>
           <Modal.Body>
               <Form>
-                
+   
+                <div className="logininput">
+
+                    <div className="leftlogin">
+                      <Modal.Title><b>WELCOME BACK</b></Modal.Title>
+                      <br />
+
+                        <div className="logininputtry">
+                        <label>Email: <input type="text" name="email" /></label>
+                        <br />
+                        <label>Password: <input type="text" name="password" className="password"/></label>
+                        <br />
+
+                        </div>
+                      
+                      <input type="checkbox" value="lsRememberMe" id="rememberMe"/> <label for="rememberMe">Remember me </label>
+                      <Link to='/ForgetPassword' className='model-links' onClick={closeMobileMenu}>Forgot Password?</Link>
+                      <br></br>
+                      New to Myob?
+                      <Link to='/Create' className='model-links' onClick={closeMobileMenu}>Create Account?</Link>
+                    </div>
+
+                    <div className="rightlogin">
+                    <img src="/images/loginimage.gif" alt="" className="login_pic"></img>
+                  </div>
+
+                </div>
+
               </Form>
           </Modal.Body>
 
+
             <Modal.Footer>
-              <Button variant="secondary" onClick={handleClose}>
-                Close
-              </Button>
-              <Button variant="primary" onClick={handleClose}>
-                Save Changes
-              </Button>
+
             </Modal.Footer>
         </Modal>
         </div>

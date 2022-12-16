@@ -137,18 +137,19 @@
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+ 
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
+  margin: 5% auto; /* 15% from the top and centered */
+  
   border: 1px solid #888;
   width: 50%; /* Could be more or less, depending on screen size */
   border-radius: 2rem;
+  scroll-behavior: unset;
 }
 
 .modal.footer {
@@ -164,4 +165,25 @@
 
 .loginbtn:hover {
   cursor: pointer;
+}
+
+.logininput {
+  display: flex;
+}
+
+.login_pic {
+  width: 90%;
+  height: 100%;
+  
+  padding-left: 60px;
+  border-radius: 2rem;
+}
+
+.leftlogin{
+  padding: 20px;
+
+}
+
+.logininputtry {
+  padding-bottom: 20px;
 }
