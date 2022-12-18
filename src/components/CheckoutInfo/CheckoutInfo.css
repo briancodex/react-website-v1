@@ -11,10 +11,10 @@
     width: 100%;
 }
 
-.rectangle{
+.checkoutrectangle{
     background: #F7FAFC;
     border-radius: 20px;
-    width: 96%;
+    width: 45%;
     height: 500px;
     bottom: 10%;
     left: 2%;
@@ -23,12 +23,32 @@
 }
 
 .checkout_text{
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
+    display: inline-flex;
+    column-gap: 25px;
     padding-top: 50px;
-    padding-left: 50px;
-    font-size: 18px;
-    font-family: 'Inter';
-    font-style: normal;
-    text-align: right;
+    padding-left: 130px;
+    padding-right: 100px;
+}
+
+.checkoutheader{
+    text-align: left;
+    font-size: 20px;
+    padding-bottom: 10px;
+    padding-left: 150px;
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+}
+
+.email{
+    text-align: left;
+    font-size: 15px;
+    color: #718096;
+    padding-bottom: 30px;
+    padding-left: 150px;
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+}
+
+.text{
+    border-radius: 20px;
+    width: 10%;
+    height: 50px;
 }

@@ -52,7 +52,7 @@ export default function Cart() {
             <div className='cartbutton'>
               <Link to='/CheckoutInfo'>
                 <Button style={{ color: 'white', width:'350px',  height: '50px', borderColor: 'white', borderRadius:'10px', backgroundColor:'#6A00BF', fontSize:'17px'}}>
-                  Process to Checkout
+                  Proceed to Checkout
                 </Button>
               </Link>
             </div>

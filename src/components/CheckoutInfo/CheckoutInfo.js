@@ -16,13 +16,22 @@ export default function CheckoutInfo() {
         </section>
 
         <section className='checkoutinfo'>
-          <div className="rectangle">
+          <div className="checkoutrectangle">
             <div className='checkout_text'>
-                <p style={{color: '#3182CE'}}>Information</p>
-                <hr style={{background: 'black', color: '000000', borderColor: '000000', height: '1px', width:"2%", }}/>
+                <span style={{color: '#3182CE'}}>Information</span>
+                <hr style={{background:'#3182CE', color: '#3182CE', borderColor: '#3182CE', height: '1%', width:"30%", }}/>
                 <i class="fa-solid fa-circle-check" style={{color: 'black'}}></i>
+                <hr style={{background:'#3182CE', color: '#3182CE', borderColor: '#3182CE', height: '1%', width:"30%", }}/>
+                <span style={{color: 'grey'}}>Shipping</span>
+                <hr style={{background:'#3182CE', color: '#3182CE', borderColor: '#3182CE', height: '1%', width:"30%", }}/>
+                <i class="fa-solid fa-circle-check" style={{color: 'black'}}></i>
+                <hr style={{background:'#3182CE', color: '#3182CE', borderColor: '#3182CE', height: '1%', width:"30%", }}/>
+                <span style={{color: 'grey'}}>Payment</span>
             </div>
-            
+
+            <div className="checkoutheader"><b>Account details</b></div>
+            <div className="email">Email Address</div>
+            <div><input type="textbox" className="text"></input></div> 
 
           </div>
         </section>

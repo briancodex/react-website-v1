@@ -33,7 +33,6 @@
 }
 .cartgrid{
     display: flex;
-    grid-template-columns: 2fr 2fr 2fr;
     padding-top: 50px;
     column-gap: 85px;
     padding-left: 530px;
@@ -56,7 +55,6 @@
 
 .align-line{
     display: flex;
-    grid-template-columns: 2fr 2fr 2fr;
     column-gap:100px;
     padding-left: 100px;
     padding-right: 100px;
@@ -64,7 +62,6 @@
 
 .alignline{
     display: flex;
-    grid-template-columns: 2fr 2fr 2fr;
     column-gap:100px;
     padding-top: 100px;
     padding-left: 100px;
