@@ -10,7 +10,7 @@ export default function Blog() {
             {/* Section for flex display picture and paragraph */}
       
       <section className='blogPic'>
-          <div className="top_Pic">
+          <div className="blog_top_Pic">
             <img src="/images/blog pic.png" alt="" className="blog_pic"></img>
           </div>
       </section>
@@ -20,42 +20,42 @@ export default function Blog() {
       </section>
 
       {/*adding in the blog link*/}
-      <section className='shouldI'>
+      <section className='blog_shouldI'>
 
-        <div className='rectangle'>
-          <img src='/images/update1.jpg' alt='' className="accounting"></img>
-          <div className="abss">
+        <div className='blog_rectangle'>
+          <img src='/images/update1.jpg' alt='' className="blog_accounting"></img>
+          <div className="blog_abss">
             <b>Should I upgrade by ABSS (fka MYOB) Accounting Software?</b>
           </div>
-          <div className="read-morelink">
+          <div className="blog_read-morelink">
             <a href='https://myobsingapore.com/blog.php?id=20'><u>Read More {'>'} </u></a>
           </div>
         </div>
 
       </section>
       
-      <section className='xero'>
+      <section className='blog_xero'>
 
-        <div className='rectangle'>
-          <img src='/images/Xero1.jpg' alt='' className="xerovs"></img>
-          <div className="best">
+        <div className='blog_rectangle'>
+          <img src='/images/Xero1.jpg' alt='' className="blog_xerovs"></img>
+          <div className="blog_best">
             <b>Xero vs. Quickbooks vs. MYOB - Which is the best accounting software?</b>
           </div>
-          <div className="readmore">
+          <div className="blog_readmore">
             <a href='https://myobsingapore.com/blog.php?id=19'><u>Read More {'>'} </u></a>
           </div>
         </div>
 
       </section>
 
-      <section className='psg'>
+      <section className='blog_psg'>
 
-        <div className='rectangle'>
-          <img src='/images/psg2.png' alt='' className="psgpic"></img>
-          <div className="productivity">
+        <div className='blog_rectangle'>
+          <img src='/images/psg2.png' alt='' className="blog_psgpic"></img>
+          <div className="blog_productivity">
             <b>Productivity Solutions Grant (PSG) for ABSS Accounting Software - FKA MYOB</b>
           </div>
-          <div className="readmore-link">
+          <div className="blog_readmore-link">
             <Link to='/Psggrant'><u>Read More {'>'} </u></Link>
           </div>
         </div>

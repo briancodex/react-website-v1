@@ -9,6 +9,7 @@
 .cart_pic{
     height:100%;
     width: 100%;
+
   }
 .carticon{
     position: relative;
@@ -18,15 +19,19 @@
 .cartheader{
     text-align:center;
     font-size: 45px;
-    padding-top: 10px;
 }
 
-.rectangle{
+.cartinfo{
+    position: relative;
+    height: 600px;
+}
+
+.cart_rectangle{
     background: #F7FAFC;
     border-radius: 20px;
     width: 96%;
     height: 500px;
-    bottom: 10%;
+    top: 40px;
     left: 2%;
     right: 2%;
     position:relative;
@@ -42,25 +47,25 @@
     text-align: right;
 }
 
-.text{
+.cart_text{
     position: relative;
     padding-left: 1270px;
 }
 
-.total{
+.cart_total{
     padding-top: 30px;
     padding-left: 1270px;
     font-size: 18px;
 }
 
-.align-line{
+.cart_align-line{
     display: flex;
     column-gap:100px;
     padding-left: 100px;
     padding-right: 100px;
 }
 
-.alignline{
+.cart_alignline{
     display: flex;
     column-gap:100px;
     padding-top: 100px;

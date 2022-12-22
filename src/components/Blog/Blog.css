@@ -2,13 +2,13 @@
     font-family: 'IBM Plex Sans Devanagari', sans-serif;
 }
 
-.rectangle{
+.blog_rectangle{
 
     background-color: #f3f0f0;
 }
 
 /*Top Banner*/
-.top_Pic{
+.blog_top_Pic{
     left: 0%;
 }
 
@@ -23,68 +23,68 @@
     padding-top: 40px;
 }
 
-.shouldI{
+.blog_shouldI{
     padding-top: 50px;
 }
 
-.accounting{
+.blog_accounting{
     height: 100%;
     width: 100%;
 }
 
-.abss{
+.blog_abss{
     text-align:left;
     font-size: 45px;
     padding-left: 20px;
 }
 
-.read-morelink{
+.blog_read-morelink{
     color: #86B8F9;
     text-align:right;
     font-size: 20px;
     padding-right: 30px;
 }
 
-.xero{
+.blog_xero{
 
     padding-top: 200px;
 }
 
-.xerovs{
+.blog_xerovs{
     height: 100%;
     width: 100%;
 }
 
-.best{
+.blog_best{
     text-align:left;
     font-size: 45px;
     padding-left: 20px;
 }
 
-.readmore{
+.blog_readmore{
     color: #86B8F9;
     text-align:right;
     font-size: 20px;
     padding-right: 30px;
 }
 
-.psg{
+.blog_psg{
     padding-top: 200px;
     padding-bottom: 100px;
 }
 
-.psgpic{
+.blog_psgpic{
     height:100%;
     width: 100%;
 }
 
-.productivity{
+.blog_productivity{
     text-align:left;
     font-size: 45px;
     padding-left: 20px;
 }
 
-.readmore-link{
+.blog_readmore-link{
     color: #86B8F9;
     text-align:right;
     font-size: 20px;
