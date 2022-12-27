@@ -1,3 +1,7 @@
+* {
+  font-family: 'IBM Plex Sans Devanagari', sans-serif;
+}
+
 .navbar {
   background: white;
   height: 70px;
@@ -133,22 +137,22 @@
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  left: 0;
+  left: 0px;
   top: 0;
+  
   width: 100%; /* Full width */
   height: 100%; /* Full height */
- 
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
 .modal-content {
-  background-color: #fefefe;
-  margin: 5% auto; /* 15% from the top and centered */
   
+  background-color: #fefefe;
+  margin: 4% auto; /* 15% from the top and centered */
   border: 1px solid #888;
-  width: 50%; /* Could be more or less, depending on screen size */
-  border-radius: 2rem;
+  width: 65%; /* Could be more or less, depending on screen size */
+ 
   scroll-behavior: unset;
 }
 
@@ -160,7 +164,10 @@
   padding: 10px;
   padding-left: 20px;
   padding-right: 20px;
-  border-radius: 0.5rem;
+  border-color: black;
+  border-radius: 2rem;
+  background-color: white;
+ 
 }
 
 .loginbtn:hover {
@@ -169,21 +176,228 @@
 
 .logininput {
   display: flex;
+  padding-right: 150px;
 }
 
 .login_pic {
-  width: 90%;
+  justify-content: space-between;
+  width: 150%;
   height: 100%;
-  
-  padding-left: 60px;
-  border-radius: 2rem;
+  margin-right: 300px;
 }
 
 .leftlogin{
   padding: 20px;
+  padding-bottom: 70px;
 
 }
 
 .logininputtry {
-  padding-bottom: 20px;
+  
+  padding-left: 120px;
+  padding-right: 120px;
+  
 }
+
+.logininput1 {
+  width: 90%;
+  height: 30px;
+  margin-bottom: 20px;
+  border-radius: 0.5rem;
+  box-shadow: inset 0 0 3px grey;
+  background-color: #F6F6F6;
+  border-color: white;
+}
+
+.fa-square-facebook{
+  color: blue;
+}
+
+.fa-linkedin {
+  color: rgb(23, 23, 197);
+}
+
+.login_title{
+ text-align: center;
+}
+
+.title {
+  font-size: 50px;
+}
+
+.model-links {
+  text-decoration: none;
+}
+
+.submitting {
+  padding-left: 100px;
+}
+
+.rmbmeandforget {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  margin-left: 5%;
+  
+  
+}
+
+.submit {
+  width: 65%;
+  height: 30px;
+  border-radius: 0.5rem;
+  color: white;
+  background-color: rgb(129, 14, 129);
+  border-color: white;
+  margin-bottom: 20px;
+  font-size: 15px;
+  margin-left: 5%;
+}
+
+.cracc {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-left: 50px;
+}
+
+.login_pic1 {
+  height: 12%;
+  width: 24%;
+ 
+
+}
+
+
+.forgetpasswordpage {
+  display: flex;
+  justify-content: space-between;
+}
+
+.forgettitle {
+  margin-top: 15%;
+  margin-left: 20%;
+  
+}
+.forgetpara {
+  margin-left: 20%;
+  margin-right: 20%;
+  font-size: 14px;
+}
+
+.forgetpasswordemail {
+  margin-left: 20%;
+  margin-right: 20%;
+  border-radius: 0.5rem;
+  height: 35px;
+  width: 20rem;
+  border-color: white;
+  box-shadow: inset 0 0 2px grey;
+  background-color: #F6F6F6;
+}
+
+.forgetemail {
+  margin-left: 20%;
+  
+}
+
+.submit1 {
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: purple;
+  border-color: white;
+  color:white;
+  border-radius: 0.5rem;
+  width: 20.5rem;
+  height: 35px;
+  font-size: 15px;
+}
+
+.forgetpassword-link {
+  margin-left: 42%;
+  
+}
+
+
+.createaccountpage {
+  display:flex;
+ 
+}
+
+.login_pic3 {
+  height: 10%;
+  width: 21%;
+}
+
+.createaccountheader {
+  text-align: center;
+  font-size: 50px;
+  line-height: 0px
+}
+.createaccountpara {
+  text-align: center;
+}
+
+.flname {
+  display: flex;
+  justify-content: space-between;
+  
+  font-size: 14px;
+  
+}
+
+.ciname {
+  font-size: 14px;
+}
+
+.flinput {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2%;
+  
+
+ 
+
+  
+}
+
+.createaccountinput {
+  margin-left: 10%;
+  margin-right: 10%;
+  
+  
+}
+
+.cinput {
+  width: 90%;
+  height: 25px;
+  border-radius: 0.5rem;
+  margin-bottom: 2%;
+  box-shadow: inset 0 0 3px grey;
+  background-color: #F6F6F6;
+  border-color: white;
+  
+}
+
+.clinput {
+  width: 40%;
+  height: 25px;
+  border-radius: 0.5rem ;
+  background-color: #F6F6F6;
+  border-color: white;
+  box-shadow: inset 0 0 3px grey;
+}
+
+.submitcreate{
+  margin-top: 5%;
+  width: 75%;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 30px;
+  border-radius: 0.5rem;
+  color: white;
+  background-color: purple;
+  border-color: white;
+
+}
+

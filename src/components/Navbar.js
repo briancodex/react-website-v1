@@ -16,7 +16,31 @@ function Navbar() {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleClose1 = () => setShow1(false);
+  const handleClose2 = () => setShow2(false);
+
+  const handleShowLogin = () => {
+    setShow(true);
+    setShow1(false);
+    setShow2(false);
+  }
+  const handleShowForgetPassword = () => {
+    setShow1(true);
+    setShow(false);
+    setShow2(false);
+  }
+  const handleShowRegister = () => {
+    setShow2(true);
+    setShow1(false);
+    setShow(false);
+  }
+
+
+
+  const [show1, setShow1] = useState(false);
+  const [show2, setShow2] = useState(false);
+  
+
 
   const showButton = () => {
     if (window.innerWidth <= 960) {
@@ -85,46 +109,130 @@ function Navbar() {
               
 
           </ul>
-          <Button variant="primary" onClick={handleShow} className="loginbtn">LOGIN</Button>
+          <Button variant="primary" onClick={handleShowLogin} className="loginbtn">LOGIN  </Button>
 
-        <Modal show={show} onHide={handleClose}>
+        <Modal show={show} onHide={handleClose} className="loginmodel">
           <Modal.Body>
               <Form>
-   
                 <div className="logininput">
-
                     <div className="leftlogin">
-                      <Modal.Title><b>WELCOME BACK</b></Modal.Title>
+                      <img src="/images/MYOB_Logo.png" alt="" className="login_pic1"></img>
+                      <div className="login_title">
+                      
+                        <Modal.Title><b className="title">WELCOME BACK</b></Modal.Title>
+                        <div>Login using social networks</div>
+                        <i class="fa-brands fa-google fa-3x"></i>
+                        <i class="fa-brands fa-square-facebook fa-3x"></i>
+                        <i class="fa-brands fa-linkedin fa-3x"></i>
+                        <div>------------------------------------or------------------------------------</div>
+                      </div>
                       <br />
-
+ 
                         <div className="logininputtry">
-                        <label>Email: <input type="text" name="email" /></label>
-                        <br />
-                        <label>Password: <input type="text" name="password" className="password"/></label>
-                        <br />
+                      
+                          <label><b>Email Address: </b><input type="text" name="email" className="logininput1" /></label>
+    
+                          <label><b>Password: </b><input type="text" name="password" className="logininput1"/></label>
+                         
 
                         </div>
-                      
-                      <input type="checkbox" value="lsRememberMe" id="rememberMe"/> <label for="rememberMe">Remember me </label>
-                      <Link to='/ForgetPassword' className='model-links' onClick={closeMobileMenu}>Forgot Password?</Link>
-                      <br></br>
-                      New to Myob?
-                      <Link to='/Create' className='model-links' onClick={closeMobileMenu}>Create Account?</Link>
+                      <div className="submitting">
+
+                        <div className="rmbmeandforget">
+                        <label for="rememberMe"><input type="checkbox" value="lsRememberMe" id="rememberMe"/>Remember me </label>
+                        <Link to='/' className='model-links' onClick={handleShowForgetPassword}>Forgot Password?</Link>
+                        </div>
+
+                        <br/>
+                        <b><input type="submit" value="Login" className="submit"/></b>
+                        <br />  
+                        <div className="cracc">
+                        New to Myob? 
+
+                        <Link to='/' className='model-linkss' onClick={handleShowRegister}>Create Account</Link> 
+                        </div>
+                      </div>
                     </div>
 
                     <div className="rightlogin">
+                  
                     <img src="/images/loginimage.gif" alt="" className="login_pic"></img>
                   </div>
-
                 </div>
-
               </Form>
           </Modal.Body>
+        </Modal>
+        
+       <Modal show={show1} onHide={handleClose1} className="forgetpassword">
+          <Modal.Body>
+            <div className="forgetpasswordpage">
+                <div className="forgetpassword_leftside">
+                <img src="/images/MYOB_Logo.png" alt="" className="login_pic1"></img>
+                    <h2 className="forgettitle">Forget<br />
+                        Password?</h2>
+                    <p className="forgetpara">Don't worry! It happens. Please enter the email<br/> address and we will send a password reset link. </p>
+                    <h4 className="forgetemail">Enter the email address</h4>
+                    <label><input type="text" name="email" className="forgetpasswordemail" /></label>
+                    <br/>
+                    <b><input type="submit" value="Continue" className="submit1"/></b>
+                    <Link to='/' className='forgetpassword-link' onClick={handleShowLogin}>Back to Login</Link>
 
+                </div>
+                <div className="forgetpassword_rightside">
+                  <img src="/images/forgetpasswordimage.gif" alt="" className="forgetpasswordgif"></img>
+                </div>
+            </div>
+          </Modal.Body>
+        </Modal>
 
-            <Modal.Footer>
+        <Modal show={show2} onHide={handleClose2} className="createaccount">
+          <Modal.Body>
+              <div className="createaccountpage">
+                <div className="createaccount_leftside">
+                  <img src="/images/MYOB_Logo.png" alt="" className="login_pic3"></img>
+                  <h2 className="createaccountheader">Create Account</h2>
+                  <p className="createaccountpara">Be part of The MYOB Family</p>
+                  <div className="createaccountinput">
 
-            </Modal.Footer>
+                    <div className="flname">
+                      <label>First Name:</label>
+                      <label>Last Name:</label>
+                      <br/>
+                    </div>
+
+                    <div className="flinput">
+                      <input type="text" name="firstname"  className="clinput"></input>
+                      <input type="text" name="lastname" className="clinput" ></input> 
+                      <br/>
+                    </div>
+
+                    <label className="ciname">Email Address:</label><br/>
+                    <input type="email" name="email"  className="cinput"></input>
+                    <br/>
+
+                    <label className="ciname">Phone Number:</label><br/>
+                    <input type="number" name="number" className="cinput"></input>
+                    <br/>
+
+                    <label className="ciname">Password:</label><br/>
+                    <input type="text" name="password" className="cinput"></input>
+                    <br/>
+
+                    <label className="ciname">Confirm Password:</label><br/>
+                    <input type="text" name="cpassword" className="cinput"></input>
+                    <br/>
+
+                    <input type="checkbox" value="agree" id="agree"/>I agree to MYOB's <u>Terms of Service & Private Policy</u>
+                    <br/>
+
+                    <b><input type="submit" value="Sign Up" className="submitcreate" onClick={handleShowLogin}/></b>
+                  </div>
+                </div>
+                <div className="createaccount_rightside">
+                  <img src="/images/loginimage.gif" alt="" className="loginimageca"></img>
+                </div>
+              </div>
+          </Modal.Body>
         </Modal>
         </div>
       </nav>
