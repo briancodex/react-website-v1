@@ -1,0 +1,92 @@
+.row{
+    padding-top: 5rem;
+}
+.product{
+    overflow: hidden;
+    width: 326px;
+    height: 909px;
+    background-color: #E8E8E8;
+    border: 3px solid white;
+    box-shadow: 0 3px 24px rgb(0 0 0 / 4%);
+    border-radius: 20px;
+}
+.product-thumb{
+    margin-top: 200px;
+    font-size: 18px;
+
+}
+.product-description .fa-solid{
+    color: green;
+}
+.product-description{
+    color:gray;
+}
+i {
+    margin-left: 8px;
+  }
+
+.title h1{
+    margin-top: 30px;
+    margin-left: 15px;
+    font-size: 35px;
+    font-family: sans-serif;
+    color: black;
+    font-weight: normal;
+}
+.title h2{
+    font-size: 35px;
+    font-family: sans-serif;
+    color: black;
+    margin-left: 15px;
+    margin-top: -25px;
+}
+.title-description{
+    align-items: center;
+    font-size: 20px;
+    margin-left: 15px;
+    color: gray;
+
+}
+.price{
+    margin-top: 30px;
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.footer{
+    margin-top: 20px;
+
+}
+.btn{
+    display: flex;
+    flex-direction: column;
+ 
+}
+.btn-custom{
+    cursor: pointer;
+    text-align: center;
+    background-color: purple;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: sans-serif;
+    padding: 15px 25px;
+    transition: 0.3s;
+    text-transform: uppercase;
+    margin-left: 25px;
+    text-decoration: none;
+}
+.btn .primary{
+    background-color: #9812D7;
+    color: white;
+    border-radius: 30px;
+}
+.btn .primary:hover{
+    background-color: black;
+}
+.btn .secondary{
+    background-color: lightgray;
+    color: black;
+    border-radius: 30px;
+    margin-top: 5px;
+}

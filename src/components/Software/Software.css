@@ -1,0 +1,74 @@
+.Software {
+    font-family: sans-serif;
+    display: flex;
+    align-items:baseline;
+    justify-content: center;
+    height: 100vh;
+  }
+
+.psgtopPic{
+  width: 100%;
+}
+.bizsupport{
+  width: 100%;
+  padding-top: 3px;
+  padding-bottom: 10px;
+
+}
+.comparisonheader{
+  font-size: 50px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.keyfeat{
+  width: 50rem;
+}
+.softwareimages{
+  width: 44.5rem;
+  height: 46.05rem;
+}
+.managingbooks{
+  width: 100%;
+  padding-top: 3px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.securingbooks{
+  width:100%;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.generatingreports{
+  width:100%;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.managinginventory{
+  width:100%;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.processingsales{
+  width:100%;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.managinggst{
+  width:100%;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
