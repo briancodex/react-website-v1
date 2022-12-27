@@ -13,7 +13,7 @@
 }
 .checkoutinfo{
     position: relative;
-    height: 1000px;
+    height: 900px;
 }
 
 .checkoutrectangle{
@@ -58,7 +58,7 @@
 .checkout_textb{
     margin-left: 150px;
     width: 55%;
-    height: 7%;
+    height: 50px;
     padding-top: 5px;
     background: #E2E8F0;
     border-radius: 10px;
