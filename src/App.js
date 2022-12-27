@@ -12,6 +12,7 @@ import SupportVideo from './components/SupportVideo/SupportVideo';
 import SupportNote from './components/SupportNote/SupportNote';
 import Cart from './components/Cart/Cart';
 import CheckoutInfo from './components/CheckoutInfo/CheckoutInfo';
+import CheckoutShipping from './components/CheckoutShipping/CheckoutShipping'
 import Psggrant from './components/Psggrant/Psggrant';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route path='/SupportVideo' component={SupportVideo} />
           <Route path='/Cart' component={Cart}/>
           <Route path='/CheckoutInfo' component={CheckoutInfo}/>
+          <Route path='/CheckoutShipping' component={CheckoutShipping}/>
           <Route path='/Psggrant' component={Psggrant} />
         </Switch>
         <Footer/>

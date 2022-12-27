@@ -31,8 +31,10 @@ export default function CheckoutInfo() {
             </div>
 
             <div className="checkoutheader"><b>Account details</b></div>
-            <div className="checkout_email">Email Address</div>
-            <input className="checkout_textb" type="textbox" placeholder='example@gmail.com'></input>
+            <div>
+              <div className="checkout_email">Email Address</div>
+              <input className="checkout_textb" type="textbox" placeholder='example@gmail.com'></input>
+            </div>
 
             <div className='checkout_cbox'>
               <label className='container'><input type="checkbox" /><b>I have read, understood and agree to the <u>private policy*</u></b></label>
@@ -49,7 +51,7 @@ export default function CheckoutInfo() {
                 </span>
               </Link>
               
-              <Link to='/'>
+              <Link to='/CheckoutShipping'>
                 <Button style={{ color: 'white', width:'180px',  height: '50px', borderColor: '#3182CE', borderRadius:'8px', backgroundColor:'#3182CE', fontSize:'17px'}}>
                   Shipping details
                 </Button>
