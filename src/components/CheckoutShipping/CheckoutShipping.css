@@ -187,11 +187,13 @@
 }
 
 .checkoutshipping_button{
+    display: flex;
     padding-top: 15px;
     padding-left: 360px;
 }
 .checkoutshipping_cancel_button{
     display: inline-flex;
+    padding-top: 15px;
 }
 
 .checkout_shipping_rectangle{
@@ -230,4 +232,9 @@
     padding-top: 20px;
     padding-left: 90px;
     font-family: 'IBM Plex Sans Devanagari', sans-serif;
+}
+
+.p {
+    margin: auto;
+    text-align: center;
 }

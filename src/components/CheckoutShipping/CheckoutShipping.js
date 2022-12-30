@@ -74,7 +74,7 @@ export default function CheckoutShipping() {
               
               <Link to='/'>
                 <Button style={{ color: 'white', width:'180px',  height: '50px', borderColor: '#3182CE', borderRadius:'8px', backgroundColor:'#3182CE', fontSize:'17px'}}>
-                  Payment
+                  <div className="p">Payment</div>
                 </Button>
               </Link>
             </div>

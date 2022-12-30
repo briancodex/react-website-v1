@@ -32,10 +32,10 @@ const Footer = () => {
         </div>
 
         <div className="FIL">
-            <i class="fa-brands fa-square-facebook fa-2x">   </i>
-           <i class="fa-brands fa-square-instagram fa-2x">   </i>
-           <i class="fa-brands fa-linkedin fa-2x">   </i>
-           <i class="fa-brands fa-square-youtube fa-2x">    </i>
+            <i class="fa-brands fa-square-facebook fa-2x" style = {{color: "white"}}>   </i>
+           <i class="fa-brands fa-square-instagram fa-2x" style = {{color: "white"}}>   </i>
+           <i class="fa-brands fa-linkedin fa-2x" style = {{color: "white"}}>   </i>
+           <i class="fa-brands fa-square-youtube fa-2x" style = {{color: "white"}}>    </i>
         </div>
 
     </div>

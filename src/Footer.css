@@ -6,6 +6,8 @@
     color: white;
     padding-top: 20px;
     column-gap: 800px;
+    margin-left: 6%;
+    margin-right: 5%;
     
 }
 
@@ -53,14 +55,10 @@
 
 .socialIcon1 {
     display: flex;
-    column-gap: 640px;
+    justify-content: space-between;
     padding-top: 10px;
-}
-
-.FIL {
-    color: white;
-    
-    
+    margin-left: 5%;
+    margin-right: 8%;
 }
 
 .fa-brands {

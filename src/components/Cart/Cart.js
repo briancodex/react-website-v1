@@ -50,8 +50,8 @@ export default function Cart() {
             <hr style={{ background: 'grey', color: '000000', borderColor: '000000', height: '2px', width:"40%", }}/>
             <div className='cartbutton'>
               <Link to='/CheckoutInfo'>
-                <Button style={{ color: 'white', width:'350px',  height: '50px', borderColor: 'white', borderRadius:'10px', backgroundColor:'#6A00BF', fontSize:'17px'}}>
-                  Proceed to Checkout
+                <Button style={{ color: 'white', width: '350px',  height: '50px', borderColor: 'white', borderRadius:'10px', backgroundColor:'#6A00BF', fontSize:'20px'}}>
+                  <div className="t">Proceed to Checkout</div>
                 </Button>
               </Link>
             </div>
