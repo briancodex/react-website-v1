@@ -1,15 +1,93 @@
 .SNPic{
-  height:100%;
-  width: 100%px;
+  height:700px;
+  width: 100%;
+  background-image: ("SupportNote.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 /*SupportNotes*/
 .snhead{
     text-align: center;
-    font-size:400px;
+    font-size:35px;
+    margin-bottom : -45px;
 }
 
 .snlabel{
     text-align: center;
-  font-size: 15px;
+  font-size: 30px;
+  font-stretch: expanded;
+}
+
+body.active-General{
+  overflow-y: hidden;
+
+}
+
+.supportBtn{
+
+  padding: 0px 1px;
+    padding-left: 5px;
+    margin: 100px auto 0;
+    font-size: 18px;
+}
+
+.supportModal .supportModalOverlay{
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+.supportModalOverlay{
+padding: 10px 20px;
+display: block;
+margin: 100px auto 0;
+font-size: 18px;
+}
+
+.supportModalContent{
+ position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  background: white;
+  padding: 14px 28px;
+  border-radius: 3px;
+  max-width: 600px;
+  min-width: 300px;
+}
+
+.supportModalContent .titleImage{
+  text-align: center;
+}
+
+.close-btn{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 7px;
+}
+
+.L{
+  height:50%;
+  width:15%;
+  border: none;
+}
+
+.Left{
+  height:350px;
+  width:300x;
+}
+
+
+.links{
+  padding-top: 40px;
+  padding-left: 100px;
+  
 }
