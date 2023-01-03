@@ -51,9 +51,9 @@ export default function CheckoutInfo() {
                 </span>
               </Link>
               
-              <Link to='/CheckoutShipping'>
+              <Link style={{textDecoration: 'none'}} to='/CheckoutShipping'>
                 <Button style={{ color: 'white', width:'180px',  height: '50px', borderColor: '#3182CE', borderRadius:'8px', backgroundColor:'#3182CE', fontSize:'17px'}}>
-                  Shipping details
+                  <div className="s">Shipping details</div>
                 </Button>
               </Link>
             </div>

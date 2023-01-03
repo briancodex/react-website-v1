@@ -2,10 +2,6 @@
     font-family: 'IBM Plex Sans Devanagari', sans-serif;
 }
 
-.topcheckout_Pic{
-    left: 0%;
-}
-
 .checkout_pic{
     height:100%;
     width: 100%;
@@ -83,11 +79,13 @@
 }
 
 .checkout_button{
+    display: flex;
     padding-top: 30px;
-    padding-left: 400px;
+    padding-left: 350px;
 }
 .checkout_cancel_button{
     display: inline-flex;
+    padding-top: 15px;
 }
 
 .checkout_rectangle{
@@ -126,4 +124,9 @@
     padding-top: 20px;
     padding-left: 90px;
     font-family: 'IBM Plex Sans Devanagari', sans-serif;
+}
+
+.s {
+    margin: auto;
+    text-align: center;
 }
