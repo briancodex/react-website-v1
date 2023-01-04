@@ -31,6 +31,8 @@ export default function CheckoutShipping() {
                 <span style={{color: 'grey'}}>Payment</span>
             </div>
 
+            <div className="checkoutshipping_header"><b>Shipping details</b></div>
+
             <div className="checkoutshipping_country">
               <div className="checkout_shipping_country_name">Country of Residence</div>
               <input className="checkout_shipping_textb" type="textbox" placeholder='Singapore' readOnly={true}></input>
@@ -72,9 +74,9 @@ export default function CheckoutShipping() {
                 </span>
               </Link>
               
-              <Link to='/'>
+              <Link style={{textDecoration: 'none'}} to='/CheckoutPayment'>
                 <Button style={{ color: 'white', width:'180px',  height: '50px', borderColor: '#3182CE', borderRadius:'8px', backgroundColor:'#3182CE', fontSize:'17px'}}>
-                  <div className="p">Payment</div>
+                  <div className="co">Complete Order</div>
                 </Button>
               </Link>
             </div>
