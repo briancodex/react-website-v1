@@ -1,12 +1,39 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import './Navbar.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
+import { useAuthState } from "react-firebase-hooks/auth";
+import { Link, useHistory } from "react-router-dom";
+import {
+  auth,
+  registerWithEmailAndPassword,
+  signInWithGoogle,
+} from "./firebase"
 
 
 function Navbar() {
+  
+  const [email, setEmail] = useState(null);
+  const [password, setPassword] = useState("");
+  const [confirmpass, setConfirmpass] = useState("");
+  const [firstname, setFirstName] = useState("");
+  const [lastname, setLastName] = useState("");
+  const [phone, setPhone] = useState("");
+
+  const [user, loading, error] = useAuthState(auth);
+  const history = useHistory();
+
+  const register = () => {
+    if (!firstname) alert("Please enter name");
+    if (password === confirmpass) {
+      registerWithEmailAndPassword(firstname, email, password);
+      alert("Account successfully created")
+    }
+    else 
+    alert("Password does not match")
+  };
+
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
@@ -35,13 +62,8 @@ function Navbar() {
     setShow(false);
   }
 
-
-
   const [show1, setShow1] = useState(false);
   const [show2, setShow2] = useState(false);
-  
-
-
   const showButton = () => {
     if (window.innerWidth <= 960) {
       setButton(false);
@@ -121,7 +143,7 @@ function Navbar() {
                       
                         <Modal.Title><b className="title">WELCOME BACK</b></Modal.Title>
                         <div>Login using social networks</div>
-                        <i class="fa-brands fa-google fa-3x"></i>
+                        <i class="fa-brands fa-google fa-3x" onClick={signInWithGoogle}></i>
                         <i class="fa-brands fa-square-facebook fa-3x"></i>
                         <i class="fa-brands fa-linkedin fa-3x"></i>
                         <div>------------------------------------or------------------------------------</div>
@@ -201,31 +223,31 @@ function Navbar() {
                     </div>
 
                     <div className="flinput">
-                      <input type="text" name="firstname"  className="clinput"></input>
-                      <input type="text" name="lastname" className="clinput" ></input> 
+                      <input type="text"  value={firstname} onChange={(e) => setFirstName(e.target.value)} className="clinput"></input>
+                      <input type="text" value={lastname} onChange={(e) => setLastName(e.targetvalue)} className="clinput" ></input> 
                       <br/>
                     </div>
 
                     <label className="ciname">Email Address:</label><br/>
-                    <input type="email" name="email"  className="cinput"></input>
+                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="cinput"></input>
                     <br/>
 
                     <label className="ciname">Phone Number:</label><br/>
-                    <input type="number" name="number" className="cinput"></input>
+                    <input type="number" value={phone} onChange={(e) => setPhone(e.target.value)} className="cinput"></input>
                     <br/>
 
                     <label className="ciname">Password:</label><br/>
-                    <input type="text" name="password" className="cinput"></input>
+                    <input type="text" value={password} onChange={(e) => setPassword(e.target.value)} className="cinput"></input>
                     <br/>
 
                     <label className="ciname">Confirm Password:</label><br/>
-                    <input type="text" name="cpassword" className="cinput"></input>
+                    <input type="text" value={confirmpass} onChange={(e) => setConfirmpass(e.target.value)} className="cinput"></input>
                     <br/>
 
                     <input type="checkbox" value="agree" id="agree"/>I agree to MYOB's <u>Terms of Service & Private Policy</u>
                     <br/>
 
-                    <b><input type="submit" value="Sign Up" className="submitcreate" onClick={handleShowLogin}/></b>
+                    <b><input type="submit" value="Sign Up" className="submitcreate" onClick={register}/></b>
                   </div>
                 </div>
                 <div className="createaccount_rightside">
