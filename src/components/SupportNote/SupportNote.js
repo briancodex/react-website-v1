@@ -75,20 +75,21 @@ export default function General() {
 
       <h2 className='titleImage'>General Support Notes</h2>
 
- <section className="gif">
-      <div class="sPic">
+ 
+        
+      <tr>
+     <th> <div class="sPic">
           <img src ="/images/SN.gif" alt="" className="Left"></img>
-        </div>
-        
-      <div className="links">
+        </div> </th>
+     <th> <div className="links">
         <div class="linkSN">
-      <a href=''>https://myobsingapore.com/snote/how-to-use-job-costing.pdf </a>
-      <a href=''>https://myobsingapore.com/snote/how-to-delete-a-job-code.pdf</a>
+          <div class="link1">
+      <a href='https://myobsingapore.com/snote/how-to-use-job-costing.pdf '>How to use job costing</a>
       </div>
+      <a href='https://myobsingapore.com/snote/how-to-delete-a-job-code.pdf'>How to delete a job code</a>
       </div>
-      </section>
-        
-      
+</div> </th>
+</tr>
       
      
     <button

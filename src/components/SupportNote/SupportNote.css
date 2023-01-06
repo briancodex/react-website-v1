@@ -86,8 +86,9 @@ font-size: 18px;
 }
 
 
-.links{
-  padding-top: 40px;
+.linkSN{
+  padding: 30px;
   padding-left: 100px;
+  text-align: center;
   
 }
