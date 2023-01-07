@@ -14,7 +14,7 @@
   }
   
   .top_part {
-    font-size: 35px;
+    font-size: 25px;
     margin-right: 5%;
     padding-top: 20px;
     text-shadow: 2px 3px 3px rgba(46,91,173,0.6);
@@ -23,16 +23,15 @@
    
   
   .bottom_part {
-    font-size: 25px;
+    font-size: 23px;
     margin-left: 0%;
     margin-right: 30%;
   }
   
   .try_button {
-    font-size: 25px;
+    font-size: 20px;
     padding: 0.6rem;
-    height: 55px;
-    width: 45%;
+    
     border-radius: 1.5rem;
     background-color: #9812D7;
     font-family: 'IBM Plex Sans Devanagari', sans-serif;
@@ -77,18 +76,17 @@
 }
 
 .right1{
-    padding-top: 50px;
-    font-size: 30px;
+    font-size: 25px;
     padding-left: 90px;
     padding-right: 100px;
-    padding-top: 220px;
+    padding-top: 200px;
     text-align: left;
 
 }
 
 .desp {
     padding-top: 40px;
-    font-size: 25px;
+    font-size: 20px;
     text-align: left;
     position:relative;
 }
@@ -98,15 +96,15 @@
 }
 
 .picture14 {
-    height: 700px;
-    width: 800px;
+    height: 600px;
+    width: 700px;
     position: absolute;
     padding-bottom: 100px;
 }
 
 .picture15{
-    width: 700px;
-    height: 525px;
+    width: 600px;
+    height: 425px;
     position:relative;
     padding-left: 500px;
     margin-left: 150px;
@@ -117,7 +115,7 @@
 /* icon css */
 .H4{
     text-align:center;
-    font-size: 35px;
+    font-size: 30px;
     padding-top: 50px;
     background-color: white;
 }
@@ -129,8 +127,8 @@
     padding-top: 20px;
     column-gap:150px;
     row-gap: 50px;
-    padding-left: 300px;
-    padding-right: 300px;
+    padding-left: 200px;
+    padding-right: 200px;
     padding-bottom: 150px;
     background-color: white;
 }
@@ -158,13 +156,13 @@
 
 .ity {
     height: 100%;
-    width: 550px;
+   
 }
 
 .para {
-    font-size: 25px;
+    font-size: 20px;
     padding-top: 50px;
-    padding-left:200px;
+    padding-left: 100px;
     
 
 }
