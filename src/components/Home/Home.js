@@ -55,7 +55,7 @@ function Home() {
             </section>
 
             {/* Section for icons */}
-            <section className="icons">
+            <section class="icons">
             <div className="H4"><b>Less Paperwork, More Real Work - Whether It's Tax Or Business As Usual</b></div>
             <div className="grid">
                 <div className="item">

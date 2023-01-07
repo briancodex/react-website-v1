@@ -6,39 +6,41 @@
 .a_flex{
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    padding-left: 100px;  
-    background-color: lightgrey;
-  
+    background-color: #D9D9D9;
   }
   
+  .right_row {
+    margin-right: 10%;
+  }
   
   .top_part {
-    font-size: 25px;
-    left: 0%;
-    padding-top: 50px;
-    text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
+    font-size: 35px;
+    margin-right: 5%;
+    padding-top: 20px;
+    text-shadow: 2px 3px 3px rgba(46,91,173,0.6);
   }
   
    
   
   .bottom_part {
-  
     font-size: 25px;
-    font-weight:100;
-    padding-right:100px;
+    margin-left: 0%;
+    margin-right: 30%;
   }
   
   .try_button {
-    font-size: 20px;
+    font-size: 25px;
     padding: 0.6rem;
-    border-radius: 2rem;
-    background-color: mediumpurple;
+    height: 55px;
+    width: 45%;
+    border-radius: 1.5rem;
+    background-color: #9812D7;
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
     color: white;
     
   }
   .button {
-    padding-top: 70px;
+    padding-top: 100px;
   }
   
   .left_row {
@@ -46,8 +48,9 @@
   }
   
   .picture12 {
-    height: 100%;
-    width: 100%;
+    height: 130%;
+    width: 124%;
+
   }
   
   /* trusted us css */
@@ -114,20 +117,22 @@
 /* icon css */
 .H4{
     text-align:center;
-    font-size: 25px;
+    font-size: 35px;
     padding-top: 50px;
+    background-color: white;
 }
 
 .grid {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 20px;
     column-gap:150px;
     row-gap: 50px;
-    padding-left: 150px;
-    padding-right: 150px;
-    padding-bottom: 50px;
+    padding-left: 300px;
+    padding-right: 300px;
+    padding-bottom: 150px;
+    background-color: white;
 }
 
 .fa-solid{
@@ -192,6 +197,5 @@
 }
 
 .icons {
-  padding-bottom: 50px;
-  padding-top: 50px;
+  background-color: white;
 }
