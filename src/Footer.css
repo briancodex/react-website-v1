@@ -1,13 +1,11 @@
 .contact1 {
     height: 200px;
     background-color: #4D096D;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     color: white;
     padding-top: 20px;
-    column-gap: 800px;
-    margin-left: 6%;
-    margin-right: 5%;
+    justify-content: space-between;
+  
     
 }
 
@@ -16,15 +14,14 @@
 }
 
 .contact_details {
-    font-size: 15px;
+    font-size: 12px;
 }
 
 .socialIcon {
     display: flex;
     background-color: #4D096D;
-    
     height: 30px;
-    margin: 10px;
+    margin-top: 10px;
     
    
 }
@@ -57,8 +54,9 @@
     display: flex;
     justify-content: space-between;
     padding-top: 10px;
-    margin-left: 5%;
-    margin-right: 8%;
+    margin-right: 1%;
+ 
+   
 }
 
 .fa-brands {

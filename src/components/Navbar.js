@@ -5,34 +5,72 @@ import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, useHistory } from "react-router-dom";
+
 import {
   auth,
   registerWithEmailAndPassword,
   signInWithGoogle,
+  logInWithEmailAndPassword,
+  logout,
+  
 } from "./firebase"
+import { signInWithEmailAndPassword, onAuthStateChanged, signOut } from '@firebase/auth';
+
 
 
 function Navbar() {
+
+  const AuthDetails =() => {
+    const [authUser, setAuthUser] = useState(null);
+
+    useEffect(() => {
+      const listen = onAuthStateChanged(auth, (user) => {
+        if (user) {
+          setAuthUser(user)
+        } else {
+          setAuthUser(null)
+        }
+
+      });
+
+        return () => {
+          listen();
+        }
+    }, []);
+    return (
+      
+      <div className="loginicon_navbar">{authUser ? <p> <i class="fa-solid fa-user fa-2x"></i> Signed in as {authUser.email}</p> : <p> <i class="fa-solid fa-user fa-2x"></i> Signed out</p>}</div>
+    )
+  }
+
+
   
-  const [email, setEmail] = useState(null);
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  
   const [confirmpass, setConfirmpass] = useState("");
   const [firstname, setFirstName] = useState("");
   const [lastname, setLastName] = useState("");
   const [phone, setPhone] = useState("");
 
-  const [user, loading, error] = useAuthState(auth);
-  const history = useHistory();
+  
 
   const register = () => {
     if (!firstname) alert("Please enter name");
     if (password === confirmpass) {
+      
       registerWithEmailAndPassword(firstname, email, password);
       alert("Account successfully created")
+      handleShowLogin();
+      
     }
     else 
     alert("Password does not match")
   };
+
+
+
 
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
@@ -127,7 +165,13 @@ function Navbar() {
               >
               <i class="fa-solid fa-cart-shopping fa-2x"></i>
               </Link>
-            </li> 
+            </li>
+            
+            <li className="navs">
+              
+              
+              <AuthDetails/>
+            </li>
               
 
           </ul>
@@ -152,9 +196,9 @@ function Navbar() {
  
                         <div className="logininputtry">
                       
-                          <label><b>Email Address: </b><input type="text" name="email" className="logininput1" /></label>
+                          <label><b>Email Address: </b><input type="email" value={email} className="logininput1" onChange={(e) => setEmail(e.target.value)} /></label>
     
-                          <label><b>Password: </b><input type="text" name="password" className="logininput1"/></label>
+                          <label><b>Password: </b><input type="password" value={password} className="logininput1" onChange={(e) => setPassword(e.target.value)} /></label>
                          
 
                         </div>
@@ -166,7 +210,8 @@ function Navbar() {
                         </div>
 
                         <br/>
-                        <b><input type="submit" value="Login" className="submit"/></b>
+                        <b><input type="button" value="Login"  class="submit1" onClick={() => logInWithEmailAndPassword(email, password)}/></b>
+                        <Button type="signout" value="signout" onClick={logout}> Sign out</Button>
                         <br />  
                         <div className="cracc">
                         New to Myob? 
@@ -237,11 +282,11 @@ function Navbar() {
                     <br/>
 
                     <label className="ciname">Password:</label><br/>
-                    <input type="text" value={password} onChange={(e) => setPassword(e.target.value)} className="cinput"></input>
+                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="cinput"></input>
                     <br/>
 
                     <label className="ciname">Confirm Password:</label><br/>
-                    <input type="text" value={confirmpass} onChange={(e) => setConfirmpass(e.target.value)} className="cinput"></input>
+                    <input type="password" value={confirmpass} onChange={(e) => setConfirmpass(e.target.value)} className="cinput"></input>
                     <br/>
 
                     <input type="checkbox" value="agree" id="agree"/>I agree to MYOB's <u>Terms of Service & Private Policy</u>

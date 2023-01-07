@@ -1,39 +1,36 @@
-.SNPic{
-  height:700px;
+.SNPic {
+  height: 700px;
   width: 100%;
   background-image: ("SupportNote.png");
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 
 /*SupportNotes*/
-.snhead{
-    text-align: center;
-    font-size:35px;
-    margin-bottom : -45px;
+.snhead {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: -45px;
 }
 
-.snlabel{
-    text-align: center;
+.snlabel {
+  text-align: center;
   font-size: 30px;
   font-stretch: expanded;
 }
 
-body.active-General{
+body.active-General {
   overflow-y: hidden;
-
 }
 
-.supportBtn{
-
+.supportBtn {
   padding: 0px 1px;
-    padding-left: 5px;
-    margin: 100px auto 0;
-    font-size: 18px;
+  padding-left: 5px;
+  margin: 100px auto 0;
+  font-size: 18px;
 }
 
-.supportModal .supportModalOverlay{
+.supportModal .supportModalOverlay {
   width: 100vw;
   height: 100vh;
   top: 0;
@@ -43,15 +40,15 @@ body.active-General{
   position: fixed;
 }
 
-.supportModalOverlay{
-padding: 10px 20px;
-display: block;
-margin: 100px auto 0;
-font-size: 18px;
+.supportModalOverlay {
+  padding: 10px 20px;
+  display: block;
+  margin: 100px auto 0;
+  font-size: 18px;
 }
 
-.supportModalContent{
- position: fixed;
+.supportModalContent {
+  position: fixed;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -63,31 +60,39 @@ font-size: 18px;
   min-width: 300px;
 }
 
-.supportModalContent .titleImage{
+.supportModalContent .titleImage {
   text-align: center;
 }
 
-.close-btn{
+.close-btn {
   position: absolute;
   top: 10px;
   right: 10px;
   padding: 5px 7px;
 }
 
-.L{
-  height:50%;
-  width:15%;
+.L {
+  height: 50%;
+  width: 15%;
   border: none;
 }
 
-.Left{
-  height:350px;
-  width:300x;
+.Left {
+  height: 350px;
+  width: 300x;
+}
+.flex-container {
+  display: flex;
+  align-items: flex-start;
+}
+.icon {
+  margin: 0 10px;
+
 }
 
-
-.links{
-  padding-top: 40px;
-  padding-left: 100px;
-  
+.icon-container {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  margin-left: 20%;
 }
