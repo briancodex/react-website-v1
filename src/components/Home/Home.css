@@ -6,39 +6,40 @@
 .a_flex{
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    padding-left: 100px;  
-    background-color: lightgrey;
-  
+    background-color: #D9D9D9;
   }
   
+  .right_row {
+    margin-right: 10%;
+  }
   
   .top_part {
     font-size: 25px;
-    left: 0%;
-    padding-top: 50px;
-    text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
+    margin-right: 5%;
+    padding-top: 20px;
+    text-shadow: 2px 3px 3px rgba(46,91,173,0.6);
   }
   
    
   
   .bottom_part {
-  
-    font-size: 25px;
-    font-weight:100;
-    padding-right:100px;
+    font-size: 23px;
+    margin-left: 0%;
+    margin-right: 30%;
   }
   
   .try_button {
     font-size: 20px;
     padding: 0.6rem;
-    border-radius: 2rem;
-    background-color: mediumpurple;
+    
+    border-radius: 1.5rem;
+    background-color: #9812D7;
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
     color: white;
     
   }
   .button {
-    padding-top: 70px;
+    padding-top: 100px;
   }
   
   .left_row {
@@ -46,8 +47,9 @@
   }
   
   .picture12 {
-    height: 100%;
-    width: 100%;
+    height: 130%;
+    width: 123%;
+
   }
   
   /* trusted us css */
@@ -74,18 +76,17 @@
 }
 
 .right1{
-    padding-top: 50px;
-    font-size: 30px;
+    font-size: 25px;
     padding-left: 90px;
     padding-right: 100px;
-    padding-top: 220px;
+    padding-top: 200px;
     text-align: left;
 
 }
 
 .desp {
     padding-top: 40px;
-    font-size: 25px;
+    font-size: 20px;
     text-align: left;
     position:relative;
 }
@@ -95,15 +96,15 @@
 }
 
 .picture14 {
-    height: 700px;
-    width: 800px;
+    height: 600px;
+    width: 700px;
     position: absolute;
     padding-bottom: 100px;
 }
 
 .picture15{
-    width: 700px;
-    height: 525px;
+    width: 600px;
+    height: 425px;
     position:relative;
     padding-left: 500px;
     margin-left: 150px;
@@ -114,20 +115,22 @@
 /* icon css */
 .H4{
     text-align:center;
-    font-size: 25px;
+    font-size: 30px;
     padding-top: 50px;
+    background-color: white;
 }
 
 .grid {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 20px;
     column-gap:150px;
     row-gap: 50px;
-    padding-left: 150px;
-    padding-right: 150px;
-    padding-bottom: 50px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 150px;
+    background-color: white;
 }
 
 .fa-solid{
@@ -153,13 +156,13 @@
 
 .ity {
     height: 100%;
-    width: 550px;
+   
 }
 
 .para {
-    font-size: 25px;
+    font-size: 20px;
     padding-top: 50px;
-    padding-left:200px;
+    padding-left: 100px;
     
 
 }
@@ -192,6 +195,5 @@
 }
 
 .icons {
-  padding-bottom: 50px;
-  padding-top: 50px;
+  background-color: white;
 }

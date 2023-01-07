@@ -20,6 +20,7 @@ const Footer = () => {
             143 Cecil Street #17-04 GB Building <br></br>
             Singapore 069542
             </p>
+            <br/>
             </div>
     </div>
     <hr className="borderclas" style={{background: 'white', color: 'white', borderColor: 'white', margin:0, }} />

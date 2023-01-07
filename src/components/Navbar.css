@@ -24,18 +24,22 @@
 
 .navbar-logo {
   color: black;
-
   margin-left: 20px;
   cursor: pointer;
   display: flex;
   align-items: center;
 }
 
+.fa-user {
+  
+  margin: auto;
+ 
+}
 
 
 .nav-menu {
   display: grid;
-  grid-template-columns: repeat(5, auto);
+  grid-template-columns: repeat(6, auto);
   grid-gap: 15px;
   list-style: none;
   text-align: center;
@@ -300,9 +304,8 @@
 }
 
 .submit1 {
-  margin-left: 20%;
-  margin-right: 20%;
-  margin-top: 5%;
+  
+  margin-left: 3%;
   margin-bottom: 5%;
   background-color: purple;
   border-color: white;
@@ -355,11 +358,8 @@
   justify-content: space-between;
   margin-bottom: 2%;
   
-
- 
-
-  
 }
+
 
 .createaccountinput {
   margin-left: 10%;
@@ -401,3 +401,6 @@
 
 }
 
+.loginicon_navbar {
+  margin-top: 27%;
+}
