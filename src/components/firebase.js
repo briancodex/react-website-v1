@@ -1,4 +1,5 @@
 import { initializeApp } from 'firebase/app'
+
 import {
   GoogleAuthProvider,
   getAuth,
@@ -25,7 +26,8 @@ const firebaseConfig = {
     messagingSenderId: "538923119712",
     appId: "1:538923119712:web:08df9b61b97c0673f97f05"
   };
-  
+
+
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
   const db = getFirestore(app);
@@ -54,9 +56,12 @@ const firebaseConfig = {
   const logInWithEmailAndPassword = async (email, password) => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
+      alert("Sign in successfull")
+      
     } catch (err) {
       console.error(err);
       alert(err.message);
+      alert("Sign in unsucessfull")
     }
   };
 
