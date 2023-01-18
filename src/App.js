@@ -15,6 +15,7 @@ import CheckoutInfo from './components/CheckoutInfo/CheckoutInfo';
 import CheckoutShipping from './components/CheckoutShipping/CheckoutShipping'
 import CheckoutPayment from './components/CheckoutPayment/CheckoutPayment'
 import Psggrant from './components/Psggrant/Psggrant';
+import AddProducts from './components/Software/AddProducts';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path='/CheckoutShipping' component={CheckoutShipping}/>
           <Route path='/CheckoutPayment' component={CheckoutPayment}/>
           <Route path='/Psggrant' component={Psggrant} />
+          <Route path='/AddProducts' component={AddProducts} />
         </Switch>
         <Footer/>
       </Router>
