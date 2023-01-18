@@ -72,7 +72,7 @@ body.active-General {
 }
 
 .L {
-  height: 50%;
+  height: 70%;
   width: 15%;
   border: none;
 }
@@ -86,8 +86,7 @@ body.active-General {
   align-items: flex-start;
 }
 .icon {
-  margin: 0 10px;
-
+  margin: 20 10px;
 }
 
 .icon-container {

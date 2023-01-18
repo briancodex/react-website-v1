@@ -1,0 +1,20 @@
+.SNPic {
+    height: 700px;
+    width: 100%;
+    background-image: ("SupportNote.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /*SupportNotes*/
+  .snhead {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: -45px;
+  }
+  
+  .snlabel {
+    text-align: center;
+    font-size: 30px;
+    font-stretch: expanded;
+  }
