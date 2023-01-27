@@ -5,6 +5,8 @@ import "./SupportNote.css";
 import "../../App.css";
 import { useState } from "react";
 
+
+
 export default function General() {
   const [general, setGeneral] = useState(false);
   const toggleGeneral = () => {
