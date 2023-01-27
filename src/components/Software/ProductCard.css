@@ -25,21 +25,16 @@ i {
     margin-left: 8px;
   }
 
-.title h1{
-    margin-top: 30px;
-    margin-left: 15px;
-    font-size: 35px;
+.title {
+    margin-top: 40px;
+    margin-left: 12px;
+    margin-bottom: 50px;
+    font-size: 40px;
     font-family: sans-serif;
     color: black;
-    font-weight: normal;
+    font-weight: bold;
 }
-.title h2{
-    font-size: 35px;
-    font-family: sans-serif;
-    color: black;
-    margin-left: 15px;
-    margin-top: -25px;
-}
+
 .title-description{
     align-items: center;
     font-size: 20px;
@@ -73,7 +68,7 @@ i {
     padding: 15px 25px;
     transition: 0.3s;
     text-transform: uppercase;
-    margin-left: 25px;
+    margin-left: 70px;
     text-decoration: none;
 }
 .btn .primary{

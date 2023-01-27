@@ -1,251 +1,80 @@
 import React, { Fragment } from "react";
+import { useState, useEffect } from "react";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../firebase.js";
 import ReactDOM from "react-dom";
 import Carousel from "react-elastic-carousel";
 import "./Software.css";
 import "./ProductCard.css";
 
-
 const breakPoints = [
-  { width: 1, itemsToShow: 1 },
-  { width: 550, itemsToShow: 2 },
-  { width: 768, itemsToShow: 3 },
+    { width: 1, itemsToShow: 1 },
+    { width: 550, itemsToShow: 2 },
+    { width: 768, itemsToShow: 3 },
 
 ];
 
-function Software() {
-  return (
+function Software({individualProduct, addToCart}) {
 
-    <>
-      <section className='softwareBanner'>
-        <div className="top_banner">
-          <img src="/images/softwarebanner.PNG" alt="" className="psgtopPic"></img>
-        </div>
-      </section>
+    const handleAddToCart = () => {
+        addToCart(individualProduct);
+    }
+    const [product, setProducts] = useState([]);
 
-      <Fragment>
+    useEffect(() => {
+        const getData = async () => {
+            const productData = await getDocs(collection(db, "products"));
+            // console.log(parkingData);
+            setProducts(productData.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+            console.log(productData);
+        };
 
-        <section>
-          <div className="row">
-            <Carousel breakPoints={breakPoints}>
+        getData();
+    }, []);
 
-              {/* MYOB BusinessBasics */}
+    return (
 
-              <div className="product">
-
-                <div className="product-body">
-                  <div className="title">
-                    <h1>MYOB</h1><h2>BusinessBasics</h2>
-                  </div>
-                  <div className="title-description">
-                    <label>Real-time insights and flexible
-                      <br></br>reporting for businesses
-                      <br></br>looking to level up.</label>
-                  </div>
-                  <div className="price">
-                    <label>$700.00</label>
-                  </div>
-                  <div className="footer">
-                    <div className="btn">
-                      <a href="#" className="btn-custom primary"> BUY NOW </a>
-                      <a href="#" className="btn-custom secondary"> TRY FREE FOR 30 DAYS </a>
-                    </div>
-                  </div>
-                  <div className="product-thumb">
-                    <label className="product-description">
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>Windows Supported<br></br>
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>FREE 30 Days Support<br></br>
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>Easy Setup Assistant<br></br>
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>Company File Upgrade Assistant<br></br>
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>Templates Upgrade Assistant<br></br>
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>Help Files<br></br>
-                    </label>
-                  </div>
-                </div>
-              </div>
-
-
-              {/* MYOB Accounting */}
-              <div className="product">
-
-                <div className="product-body">
-                  <div className="title">
-                    <h1>MYOB</h1><h2>Accounting</h2>
-                  </div>
-                  <div className="title-description">
-                    <label>High-powered inventory management for businesses seeking efficiency.</label>
-                  </div>
-                  <div className="price">
-                    <label>$765.00</label>
-                  </div>
-                  <div className="footer">
-                    <div className="btn">
-                      <a href="#" className="btn-custom primary"> BUY NOW </a>
-                      <a href="#" className="btn-custom secondary"> TRY FREE FOR 30 DAYS </a>
-                    </div>
-                  </div>
-                  <div className="product-thumb">
-                    <label className="product-description">
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>Windows Supported<br></br>
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>FREE 30 Days Support<br></br>
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>Easy Setup Assistant<br></br>
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>Company File Upgrade Assistant<br></br>
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>Templates Upgrade Assistant<br></br>
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>Help Files<br></br>
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>Links to MYOB RetailManager<br></br>
-                    </label>
-                  </div>
-                </div>
-              </div>
-
-              {/* MYOB Premier */}
-              <div className="product">
-
-                <div className="product-body">
-                  <div className="title">
-                    <h1>MYOB</h1><h2>Premier</h2>
-                  </div>
-                  <div className="title-description">
-                    <label>Simplify complex business<br></br>needs, including working in multiple currencies.</label>
-                  </div>
-                  <div className="price">
-                    <label>$2070.00</label>
-                  </div>
-                  <div className="footer">
-                    <div className="btn">
-                      <a href="#" className="btn-custom primary"> BUY NOW </a>
-                      <a href="#" className="btn-custom secondary"> TRY FREE FOR 30 DAYS </a>
-                    </div>
-                  </div>
-                  <div className="product-thumb">
-                    <label className="product-description">
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>Windows Supported<br></br>
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>FREE 30 Days Support<br></br>
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>Easy Setup Assistant<br></br>
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>Company File Upgrade Assistant<br></br>
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>Templates Upgrade Assistant<br></br>
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>Help Files<br></br>
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>Links to MYOB RetailManager<br></br>
-                    </label>
-                  </div>
-                </div>
-              </div>
-
-
-
-              {/* MYOB Payroll */}
-              <div className="product">
-
-                <div className="product-body">
-                  <div className="title">
-                    <h1>MYOB</h1><h2>Payroll</h2>
-                  </div>
-                  <div className="title-description">
-                    <label>Real-time insights and flexible
-                      <br></br>reporting for businesses
-                      <br></br>looking to level up.</label>
-                  </div>
-                  <div className="price">
-                    <label>$1450.00</label>
-                  </div>
-                  <div className="footer">
-                    <div className="btn">
-                      <a href="#" className="btn-custom primary"> BUY NOW </a>
-                      <a href="#" className="btn-custom secondary"> TRY FREE FOR 30 DAYS </a>
-                    </div>
-                  </div>
-                  <div className="product-thumb">
-                    <label className="product-description">
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>Windows Supported<br></br>
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>FREE 30 Days Support<br></br>
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>Easy Setup Assistant<br></br>
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>Company File Upgrade Assistant<br></br>
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>Templates Upgrade Assistant<br></br>
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>Help Files<br></br>
-                    </label>
-                  </div>
-                </div>
-              </div>
-
-
-
-
-              {/* MYOB Premier Single User */}
-              <div className="product">
-
-                <div className="product-body">
-                  <div className="title">
-                    <h1>MYOB</h1><h2>Premier Single User</h2>
-                  </div>
-                  <div className="title-description">
-                    <label>Real-time insights and flexible
-                      <br></br>reporting for businesses
-                      <br></br>looking to level up.</label>
-                  </div>
-                  <div className="price">
-                    <label>$1260.00</label>
-                  </div>
-                  <div className="footer">
-                    <div className="btn">
-                      <a href="#" className="btn-custom primary"> BUY NOW </a>
-                      <a href="#" className="btn-custom secondary"> TRY FREE FOR 30 DAYS </a>
-                    </div>
-                  </div>
-                  <div className="product-thumb">
-                    <label className="product-description">
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>Windows Supported<br></br>
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>FREE 30 Days Support<br></br>
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>Easy Setup Assistant<br></br>
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>Company File Upgrade Assistant<br></br>
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>Templates Upgrade Assistant<br></br>
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>Help Files<br></br>
-                    </label>
-                  </div>
-                </div>
-              </div>
-
-
-
-
-              {/* MYOB Premier 3 User */}
-              <div className="product">
-
-                <div className="product-body">
-                  <div className="title">
-                    <h1>MYOB</h1><h2>Premier 3 User</h2>
-                  </div>
-                  <div className="title-description">
-                    <label>Real-time insights and flexible
-                      <br></br>reporting for businesses
-                      <br></br>looking to level up.</label>
-                  </div>
-                  <div className="price">
-                    <label>$2070.00</label>
-                  </div>
-                  <div className="footer">
-                    <div className="btn">
-                      <a href="#" className="btn-custom primary"> BUY NOW </a>
-                      <a href="#" className="btn-custom secondary"> TRY FREE FOR 30 DAYS </a>
-                    </div>
-                  </div>
-                  <div className="product-thumb">
-                    <label className="product-description">
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>Windows Supported<br></br>
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>FREE 30 Days Support<br></br>
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>Easy Setup Assistant<br></br>
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>Company File Upgrade Assistant<br></br>
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>Templates Upgrade Assistant<br></br>
-                      <i class="fa-sharp fa-solid fa-circle-check"></i>Help Files<br></br>
-                    </label>
-                  </div>
-                </div>
-              </div>
-
-            </Carousel>
+        <>
+        <section className='softwareBanner'>
+          <div className="top_banner">
+            <img src="/images/softwarebanner.PNG" alt="" className="psgtopPic"></img>
           </div>
         </section>
-      </Fragment>
 
-      <section className='software2ndsection'>
+        <Fragment>
+            <section>
+                <div className="row">
+                    <Carousel breakPoints={breakPoints}>
+
+                        {product.map((data) => (
+                            <div className="product">
+                                <div className="product-body">
+                                    <div className="car-content" key={data.id}>
+                                        <div className="title">{data.title}</div>
+                                        <div className="title-description">{data.description}</div>
+                                        <div className="price"><label>$</label>{data.price}<label>.00</label></div>
+                                        <a href="#" className="btn-custom primary" onClick={handleAddToCart}>ADD TO CART</a>
+                                        <div className="product-thumb">
+                                            <label className="product-description">
+                                                <i class="fa-sharp fa-solid fa-circle-check"></i>Windows Supported<br></br>
+                                                <i class="fa-sharp fa-solid fa-circle-check"></i>FREE 30 Days Support<br></br>
+                                                <i class="fa-sharp fa-solid fa-circle-check"></i>Easy Setup Assistant<br></br>
+                                                <i class="fa-sharp fa-solid fa-circle-check"></i>Company File Upgrade Assistant<br></br>
+                                                <i class="fa-sharp fa-solid fa-circle-check"></i>Templates Upgrade Assistant<br></br>
+                                                <i class="fa-sharp fa-solid fa-circle-check"></i>Help Files<br></br>
+
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </Carousel>
+
+                </div>
+            </section>
+        </Fragment>
+        <section className='software2ndsection'>
         <img src="/images/bizsupportpic.PNG" alt="" className="bizsupport"></img>
       </section>
 
@@ -265,10 +94,9 @@ function Software() {
           <img src="/images/managegst.PNG" alt="" className="managinggst"></img>
         </div>
       </section>
-    </>
-  );
+        </>
+    );
 }
-
 const rootElement = document.getElementById("root");
 ReactDOM.render(<Software />, rootElement);
 export default Software;

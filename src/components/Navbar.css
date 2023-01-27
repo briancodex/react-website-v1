@@ -106,8 +106,6 @@
 .menu-content {
   display: none;
   position: absolute;
-
-
 }
 
 .menu-content a{
@@ -137,26 +135,28 @@
   color: black;
 }
 
-.modal {
+
+/* modal background */
+.modal { 
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0px;
   top: 0;
-  
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
+/* modal background */
+
+
 
 .modal-content {
-  
   background-color: #fefefe;
-  margin: 4% auto; /* 15% from the top and centered */
+  margin: 3% auto; /* 15% from the top and centered */
   border: 1px solid #888;
-  width: 65%; /* Could be more or less, depending on screen size */
- 
+  width: 79%; /* Could be more or less, depending on screen size */
   scroll-behavior: unset;
 }
 
@@ -178,35 +178,36 @@
   cursor: pointer;
 }
 
+/* login section start */
+
 .logininput {
   display: flex;
-  padding-right: 150px;
+ 
 }
 
 .login_pic {
-  justify-content: space-between;
-  width: 150%;
   height: 100%;
-  margin-right: 300px;
+  width: 260%;
 }
 
-.leftlogin{
-  padding: 20px;
-  padding-bottom: 70px;
+.login_pic1 {
+  height: 10%;
+  width: 20%;
+}
 
+.rightlogin {
+  margin-right: 30%;
 }
 
 .logininputtry {
-  
-  padding-left: 120px;
-  padding-right: 120px;
-  
+  padding-left: 130px;
+  padding-right: 130px;
 }
 
 .logininput1 {
-  width: 90%;
+  width: 100%;
   height: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border-radius: 0.5rem;
   box-shadow: inset 0 0 3px grey;
   background-color: #F6F6F6;
@@ -226,23 +227,20 @@
 }
 
 .title {
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .model-links {
   text-decoration: none;
 }
 
-.submitting {
-  padding-left: 100px;
-}
 
 .rmbmeandforget {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  margin-left: 5%;
-  
-  
+  grid-template-columns: 1fr 2fr;
+  margin-left: 35px;
+  column-gap: 100px;
+ 
 }
 
 .submit {
@@ -254,22 +252,89 @@
   border-color: white;
   margin-bottom: 20px;
   font-size: 15px;
-  margin-left: 5%;
 }
 
 .cracc {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  margin-left: 50px;
+  margin-left: 85px;  
 }
 
-.login_pic1 {
-  height: 12%;
-  width: 24%;
- 
-
+.submitting {
+  margin-left: 15%;
 }
 
+
+.submit1 {
+  margin-left: 3%;
+  margin-bottom: 5%;
+  background-color: purple;
+  border-color: white;
+  color:white;
+  border-radius: 0.5rem;
+  width: 65%;
+  height: 35px;
+  font-size: 15px;
+  margin-left: 9%;
+}
+
+
+@media screen and (min-width: 1600px) {
+
+  .login_pic {
+    width: 258%;
+    height: 100%;
+    
+  }
+  
+  .modal-content {
+    width: 70%;
+  }
+
+  .logininput1 {
+    width: 80%;
+    
+  }
+
+  .logininputtry {
+    margin-left: 25%;
+    margin-right: 15%;
+    font-size: 22px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0px;
+  }
+
+  .rmbmeandforget {
+    margin-left: 11%;
+    column-gap: 50px;
+  }
+
+  .submit1 {
+    margin-left: 11%;
+    width: 59%;
+  }
+
+  .cracc {
+    margin-left: 17%;
+    padding-bottom: 20px;
+  }
+
+
+}
+/* login section end */
+
+/* Forget Password Section */
+.submit2 {
+  color: white;
+  background-color: purple;
+  margin-left: 20%;
+  width: 20.5rem;
+  border-radius: 0.5rem;
+  margin-top: 5%;
+  height: 35px;
+  margin-bottom: 5%;
+  border-color: white;
+}
 
 .forgetpasswordpage {
   display: flex;
@@ -300,31 +365,18 @@
 
 .forgetemail {
   margin-left: 20%;
-  
-}
-
-.submit1 {
-  
-  margin-left: 3%;
-  margin-bottom: 5%;
-  background-color: purple;
-  border-color: white;
-  color:white;
-  border-radius: 0.5rem;
-  width: 20.5rem;
-  height: 35px;
-  font-size: 15px;
 }
 
 .forgetpassword-link {
-  margin-left: 42%;
+  margin-left: 40%;
   
 }
 
 
+/* Forget Password Section End */
+
 .createaccountpage {
   display:flex;
- 
 }
 
 .login_pic3 {
@@ -402,5 +454,5 @@
 }
 
 .loginicon_navbar {
-  margin-top: 27%;
+  margin-top: 18%;
 }
