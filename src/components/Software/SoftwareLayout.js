@@ -115,8 +115,8 @@ function Software() {
                   </div>
                   <div className="footer">
                     <div className="btn">
-                      <a href="#" className="btn-custom primary"> ADD TO CART </a>
-                      <a href="#" className="btn-custom secondary"> TRY FREE FOR 30 DAYS </a>
+                      <a href="#" className="btn-primary"> ADD TO CART </a>
+                      <a href="#" className="btn-secondary"> TRY FREE FOR 30 DAYS </a>
                     </div>
                   </div>
                   <div className="product-thumb">
