@@ -76,10 +76,6 @@ function Navbar() {
     }, []);
     
 
-
-   
-    
-
     return (
       <div className="loginicon_navbar">
         {authUser ? <p><i class="fa-solid fa-user fa-2x"></i>
@@ -193,7 +189,7 @@ function Navbar() {
               
 
           </ul>
-          <Button variant="primary" onClick={handleShowLogin} className="loginbtn">LOGIN  </Button>
+          <Button variant="a" onClick={handleShowLogin} className="loginbtnmain1">LOGIN </Button>
 
         <Modal show={show} onHide={handleClose} className="loginmodel">
           <Modal.Body>
@@ -229,7 +225,7 @@ function Navbar() {
 
                         <br/>
                         <b><input type="button" value="Login"  class="submit1" onClick={loginbutton}/></b>
-                        <Button type="signout" value="signout" onClick={logout}> Sign out</Button>
+                        <Button variant="a" type="signout" value="signout" className="signoutbtn" onClick={logout}> Sign out</Button>
                         <br />  
                         <div className="cracc">
                         New to Myob? 

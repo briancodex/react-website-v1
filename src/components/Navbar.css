@@ -164,14 +164,13 @@
   padding-top: 20px;
 }
 
-.loginbtn {
+.loginbtnmain1 {
   padding: 10px;
   padding-left: 20px;
   padding-right: 20px;
   border-color: black;
   border-radius: 2rem;
   background-color: white;
- 
 }
 
 .loginbtn:hover {
