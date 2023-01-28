@@ -5,6 +5,8 @@ import "./SupportNote.css";
 import "../../App.css";
 import { useState } from "react";
 
+
+
 export default function General() {
   const [general, setGeneral] = useState(false);
   const toggleGeneral = () => {
@@ -634,9 +636,39 @@ export default function General() {
                   &times;
                 </button>
               </div>
+
             </div>
 
+            
+
           )}
+
+          
+              <div>
+                    <h1> Review us</h1>
+               
+                    <p>Please Rate Our Service:</p>
+                    <input type="radio" id="Strongly Disagree" name="service" value="Strongly Disagree"></input>
+                    <label for="Strongly Disagree">Strongly Disagree</label><br></br>
+                     <input type="radio" id="Disagree" name="service" value="Disagree"></input>
+                     <label for="Disagree">Disagree</label><br></br>
+                      <input type="radio" id="Agree" name="service" value="Agree"></input>
+                          <label for="Agree">Agree</label><br></br>
+                       <input type="radio" id="Strongly Agree" name="service" value="Strongly Agree"></input>
+                         <label for="Strongly Agree">Strongly Agree</label><br></br>
+                         
+                         
+<form action="/action_page.php">
+                  <p><babel for="Comment:"> Any Other Comment:</babel></p>
+                  <textarea id="Comment" name="comment" rows="4" cols="50">
+                    
+                    
+                    
+                  </textarea>
+                  <input type="Submit" value="Submit"></input>
+</form>
+
+                </div>
         
       
 

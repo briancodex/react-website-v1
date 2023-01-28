@@ -18,6 +18,12 @@ import {
   addDoc,
 } from "firebase/firestore";
 
+
+
+
+
+
+
 const firebaseConfig = {
     apiKey: "AIzaSyCpIULXhtdN2Ga65G65vk3qjvWp-gQQuj8",
     authDomain: "myobd-9bddd.firebaseapp.com",
@@ -32,6 +38,7 @@ const firebaseConfig = {
   const auth = getAuth(app);
   const db = getFirestore(app);
   const googleProvider = new GoogleAuthProvider();
+ 
 
   const signInWithGoogle = async () => {
     try {
@@ -64,6 +71,7 @@ const firebaseConfig = {
       alert("Sign in unsucessfull")
     }
   };
+
 
   const registerWithEmailAndPassword = async (name, email, password) => {
     try {

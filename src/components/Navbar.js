@@ -3,8 +3,8 @@ import './Navbar.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
-import { useAuthState } from "react-firebase-hooks/auth";
-import { Link, useHistory } from "react-router-dom";
+import {Link} from "react-router-dom";
+import { db } from "./firebase.js";
 
 import {
   auth,
@@ -12,15 +12,44 @@ import {
   signInWithGoogle,
   logInWithEmailAndPassword,
   logout,
+  sendPasswordReset
   
 } from "./firebase"
-import { signInWithEmailAndPassword, onAuthStateChanged, signOut } from '@firebase/auth';
+import {onAuthStateChanged} from '@firebase/auth';
+import { collection, getDocs } from 'firebase/firestore';
 
 
 
 function Navbar() {
 
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmpass, setConfirmpass] = useState("");
+  const [firstname, setFirstName] = useState("");
+  const [lastname, setLastName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [cuser, setCuser] = useState("");
+  const [show1, setShow1] = useState(false);
+  const [show2, setShow2] = useState(false);
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleClose1 = () => setShow1(false);
+  const handleClose2 = () => setShow2(false);
+  
+
+  var paswd=  /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
+
+
+  const loginbutton =() => {
+    logInWithEmailAndPassword(email, password);
+    setShow(false);
+  }
+
   const AuthDetails =() => {
+  
     const [authUser, setAuthUser] = useState(null);
 
     useEffect(() => {
@@ -30,59 +59,62 @@ function Navbar() {
         } else {
           setAuthUser(null)
         }
-
       });
-
         return () => {
           listen();
         }
     }, []);
+
+    const [name, setNames] = useState([]);
+
+    useEffect(() => {
+      const getData = async () => {
+        const customerName = await getDocs(collection(db ,"users"));
+        setNames(customerName.docs.map((doc) => ({...doc.data(),  id: doc.id})));
+      };
+      getData();
+    }, []);
+    
+
+
+   
+    
+
     return (
-      
-      <div className="loginicon_navbar">{authUser ? <p> <i class="fa-solid fa-user fa-2x"></i> Signed in as {authUser.email}</p> : <p> <i class="fa-solid fa-user fa-2x"></i> Signed out</p>}</div>
+      <div className="loginicon_navbar">
+        {authUser ? <p><i class="fa-solid fa-user fa-2x"></i>
+          {name.map((data) => {
+            if (authUser.uid === data.uid) {
+             setCuser(data.name)    
+            }       
+          }
+          )}
+          Signed in as {cuser}
+         </p> : 
+        <p> <i class="fa-solid fa-user fa-2x"></i> Signed out</p>}</div>
+
     )
   }
 
 
-  
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  
-  const [confirmpass, setConfirmpass] = useState("");
-  const [firstname, setFirstName] = useState("");
-  const [lastname, setLastName] = useState("");
-  const [phone, setPhone] = useState("");
-
-  
-
   const register = () => {
+    let passwordError = "";
     if (!firstname) alert("Please enter name");
     if (password === confirmpass) {
-      
+      if (password.match(paswd)) {
       registerWithEmailAndPassword(firstname, email, password);
       alert("Account successfully created")
       handleShowLogin();
-      
+      }
+      else 
+      {
+        passwordError = "Password is nt enough";
+        alert(passwordError);
+      }
     }
     else 
     alert("Password does not match")
   };
-
-
-
-
-  const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
-
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
-
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleClose1 = () => setShow1(false);
-  const handleClose2 = () => setShow2(false);
 
   const handleShowLogin = () => {
     setShow(true);
@@ -100,21 +132,7 @@ function Navbar() {
     setShow(false);
   }
 
-  const [show1, setShow1] = useState(false);
-  const [show2, setShow2] = useState(false);
-  const showButton = () => {
-    if (window.innerWidth <= 960) {
-      setButton(false);
-    } else {
-      setButton(true);
-    }
-  };
-
-  useEffect(() => {
-    showButton();
-  }, []);
-
-  window.addEventListener('resize', showButton);
+  
 
   return (
     <>
@@ -196,9 +214,9 @@ function Navbar() {
  
                         <div className="logininputtry">
                       
-                          <label><b>Email Address: </b><input type="email" value={email} className="logininput1" onChange={(e) => setEmail(e.target.value)} /></label>
+                          <label>Email Address:<input type="email" value={email} className="logininput1" onChange={(e) => setEmail(e.target.value)} /></label>
     
-                          <label><b>Password: </b><input type="password" value={password} className="logininput1" onChange={(e) => setPassword(e.target.value)} /></label>
+                          <label>Password: <input type="password" value={password} className="logininput1" onChange={(e) => setPassword(e.target.value)} /></label>
                          
 
                         </div>
@@ -210,7 +228,7 @@ function Navbar() {
                         </div>
 
                         <br/>
-                        <b><input type="button" value="Login"  class="submit1" onClick={() => logInWithEmailAndPassword(email, password)}/></b>
+                        <b><input type="button" value="Login"  class="submit1" onClick={loginbutton}/></b>
                         <Button type="signout" value="signout" onClick={logout}> Sign out</Button>
                         <br />  
                         <div className="cracc">
@@ -239,9 +257,9 @@ function Navbar() {
                         Password?</h2>
                     <p className="forgetpara">Don't worry! It happens. Please enter the email<br/> address and we will send a password reset link. </p>
                     <h4 className="forgetemail">Enter the email address</h4>
-                    <label><input type="text" name="email" className="forgetpasswordemail" /></label>
+                    <label><input type="text" name="email" className="forgetpasswordemail" onChange={(e) => setEmail(e.target.value)} /></label>
                     <br/>
-                    <b><input type="submit" value="Continue" className="submit1"/></b>
+                    <b><input type="submit" value="Continue" className="submit2" onClick={() => sendPasswordReset(email)}/></b>
                     <Link to='/' className='forgetpassword-link' onClick={handleShowLogin}>Back to Login</Link>
 
                 </div>
@@ -283,6 +301,7 @@ function Navbar() {
 
                     <label className="ciname">Password:</label><br/>
                     <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="cinput"></input>
+                    
                     <br/>
 
                     <label className="ciname">Confirm Password:</label><br/>
