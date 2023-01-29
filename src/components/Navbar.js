@@ -215,7 +215,16 @@ function Navbar() {
               
             </li>
             <li className="nav-links">
-              <Link to ="/AdminPage"><h3>Admin</h3></Link>
+            {details.map((data) => {
+              if(email == data.email) {
+                  if (data.role == "admin") {
+                    return (
+                      <Link to ="/AdminPage"><h3>Admin</h3></Link>
+                    ) 
+                  }
+              }
+    })}
+              
             </li>
           </ul>
           <Button variant="a" onClick={handleShowLogin} className="loginbtnmain1">LOGIN </Button>
