@@ -39,8 +39,7 @@ function App() {
           <Route path='/CheckoutPayment' component={CheckoutPayment}/>
           <Route path='/Psggrant' component={Psggrant} />
           <Route path='/AddProducts' component={AddProducts} />
-          <Route path='/AdminPage' component={AdminPage} />
-          
+          <Route path='/AdminPage' component ={AdminPage} />
         </Switch>
         <Footer/>
       </Router>
