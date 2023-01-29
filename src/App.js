@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import './App.css';
 import Home from './components/Home/Home';
@@ -16,14 +16,19 @@ import CheckoutShipping from './components/CheckoutShipping/CheckoutShipping'
 import CheckoutPayment from './components/CheckoutPayment/CheckoutPayment'
 import Psggrant from './components/Psggrant/Psggrant';
 import AddProducts from './components/Software/AddProducts';
+import AdminPage from './components/AdminPage/AdminPage';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from './components/firebase';
 
 function App() {
+
   return (
     <>
+
       <Router>
         <Navbar />
         <Switch>
-          <Route path='/' exact component={Home} />
+          <Route path='/' exact component={Home}/>
           <Route path='/Aboutus' exact component={Aboutus} />
           <Route path='/Blog' component={Blog} />
           <Route path='/Software' component={Software} />
@@ -36,6 +41,8 @@ function App() {
           <Route path='/CheckoutPayment' component={CheckoutPayment}/>
           <Route path='/Psggrant' component={Psggrant} />
           <Route path='/AddProducts' component={AddProducts} />
+          <Route path='/AdminPage' component={AdminPage} />
+          
         </Switch>
         <Footer/>
       </Router>

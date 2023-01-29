@@ -82,6 +82,7 @@ const firebaseConfig = {
         name,
         authProvider: "local",
         email,
+        role: "user"
       });
     } catch (err) {
       console.error(err);
