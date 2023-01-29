@@ -17,8 +17,6 @@ import CheckoutPayment from './components/CheckoutPayment/CheckoutPayment'
 import Psggrant from './components/Psggrant/Psggrant';
 import AddProducts from './components/Software/AddProducts';
 import AdminPage from './components/AdminPage/AdminPage';
-import { collection, getDocs } from 'firebase/firestore';
-import { db } from './components/firebase';
 
 function App() {
 
