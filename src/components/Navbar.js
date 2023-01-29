@@ -3,7 +3,7 @@ import './Navbar.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
-import {Link} from "react-router-dom";
+import {Link, Redirect} from "react-router-dom";
 import { db } from "./firebase.js";
 
 import {
@@ -38,20 +38,49 @@ function Navbar() {
   const handleClose = () => setShow(false);
   const handleClose1 = () => setShow1(false);
   const handleClose2 = () => setShow2(false);
-  
+  const [authUser, setAuthUser] = useState(null);
+  const [details, setDetails] = useState([]);
 
   var paswd=  /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
 
 
-  const loginbutton =() => {
-    logInWithEmailAndPassword(email, password);
+  useEffect(() => {
+    const getData = async () => {
+      const customerName = await getDocs(collection(db ,"users"));
+      setDetails(customerName.docs.map((doc) => ({...doc.data(),  id: doc.id})));
+    };
+    getData();
+  }, []);
+
+  const loginbutton = () => {
+
+    {details.map((data) => {
+      if(email == data.email) {
+          logInWithEmailAndPassword(email, password);
+          if (data.role == "admin") {
+            alert("Admin")
+          }
+      }
+    })}
+
     setShow(false);
+
+  }
+
+  const adminP  = () => {
+
+    {details.map((data) => {
+      if(email == data.email) {
+          if (data.role == "admin") {
+           
+              <div><Link to ='/Admin Page'>Admin</Link></div>
+            
+          }
+      }
+    })}
   }
 
   const AuthDetails =() => {
-  
-    const [authUser, setAuthUser] = useState(null);
-
     useEffect(() => {
       const listen = onAuthStateChanged(auth, (user) => {
         if (user) {
@@ -182,12 +211,12 @@ function Navbar() {
             </li>
             
             <li className="navs">
-              
-              
               <AuthDetails/>
-            </li>
               
-
+            </li>
+            <li className="nav-links">
+              <Link to ="/AdminPage"><h3>Admin</h3></Link>
+            </li>
           </ul>
           <Button variant="a" onClick={handleShowLogin} className="loginbtnmain1">LOGIN </Button>
 
@@ -224,7 +253,8 @@ function Navbar() {
                         </div>
 
                         <br/>
-                        <b><input type="button" value="Login"  class="submit1" onClick={loginbutton}/></b>
+                        <b><input type="button" value="Login"  class="submit1" onClick={loginbutton}/>
+                        </b>
                         <Button variant="a" type="signout" value="signout" className="signoutbtn" onClick={logout}> Sign out</Button>
                         <br />  
                         <div className="cracc">
