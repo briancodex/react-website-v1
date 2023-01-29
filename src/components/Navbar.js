@@ -40,6 +40,7 @@ function Navbar() {
   const handleClose2 = () => setShow2(false);
   const [authUser, setAuthUser] = useState(null);
   const [details, setDetails] = useState([]);
+  const [aemail, setAemail] = useState("");
 
   var paswd=  /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
 
@@ -57,6 +58,7 @@ function Navbar() {
     {details.map((data) => {
       if(email == data.email) {
           logInWithEmailAndPassword(email, password);
+          setAemail(data.email)
           if (data.role == "admin") {
             alert("Admin")
           }
@@ -65,19 +67,6 @@ function Navbar() {
 
     setShow(false);
 
-  }
-
-  const adminP  = () => {
-
-    {details.map((data) => {
-      if(email == data.email) {
-          if (data.role == "admin") {
-           
-              <div><Link to ='/Admin Page'>Admin</Link></div>
-            
-          }
-      }
-    })}
   }
 
   const AuthDetails =() => {
@@ -216,7 +205,7 @@ function Navbar() {
             </li>
             <li className="nav-links">
             {details.map((data) => {
-              if(email == data.email) {
+              if(aemail == data.email) {
                   if (data.role == "admin") {
                     return (
                       <Link to ="/AdminPage"><h3>Admin</h3></Link>
