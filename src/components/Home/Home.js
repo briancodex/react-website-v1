@@ -3,6 +3,7 @@ import './Home.css';
 
 
 function Home() {
+    
   return (
     <>
           <hr style={{ background: 'black', color: 'black', borderColor: 'black', margin:0 }} />
@@ -18,7 +19,7 @@ function Home() {
                             <label>A single system that automates your everyday tasks and helps your business look professional while staying compliant.</label>
                         </div>
                         <div className="button">
-                            <button className="try_button" color="white">TRY FREE FOR 30 DAYS</button>
+                            <button className="try_button" color="white"><a href="#demo" className='demobtn1'>TRY FREE FOR 30 DAYS</a></button>
                         </div>
                     </div>
                     <div className="right_row">
@@ -103,7 +104,7 @@ function Home() {
 
             {/* Section for demo class */}
             <hr style={{ background: 'black', color: 'black', borderColor: 'black', margin:0 }} />
-            <section className="demo">
+            <section className="demo" id="demo">
               <div className="desp1">
                   <div className="para">
                       <h2>Request For Demo</h2>

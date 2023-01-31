@@ -46,6 +46,11 @@
     position: center;
   }
   
+  .demobtn1 {
+    text-decoration: none;
+    color: white;
+    
+  }
   .picture12 {
     height: 130%;
     width: 123%;

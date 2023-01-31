@@ -50,10 +50,14 @@ function Software({individualProduct, addToCart}) {
                             <div className="product">
                                 <div className="product-body">
                                     <div className="car-content" key={data.id}>
-                                        <div className="title">{data.title}</div>
+                                        <div className="title1">{data.title1}</div>
+                                        <div className="title2">{data.title2}</div>
+                                        <div className="title3">{data.title3}</div>
                                         <div className="title-description">{data.description}</div>
-                                        <div className="price"><label>$</label>{data.price}<label>.00</label></div>
-                                        <a href="#" className="btn-custom primary" onClick={handleAddToCart}>ADD TO CART</a>
+                                        <div className="price1"><label>$</label>{data.price1}<label>.00</label></div>
+                                        <div className="price2"><label>$</label>{data.price2}<label>.00</label></div>
+                                        <a href="#" className="btn-primary" onClick={handleAddToCart}>ADD TO CART</a>
+                                        <a href="#" className="btn-secondary"> TRY FREE FOR 30 DAYS </a>
                                         <div className="product-thumb">
                                             <label className="product-description">
                                                 <i class="fa-sharp fa-solid fa-circle-check"></i>Windows Supported<br></br>

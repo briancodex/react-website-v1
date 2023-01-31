@@ -39,7 +39,7 @@
 
 .nav-menu {
   display: grid;
-  grid-template-columns: repeat(6, auto);
+  grid-template-columns: repeat(7, auto);
   grid-gap: 15px;
   list-style: none;
   text-align: center;
@@ -95,6 +95,11 @@
 .fa-soild {
   color: black;
   height: 20px;
+}
+
+.error {
+  color: red;
+  margin-top: -2%;
 }
 
 
@@ -164,14 +169,13 @@
   padding-top: 20px;
 }
 
-.loginbtn {
+.loginbtnmain1 {
   padding: 10px;
   padding-left: 20px;
   padding-right: 20px;
   border-color: black;
   border-radius: 2rem;
   background-color: white;
- 
 }
 
 .loginbtn:hover {
@@ -227,7 +231,7 @@
 }
 
 .title {
-  font-size: 40px;
+  font-size: 45px;
 }
 
 .model-links {
@@ -380,13 +384,13 @@
 }
 
 .login_pic3 {
-  height: 10%;
-  width: 21%;
+  height: 7%;
+  width: 15%;
 }
 
 .createaccountheader {
   text-align: center;
-  font-size: 50px;
+  font-size: 45px;
   line-height: 0px
 }
 .createaccountpara {
@@ -403,12 +407,20 @@
 
 .ciname {
   font-size: 14px;
+
 }
 
 .flinput {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2%;
+  
+}
+
+.flerror {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 18%;
+  margin-left: 8%;
   
 }
 
@@ -416,19 +428,16 @@
 .createaccountinput {
   margin-left: 10%;
   margin-right: 10%;
-  
-  
 }
 
 .cinput {
   width: 90%;
   height: 25px;
   border-radius: 0.5rem;
-  margin-bottom: 2%;
   box-shadow: inset 0 0 3px grey;
   background-color: #F6F6F6;
   border-color: white;
-  
+  margin-top: 0%;
 }
 
 .clinput {
@@ -441,7 +450,7 @@
 }
 
 .submitcreate{
-  margin-top: 5%;
+  margin-top: 3%;
   width: 75%;
   margin-left: 10%;
   margin-right: 10%;
@@ -455,4 +464,9 @@
 
 .loginicon_navbar {
   margin-top: 18%;
+}
+
+.error1 {
+  color: red;
+  margin-top: -0.5%;
 }
