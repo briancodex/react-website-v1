@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./SupportNote.css";
 import "../../App.css";
 import { useState } from "react";
-
+import { } from 'firebase/firestore';
 
 
 export default function General() {
@@ -645,34 +645,33 @@ export default function General() {
 
           
               <div>
-                    <h1> Review us</h1>
-               
-                    <p>Please Rate Our Service:</p>
-                    <input type="radio" id="Strongly Disagree" name="service" value="Strongly Disagree"></input>
-                    <label for="Strongly Disagree">Strongly Disagree</label><br></br>
-                     <input type="radio" id="Disagree" name="service" value="Disagree"></input>
-                     <label for="Disagree">Disagree</label><br></br>
-                      <input type="radio" id="Agree" name="service" value="Agree"></input>
-                          <label for="Agree">Agree</label><br></br>
-                       <input type="radio" id="Strongly Agree" name="service" value="Strongly Agree"></input>
-                         <label for="Strongly Agree">Strongly Agree</label><br></br>
-                         
-                         
-<form action="/action_page.php">
-                  <p><babel for="Comment:"> Any Other Comment:</babel></p>
-                  <textarea id="Comment" name="comment" rows="4" cols="50">
-                    
-                    
-                    
-                  </textarea>
-                  <input type="Submit" value="Submit"></input>
-</form>
 
-                </div>
-        
-      
+              <title>Contact Messages | Firebase</title>
+              <div class="container">
+        <form action="" id="contactForm">
+            <div class="alert">Your message is sent!</div>
 
-     
+            <div class="inputBox">
+                <input type="text" id="name" placeholder="Your name...." />
+            </div>
+
+            <div class="inputBox">
+                <input type="email" id="emailid" placeholder="Your Email....." />
+            </div>
+
+            <div class="inputBox">
+                <textarea id="msgContent" cols="30" rows="10" placeholder="Message"></textarea>
+            </div>
+
+            <div class="inputBox">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="./ReviewFB.js"></script>
+    
+
+     </div>
       </div>
       </section>
     </>
