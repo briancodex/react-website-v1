@@ -3,16 +3,16 @@ import './Navbar.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
-import {Link, Redirect} from "react-router-dom";
+import {Link} from "react-router-dom";
 import { db } from "./firebase.js";
 
 import {
   auth,
   registerWithEmailAndPassword,
-  signInWithGoogle,
   logInWithEmailAndPassword,
   logout,
-  sendPasswordReset
+  sendPasswordReset,
+  
   
 } from "./firebase"
 import {onAuthStateChanged} from '@firebase/auth';
@@ -21,13 +21,7 @@ import { collection, getDocs } from 'firebase/firestore';
 
 
 function Navbar() {
-
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmpass, setConfirmpass] = useState("");
-  const [firstname, setFirstName] = useState("");
-  const [lastname, setLastName] = useState("");
-  const [phone, setPhone] = useState("");
   const [cuser, setCuser] = useState("");
   const [show1, setShow1] = useState(false);
   const [show2, setShow2] = useState(false);
@@ -41,9 +35,79 @@ function Navbar() {
   const [authUser, setAuthUser] = useState(null);
   const [details, setDetails] = useState([]);
   const [aemail, setAemail] = useState("");
+  const [formErrors, setFormErrors] = useState({});
+  const [registerErrors, setRegisterErrors] = useState({});
+  const initialLoginValues = {email: "", password: ""};
+  const initialRegisterValues = {email: "", password: "", phone: "", firstname: "", lastname: "", confirmpass: ""};
+  const [formValues, setFormValues] = useState(initialLoginValues);
+  const [registerValues, setRegisterValues] = useState(initialRegisterValues);
 
   var paswd=  /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
 
+  const handleChange = (e) => {
+    const {name, value} = e.target;
+    setFormValues({...formValues, [name]: value});
+
+  }
+
+  const validate = (values) => {
+    const errors = {};
+
+    if (!values.email) {
+      errors.email = "Email is required!";
+    }
+    else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+      errors.email = "Email format is incorrect";
+    }
+
+    if (!values.password) {
+      errors.password = "Password is required!";
+    }
+
+    return errors;
+  }
+
+  const handleChange1 = (e) => {
+    const {name, value} = e.target;
+    setRegisterValues({...registerValues,[name]: value});
+
+  }
+
+  const rvalidate = (values) => {
+    const errors ={};
+
+    if (!values.email) {
+      errors.email = "Email is required!";
+    }
+    else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+      errors.email = "Email format is incorrect";
+    }
+
+    if (!values.password) {
+      errors.password = "Password is required!";
+    }
+    else if (!paswd.test(values.password)) {
+      errors.password = "Password must minimum be 9 characters"
+    }
+
+    if (!values.phone) {
+      errors.phone = "Phone number is required!"
+    }
+
+    if (!values.firstname) {
+      errors.firstname = "Field is required"
+    }
+
+    if (!values.lastname) {
+      errors.lastname = "Field is required"
+    }
+
+    if (values.password != values.confirmpass) {
+      errors.confirmpass = "Password does not match"
+    }
+    return errors;
+
+  }
 
   useEffect(() => {
     const getData = async () => {
@@ -53,20 +117,24 @@ function Navbar() {
     getData();
   }, []);
 
-  const loginbutton = () => {
+  const loginbutton = (e) => {
+    e.preventDefault();
+    setFormErrors(validate(formValues))
 
     {details.map((data) => {
-      if(email == data.email) {
-          logInWithEmailAndPassword(email, password);
+
+      if (Object.keys(formErrors).length === 0) {
+        if(formValues.email === data.email) {
+          logInWithEmailAndPassword(formValues.email, formValues.password);
+          setShow(false);
           setAemail(data.email)
-          if (data.role == "admin") {
+          if (data.role === "admin") {
             alert("Admin")
           }
       }
+      }
     })}
-
-    setShow(false);
-
+    
   }
 
   const AuthDetails =() => {
@@ -111,19 +179,15 @@ function Navbar() {
   }
 
 
+
   const register = () => {
     let passwordError = "";
-    if (!firstname) alert("Please enter name");
-    if (password === confirmpass) {
-      if (password.match(paswd)) {
-      registerWithEmailAndPassword(firstname, email, password);
+    setRegisterErrors(rvalidate(registerValues))
+    if (registerValues.password === registerValues.confirmpass) {
+      if (registerValues.password.match(paswd)) {
+      registerWithEmailAndPassword(registerValues.firstname, registerValues.email, registerValues.password);
       alert("Account successfully created")
       handleShowLogin();
-      }
-      else 
-      {
-        passwordError = "Password is nt enough";
-        alert(passwordError);
       }
     }
     else 
@@ -182,8 +246,8 @@ function Navbar() {
             <li className='nav-links'>
               
                 <div class="dropdown">
-                  <div class="menu-button">SUPPORT ▼</div>
-                  <div class="menu-content">
+                  <div className="menu-button">SUPPORT ▼</div>
+                  <div className="menu-content">
                     <ul className='list_try'>
                   <li><Link to='/SupportNote' className='nav-links' onClick={closeMobileMenu} >Support Note</Link></li>
                   <li><Link to='/SupportVideo' className='nav-links' onClick={closeMobileMenu} >Support Video</Link></li>
@@ -205,8 +269,8 @@ function Navbar() {
             </li>
             <li className="nav-links">
             {details.map((data) => {
-              if(aemail == data.email) {
-                  if (data.role == "admin") {
+              if(aemail === data.email) {
+                  if (data.role === "admin") {
                     return (
                       <Link to ="/AdminPage"><h3>Admin</h3></Link>
                     ) 
@@ -227,20 +291,31 @@ function Navbar() {
                       <div className="login_title">
                       
                         <Modal.Title><b className="title">WELCOME BACK</b></Modal.Title>
-                        <div>Login using social networks</div>
-                        <i class="fa-brands fa-google fa-3x" onClick={signInWithGoogle}></i>
-                        <i class="fa-brands fa-square-facebook fa-3x"></i>
-                        <i class="fa-brands fa-linkedin fa-3x"></i>
-                        <div>------------------------------------or------------------------------------</div>
+                      
                       </div>
                       <br />
  
                         <div className="logininputtry">
-                      
-                          <label>Email Address:<input type="email" value={email} className="logininput1" onChange={(e) => setEmail(e.target.value)} /></label>
-    
-                          <label>Password: <input type="password" value={password} className="logininput1" onChange={(e) => setPassword(e.target.value)} /></label>
-                         
+                          <label>Email Address:
+                            <input 
+                                type="email" 
+                                name="email"
+                                value={formValues.email} 
+                                placeholder="email"
+                                className="logininput1" 
+                                onChange={handleChange} />
+                            </label>
+                            <p className="error">{formErrors.email}</p>
+                          <label>Password: 
+                            <input 
+                                type="password" 
+                                name="password"
+                                value={formValues.password} 
+                                placeholder="password"
+                                className="logininput1" 
+                                onChange={handleChange} />
+                            </label>
+                            <p className="error">{formErrors.password}</p>
 
                         </div>
                       <div className="submitting">
@@ -310,30 +385,68 @@ function Navbar() {
                     </div>
 
                     <div className="flinput">
-                      <input type="text"  value={firstname} onChange={(e) => setFirstName(e.target.value)} className="clinput"></input>
-                      <input type="text" value={lastname} onChange={(e) => setLastName(e.targetvalue)} className="clinput" ></input> 
+                      <input type="text"  name="firstname" value={registerValues.firstname} onChange={handleChange1} className="clinput"></input>
+                      <input type="text" name="lastname" value={registerValues.lastname} onChange={handleChange1} className="clinput" ></input> 
+                      <br/>
                       <br/>
                     </div>
 
+                    <div className="flerror">
+                    <p className="error1">{registerErrors.firstname}</p>
+                    <p className="error1">{registerErrors.lastname}</p>
+                    </div>
+
                     <label className="ciname">Email Address:</label><br/>
-                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="cinput"></input>
-                    <br/>
-
-                    <label className="ciname">Phone Number:</label><br/>
-                    <input type="number" value={phone} onChange={(e) => setPhone(e.target.value)} className="cinput"></input>
-                    <br/>
-
-                    <label className="ciname">Password:</label><br/>
-                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="cinput"></input>
+                    <input 
+                        type="email" 
+                        name="email"
+                        value={registerValues.email} 
+                        onChange={handleChange1} 
+                        className="cinput">
+                          
+                    </input>
+                    <p className="error1">{registerErrors.email}</p>
                     
-                    <br/>
 
+                  
+                    <label className="ciname">Phone Number:</label><br/>
+                    <input 
+                      type="number" 
+                      name="phone"
+                      value={registerValues.phone} 
+                      onChange={handleChange1} 
+                      className="cinput">
+                    </input>
+                    <p className="error1">{registerErrors.phone1}</p>
+
+                    
+                    <label className="ciname">Password:</label><br/>
+                    <input 
+                      type="password" 
+                      name="password"
+                      value={registerValues.password} 
+                      onChange={handleChange1} 
+                      className="cinput">
+                    </input>
+                    <p className="error1">{registerErrors.password}</p>
+
+                    
                     <label className="ciname">Confirm Password:</label><br/>
-                    <input type="password" value={confirmpass} onChange={(e) => setConfirmpass(e.target.value)} className="cinput"></input>
+                    <input 
+                      type="password" 
+                      name="confirmpass"
+                      value={registerValues.confirmpass} 
+                      onChange={handleChange1} 
+                      className="cinput">
+                    </input>
+                    <p className="error1">{registerErrors.confirmpass}</p>
                     <br/>
-
-                    <input type="checkbox" value="agree" id="agree"/>I agree to MYOB's <u>Terms of Service & Private Policy</u>
-                    <br/>
+                   
+                    <input 
+                    type="checkbox" 
+                    value="agree" 
+                    id="agree"/>I agree to MYOB's <u>Terms of Service & Private Policy</u>
+                   
 
                     <b><input type="submit" value="Sign Up" className="submitcreate" onClick={register}/></b>
                   </div>
