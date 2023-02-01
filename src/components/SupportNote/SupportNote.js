@@ -681,7 +681,7 @@ export default function General() {
                   <input type="text" ref={emailRef} /><br></br>
                   <label>Enter Comments:</label>
                   <input type="text" ref={messageRef} /><br></br>
-                  <button type="submit">Save</button>
+                  <button type="submit">Saved</button>
                 </form>
 
               

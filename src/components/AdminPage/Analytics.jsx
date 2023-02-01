@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import { getFirestore, collection, addDoc } from "firebase/firestore";
  
-const AddProducts = () => {
+const Analytics = () => {
     const [title1  , SetTitle1] = useState("");
     const [title2  , SetTitle2] = useState("");
     const [title3  , SetTitle3] = useState("");
@@ -60,4 +60,4 @@ const AddProducts = () => {
     );
 }
  
-export default AddProducts;
+export default Analytics;
