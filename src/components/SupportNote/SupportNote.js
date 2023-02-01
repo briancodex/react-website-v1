@@ -1,12 +1,11 @@
 import React, { useRef } from "react";
-import { Modal } from "react-bootstrap";
+import { Modal, Toast } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./SupportNote.css";
 import "../../App.css";
 import { useState } from "react";
 import { db } from "../firebase";
 import { addDoc, collection } from "@firebase/firestore";
- 
 
 
 export default function General() {
@@ -53,6 +52,9 @@ export default function General() {
   const emailRef = useRef();
   const ref = collection(db, "Review");
 
+  
+    
+  
   const handleSave = async (e) => {
     e.preventDefault();
     console.log(messageRef.current.value);
@@ -457,7 +459,6 @@ export default function General() {
 
           )}
 
-
 {multicurrency && (
             
             <div className="supportModal">
@@ -692,4 +693,5 @@ export default function General() {
     </>
   );
 }
+
 
