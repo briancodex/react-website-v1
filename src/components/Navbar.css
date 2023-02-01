@@ -152,6 +152,7 @@
   height: 100%; /* Full height */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  
 }
 /* modal background */
 
@@ -163,6 +164,7 @@
   border: 1px solid #888;
   width: 79%; /* Could be more or less, depending on screen size */
   scroll-behavior: unset;
+  border-radius: 2rem;
 }
 
 .modal.footer {
@@ -192,11 +194,15 @@
 .login_pic {
   height: 100%;
   width: 260%;
+  border-radius: 0rem 2rem 2rem 0rem;
 }
 
 .login_pic1 {
   height: 10%;
   width: 20%;
+  border-radius: 2rem;
+  margin-left: 10px;
+  margin-top : 3px;
 }
 
 .rightlogin {
@@ -216,6 +222,7 @@
   box-shadow: inset 0 0 3px grey;
   background-color: #F6F6F6;
   border-color: white;
+  padding-left: 10px;
 }
 
 .fa-square-facebook{
@@ -376,6 +383,10 @@
   
 }
 
+.forgetpasswordgif {
+  border-radius: 0rem 2rem 2rem 0rem;
+}
+
 
 /* Forget Password Section End */
 
@@ -386,6 +397,8 @@
 .login_pic3 {
   height: 7%;
   width: 15%;
+  margin-left: 20px;
+  margin-top: 10px
 }
 
 .createaccountheader {
@@ -469,4 +482,8 @@
 .error1 {
   color: red;
   margin-top: -0.5%;
+}
+
+.loginimageca {
+  border-radius: 0rem 2rem 2rem 0rem;
 }
