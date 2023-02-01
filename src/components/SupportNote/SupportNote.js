@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Modal } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./SupportNote.css";
 import "../../App.css";
 import { useState } from "react";
-import { } from 'firebase/firestore';
+import { db } from "../firebase";
+import { addDoc, collection } from "@firebase/firestore";
+ 
 
 
 export default function General() {
@@ -45,6 +47,32 @@ export default function General() {
   const toggleTimeBilling= () => {
     setTimeBilling(!timebilling);
   };
+
+  const messageRef = useRef();
+  const nameRef = useRef();
+  const emailRef = useRef();
+  const ref = collection(db, "Review");
+
+  const handleSave = async (e) => {
+    e.preventDefault();
+    console.log(messageRef.current.value);
+    console.log(nameRef.current.value);
+    console.log(emailRef.current.value);
+
+    let data = {
+      name: nameRef.current.value,
+      email: emailRef.current.value,
+      message: messageRef.current.value,
+
+    };
+
+    try {
+      addDoc(ref, data);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+  
 
   return (
     <>
@@ -645,30 +673,17 @@ export default function General() {
 
           
               <div>
+                <form onSubmit={handleSave}>
+                  <label>Enter Name:</label>
+                  <input type="text" ref={nameRef} /><br></br>
+                  <label>Enter Email:</label>
+                  <input type="text" ref={emailRef} /><br></br>
+                  <label>Enter Comments:</label>
+                  <input type="text" ref={messageRef} /><br></br>
+                  <button type="submit">Save</button>
+                </form>
 
-              <title>Contact Messages | Firebase</title>
-              <div class="container">
-        <form action="" id="contactForm">
-            <div class="alert">Your message is sent!</div>
-
-            <div class="inputBox">
-                <input type="text" id="name" placeholder="Your name...." />
-            </div>
-
-            <div class="inputBox">
-                <input type="email" id="emailid" placeholder="Your Email....." />
-            </div>
-
-            <div class="inputBox">
-                <textarea id="msgContent" cols="30" rows="10" placeholder="Message"></textarea>
-            </div>
-
-            <div class="inputBox">
-                <button type="submit">Submit</button>
-            </div>
-        </form>
-    </div>
-    <script src="./ReviewFB.js"></script>
+              
     
 
      </div>
