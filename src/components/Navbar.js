@@ -35,6 +35,7 @@ function Navbar() {
   const [authUser, setAuthUser] = useState(null);
   const [details, setDetails] = useState([]);
   const [aemail, setAemail] = useState("");
+  const [apassowrd, setAPassword] = useState("");
   const [formErrors, setFormErrors] = useState({});
   const [registerErrors, setRegisterErrors] = useState({});
   const initialLoginValues = {email: "", password: ""};
@@ -125,13 +126,11 @@ function Navbar() {
 
       if (Object.keys(formErrors).length === 0) {
         if(formValues.email === data.email) {
-          logInWithEmailAndPassword(formValues.email, formValues.password);
-          setShow(false);
-          setAemail(data.email)
-          if (data.role === "admin") {
-            alert("Admin")
-          }
-      }
+            logInWithEmailAndPassword(formValues.email, formValues.password);
+            setShow(false);
+            setAemail(data.email)
+            setAPassword(formValues.password);
+      } 
       }
     })}
     
@@ -181,13 +180,12 @@ function Navbar() {
 
 
   const register = () => {
-    let passwordError = "";
     setRegisterErrors(rvalidate(registerValues))
     if (registerValues.password === registerValues.confirmpass) {
       if (registerValues.password.match(paswd)) {
       registerWithEmailAndPassword(registerValues.firstname, registerValues.email, registerValues.password);
       alert("Account successfully created")
-      handleShowLogin();
+      handleCloseAll();
       }
     }
     else 
@@ -210,6 +208,11 @@ function Navbar() {
     setShow(false);
   }
 
+  const handleCloseAll = () => {
+    setShow(false);
+    setShow1(false);
+    setShow2(false);
+  }
   
 
   return (
@@ -270,11 +273,14 @@ function Navbar() {
             <li className="nav-links">
             {details.map((data) => {
               if(aemail === data.email) {
+                if (apassowrd === data.password) {
                   if (data.role === "admin") {
                     return (
                       <Link to ="/AdminPage"><h3>Admin</h3></Link>
                     ) 
                   }
+                }
+                  
               }
     })}
               

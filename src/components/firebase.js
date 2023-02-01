@@ -7,10 +7,13 @@ import {
   sendPasswordResetEmail,
   signOut,
 } from "firebase/auth";
+
 import {
   getFirestore,
+  query,
+  getDocs,
   collection,
-
+  where,
   addDoc,
 } from "firebase/firestore";
 
@@ -57,7 +60,8 @@ const firebaseConfig = {
         name,
         authProvider: "local",
         email,
-        role: "user"
+        role: "user",
+        password
       });
     } catch (err) {
       console.error(err);

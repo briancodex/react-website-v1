@@ -33,10 +33,10 @@ const Footer = () => {
         </div>
 
         <div className="FIL">
-            <i class="fa-brands fa-square-facebook fa-2x" style = {{color: "white"}}>   </i>
-           <i class="fa-brands fa-square-instagram fa-2x" style = {{color: "white"}}>   </i>
-           <i class="fa-brands fa-linkedin fa-2x" style = {{color: "white"}}>   </i>
-           <i class="fa-brands fa-square-youtube fa-2x" style = {{color: "white"}}>    </i>
+           <a href="https://www.facebook.com/MYOB/"><i class="fa-brands fa-square-facebook fa-2x" style = {{color: "white"}}></i></a>
+           <a href="https://www.instagram.com/myob/?hl=en"><i class="fa-brands fa-square-instagram fa-2x" style = {{color: "white"}}></i></a>
+           <a href=""><i class="fa-brands fa-linkedin fa-2x" style = {{color: "white"}}></i></a>
+           <a href="https://www.youtube.com/channel/UCxUXFRoa3cQ7f7TY2lHiVeg"><i class="fa-brands fa-square-youtube fa-2x" style = {{color: "white"}}>    </i></a>
         </div>
 
     </div>
