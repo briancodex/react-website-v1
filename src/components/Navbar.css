@@ -239,6 +239,7 @@
 
 .title {
   font-size: 45px;
+  
 }
 
 .model-links {
@@ -251,7 +252,7 @@
   grid-template-columns: 1fr 2fr;
   margin-left: 35px;
   column-gap: 100px;
- 
+  margin-top: 3%;
 }
 
 .submit {
@@ -289,6 +290,18 @@
   margin-left: 9%;
 }
 
+.signoutbtn {
+  margin-left: 3%;
+  margin-bottom: 5%;
+  background-color: purple;
+  border-color: white;
+  color:white;
+  border-radius: 0.5rem;
+  width: 65%;
+  height: 35px;
+  font-size: 15px;
+  margin-left: 9%;
+}
 
 @media screen and (min-width: 1600px) {
 
@@ -404,10 +417,11 @@
 .createaccountheader {
   text-align: center;
   font-size: 45px;
-  line-height: 0px
+
 }
 .createaccountpara {
   text-align: center;
+  margin-top: 5%;
 }
 
 .flname {
@@ -439,8 +453,10 @@
 
 
 .createaccountinput {
-  margin-left: 10%;
+  margin-left: 15%;
   margin-right: 10%;
+  margin-top: 2%;
+ 
 }
 
 .cinput {
