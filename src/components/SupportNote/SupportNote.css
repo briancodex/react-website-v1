@@ -10,13 +10,14 @@
 .snhead {
   text-align: center;
   font-size: 35px;
-  margin-bottom: -45px;
+  margin-top: -10px;
 }
 
 .snlabel {
   text-align: center;
   font-size: 30px;
   font-stretch: expanded;
+  margin-top: 60px;
 }
 
 body.active-General {
