@@ -7,6 +7,7 @@ import Carousel from "react-elastic-carousel";
 import "./Software.css";
 import "./ProductCard.css";
 
+
 const breakPoints = [
     { width: 1, itemsToShow: 1 },
     { width: 550, itemsToShow: 2 },

@@ -33,6 +33,11 @@ const Sidebar = ({children}) => {
             name:"Calendar",
             icon:<FaCommentAlt/>
         },
+        {
+            path:"/productCRUD",
+            name:"Calendar",
+            icon:<FaCommentAlt/>
+        },
     ]
     return (
         <div className="container">

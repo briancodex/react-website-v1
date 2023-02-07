@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import { getFirestore, collection, addDoc } from "firebase/firestore";
+import './Analytics.css';
  
 const Analytics = () => {
     const [title1  , SetTitle1] = useState("");
@@ -23,41 +24,57 @@ const Analytics = () => {
             description: description
         }))
         .then((userRef) => {
-            alert("Data Successfully Submitted");
+            alert("Product Added");
+            SetTitle1("");
+            SetTitle2("");
+            SetTitle3("");
+            SetPrice1("");
+            SetPrice2("");
+            SetDesciption("");
         })
         .catch((error) => {
             console.error("Error adding document: ", error);
         });
     }
+    
  
     return (
         <div>
             <center>
-                <form style={{marginTop:"200px" }}
+                <form style={{marginTop:"100px" }}
                   onSubmit={(event) => {sub(event)}}>
+                    <h1>Add Product</h1>
                     <input type="text" placeholder="Title 1"
+                      value={title1}
                       onChange={(e)=>{SetTitle1(e.target.value)}} />
                       <br/><br/>
                       <input type="text" placeholder="Title 2"
+                      value={title2}
                       onChange={(e)=>{SetTitle2(e.target.value)}} />
                       <br/><br/>
                       <input type="text" placeholder="Title 3"
+                      value={title3}
                       onChange={(e)=>{SetTitle3(e.target.value)}} />
                       <br/><br/>
                     <input type="number" placeholder="Old Price"
+                      value={price1}
                       onChange={(e)=>{SetPrice1(e.target.value)}}/>
                       <br/><br/>
                       <input type="number" placeholder="New Price"
+                      value={price2}
                       onChange={(e)=>{SetPrice2(e.target.value)}}/>
                       <br/><br/>
-                    <input type="text" placeholder="Description"
+                    <input type="text" placeholder="Description" 
+                      value={description}
                       onChange={(e)=>{SetDesciption(e.target.value)}}/>
                       <br/><br/>
-                    <button type="submit">Submit</button>
+                    <button className="submitPro">Submit</button>
                 </form>
             </center>
         </div>
     );
 }
+ 
+
  
 export default Analytics;

@@ -28,7 +28,7 @@ function ChatApp() {
   const [user] = useAuthState(auth);
 
   return (
-    <div className="App">
+    <div className="ChatApp">
       <header>
         <h1>⚛️🔥💬</h1>
         <SignOut />
@@ -88,7 +88,7 @@ function ChatRoom() {
     })
 
     setFormValue('');
-    dummy.current.scrollIntoView({ behavior: 'smooth' });
+    dummy.current.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
   }
 
   return (<>
@@ -116,13 +116,14 @@ function ChatMessage(props) {
 
   const messageClass = uid === auth.currentUser.uid ? 'sent' : 'received';
 
-  return (
+  return (<>
     <div className={`message ${messageClass}`}>
-      <img src={photoURL || 'https://api.adorable.io/avatars/23/abott@adorable.io.png'} alt="Profile" />
+      <img src={photoURL || 'https://api.adorable.io/avatars/23/abott@adorable.png'} />
       <p>{text}</p>
     </div>
-  );
+  </>)
 }
+
 
 
 export default ChatApp;
