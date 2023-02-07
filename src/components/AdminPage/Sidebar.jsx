@@ -4,6 +4,7 @@ import {
     FaBars,
     FaRegChartBar,
     FaCommentAlt,
+    FaShoppingBag,
     
 }from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
@@ -16,12 +17,12 @@ const Sidebar = ({children}) => {
         {
             path:"/",
             name:"Dashboard",
-            icon:<FaTh/>
+            icon:<FaRegChartBar/>
         },
         {
             path:"/analytics",
             name:"Analytics",
-            icon:<FaRegChartBar/>
+            icon:<FaTh/>
         },
         {
             path:"/chatapp",
@@ -29,21 +30,16 @@ const Sidebar = ({children}) => {
             icon:<FaCommentAlt/>
         },
         {
-            path:"/calendar",
-            name:"Calendar",
-            icon:<FaCommentAlt/>
-        },
-        {
             path:"/productCRUD",
-            name:"Calendar",
-            icon:<FaCommentAlt/>
+            name:"Product",
+            icon:<FaShoppingBag/>
         },
     ]
     return (
         <div className="container">
            <div style={{width: isOpen ? "200px" : "50px"}} className="sidebar">
                <div className="top_section">
-                   <h1 style={{display: isOpen ? "block" : "none"}} className="logo">Logo</h1>
+                   <h1 style={{display: isOpen ? "block" : "none"}} className="logo">MYOB</h1>
                    <div style={{marginLeft: isOpen ? "50px" : "0px"}} className="bars">
                        <FaBars onClick={toggle}/>
                    </div>

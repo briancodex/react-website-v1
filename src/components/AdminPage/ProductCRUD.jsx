@@ -4,6 +4,7 @@ import './ProductCRUD.css';
 import firebase from 'firebase/compat/app';
 
 class ProductCRUD extends Component {
+  
   constructor(props) {
     super(props);
     this.ref = firebase.firestore().collection('products');
@@ -37,18 +38,32 @@ class ProductCRUD extends Component {
     this.unsubscribe = this.ref.onSnapshot(this.onCollectionUpdate);
   }
 
+  handleDelete = (board) => {
+    this.ref.doc(board.key).delete().then(() => {
+      console.log("Document successfully deleted!");
+    }).catch((error) => {
+      console.error("Error removing document: ", error);
+    });
+  }
+  
+  handleUpdate = (board) => {
+  this.props.history.push(`/update/${board.key}`);
+}
+
+
   render() {
+    
     return (
-      <div class="container">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title">
+      <div className="container">
+        <div className="panel panel-default">
+          <div className="panel-heading">
+            <h3 className="panel-title">
               PRODUCT LIST
             </h3>
           </div>
-          <div class="panel-body">
+          <div className="panel-body">
             <h4><Link to="/analytics">Add Board</Link></h4>
-            <table class="table table-stripe">
+            <table className="table table-stripe">
               <thead>
                 <tr>
                   <th>Title1</th>
@@ -57,17 +72,20 @@ class ProductCRUD extends Component {
                   <th>Description</th>
                   <th>Old Price</th>
                   <th>New Price</th>
+                  <th>Action</th>
                 </tr>
               </thead>
               <tbody>
                 {this.state.boards.map(board =>
-                  <tr>
+                  <tr key={board.key}>
                     <td><Link to={`/show/${board.key}`}>{board.title1}</Link></td>
                     <td>{board.title2}</td>
                     <td>{board.title3}</td>
                     <td>{board.description}</td>
                     <td>${board.price1}</td>
                     <td>${board.price2}</td>
+                    <td><button className="btn-delete" onClick={() => this.handleDelete(board)}>Delete</button></td>
+                    <td><button className="btn-update" onClick={() => this.handleUpdate(board)}>Update</button></td>
                   </tr>
                 )}
               </tbody>
@@ -79,4 +97,4 @@ class ProductCRUD extends Component {
   }
 }
 
-export default ProductCRUD;
+export default ProductCRUD

@@ -5,7 +5,6 @@ import Sidebar from './Sidebar.jsx';
 import Dashboard from './Dashboard.jsx';
 import Analytics from './Analytics.jsx';
 import ChatApp from './ChatApp.jsx';
-import Calendar from './Calendar.jsx';
 import ProductCRUD from './ProductCRUD.jsx';
 
 
@@ -18,7 +17,6 @@ const AdminPage = () => {
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/chatapp" component={ChatApp} />
           <Route path="/analytics" component={Analytics} />
-          <Route path="/calendar" component={Calendar} />
           <Route path="/productCRUD" component={ProductCRUD} />
         </Switch>
       </Sidebar>
