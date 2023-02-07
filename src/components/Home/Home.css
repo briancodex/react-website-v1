@@ -197,8 +197,13 @@
     border-radius: 15px;
     background-color: #4D096D;
     color: white;
+    margin-left: 2%;
 }
 
 .icons {
   background-color: white;
+}
+
+.demobtn:hover {
+  transform: scale(1.1);
 }

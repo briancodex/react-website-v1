@@ -1,9 +1,38 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import './Home.css';
+import emailjs from '@emailjs/browser';
 
 
-function Home() {
+const EmailContactForm = () => {
+    const form = useRef();
     
+    function sendEmail(e) {
+      e.preventDefault(); // prevents the page from reloading when you hit “Send”
+    
+      emailjs.sendForm('service_oco97kt', 'template_9anu2x8', form.current, 'e8OBeWXMY0L-eN11C')
+      alert("Success")
+        .then((result) => {
+
+            // show the user a success message
+            alert("Email successfully sent")
+        }, (error) => {
+            // show the user an error
+            alert("Error")
+        });
+    };
+    
+    return (
+      <form ref={form} onSubmit={sendEmail}>
+        <h3 className="em">Name</h3>
+        <input type="text" className="textbox1" style={{outline: 'none'}} name="user_name"></input>
+        <h3 className="em">Email Address</h3>
+        <input type="email" className="textbox1" style={{outline: 'none'}} name="user_email"></input><button className="demobtn" type="submit">Start Your Free Demo</button>
+      </form>
+    );
+   };
+
+const Home = () => {
+
   return (
     <>
           <hr style={{ background: 'black', color: 'black', borderColor: 'black', margin:0 }} />
@@ -109,8 +138,8 @@ function Home() {
                   <div className="para">
                       <h2>Request For Demo</h2>
                       <h2 className="acc">See Our Accounting Software In Action</h2>
-                      <h3 className="em">Email Address</h3>
-                      <input type="textbox" className="textbox1"></input> <button className="demobtn">Start Your Free Demo</button>
+
+                      <EmailContactForm />
                   </div>
                   <div className="picbottom">
                       <img src="/images/bottompic2.jpg" alt="" className="ity"></img>

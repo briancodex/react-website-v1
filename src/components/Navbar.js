@@ -87,8 +87,11 @@ function Navbar() {
     if (!values.password) {
       errors.password = "Password is required!";
     }
+    else if (values.password.length < 9) {
+      errors.password = "Password must have minumum 9 characters"
+    }
     else if (!paswd.test(values.password)) {
-      errors.password = "Password must minimum be 9 characters"
+      errors.password = "Password should have a special character"
     }
 
     if (!values.phone) {
@@ -286,6 +289,8 @@ function Navbar() {
               
             </li>
           </ul>
+
+
           <Button variant="a" onClick={handleShowLogin} className="loginbtnmain1">LOGIN </Button>
 
         <Modal show={show} onHide={handleClose} className="loginmodel">
@@ -312,6 +317,7 @@ function Navbar() {
                                 onChange={handleChange} />
                             </label>
                             <p className="error">{formErrors.email}</p>
+                            <br></br>
                           <label>Password: 
                             <input 
                                 type="password" 
@@ -327,11 +333,15 @@ function Navbar() {
                       <div className="submitting">
 
                         <div className="rmbmeandforget">
+                          
                         <label for="rememberMe"><input type="checkbox" value="lsRememberMe" id="rememberMe"/>Remember me </label>
+                        
                         <Link to='/' className='model-links' onClick={handleShowForgetPassword}>Forgot Password?</Link>
                         </div>
 
                         <br/>
+                      
+   
                         <b><input type="button" value="Login"  class="submit1" onClick={loginbutton}/>
                         </b>
                         <Button variant="a" type="signout" value="signout" className="signoutbtn" onClick={logout}> Sign out</Button>
@@ -360,7 +370,8 @@ function Navbar() {
                 <img src="/images/MYOB_Logo.png" alt="" className="login_pic1"></img>
                     <h2 className="forgettitle">Forget<br />
                         Password?</h2>
-                    <p className="forgetpara">Don't worry! It happens. Please enter the email<br/> address and we will send a password reset link. </p>
+                        <br/>
+                    <p className="forgetpara">Don't worry! It happens. Please enter the email<br/> address and we will send a password reset link. </p><br/>
                     <h4 className="forgetemail">Enter the email address</h4>
                     <label><input type="text" name="email" className="forgetpasswordemail" onChange={(e) => setEmail(e.target.value)} /></label>
                     <br/>
@@ -394,7 +405,7 @@ function Navbar() {
                       <input type="text"  name="firstname" value={registerValues.firstname} onChange={handleChange1} className="clinput"></input>
                       <input type="text" name="lastname" value={registerValues.lastname} onChange={handleChange1} className="clinput" ></input> 
                       <br/>
-                      <br/>
+                      
                     </div>
 
                     <div className="flerror">
@@ -411,8 +422,9 @@ function Navbar() {
                         className="cinput">
                           
                     </input>
+                    <br/>
                     <p className="error1">{registerErrors.email}</p>
-                    
+                    <br/>
 
                   
                     <label className="ciname">Phone Number:</label><br/>
@@ -423,8 +435,9 @@ function Navbar() {
                       onChange={handleChange1} 
                       className="cinput">
                     </input>
+                    
                     <p className="error1">{registerErrors.phone1}</p>
-
+                    <br/>
                     
                     <label className="ciname">Password:</label><br/>
                     <input 
@@ -434,8 +447,9 @@ function Navbar() {
                       onChange={handleChange1} 
                       className="cinput">
                     </input>
+                   
                     <p className="error1">{registerErrors.password}</p>
-
+                    <br/>
                     
                     <label className="ciname">Confirm Password:</label><br/>
                     <input 
