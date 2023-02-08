@@ -21,7 +21,7 @@ const Sidebar = ({children}) => {
         },
         {
             path:"/analytics",
-            name:"Analytics",
+            name:"Add",
             icon:<FaTh/>
         },
         {

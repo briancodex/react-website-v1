@@ -47,7 +47,7 @@ class ProductCRUD extends Component {
   }
   
   handleUpdate = (board) => {
-  this.props.history.push(`/update/${board.key}`);
+  this.props.history.push(`/edit/${board.key}`);
 }
 
 
@@ -62,7 +62,7 @@ class ProductCRUD extends Component {
             </h3>
           </div>
           <div className="panel-body">
-            <h4><Link to="/analytics">Add Board</Link></h4>
+            <h4><Link to="/analytics">Add Product</Link></h4>
             <table className="table table-stripe">
               <thead>
                 <tr>
@@ -78,7 +78,7 @@ class ProductCRUD extends Component {
               <tbody>
                 {this.state.boards.map(board =>
                   <tr key={board.key}>
-                    <td><Link to={`/show/${board.key}`}>{board.title1}</Link></td>
+                    <td><Link to={`/Edit/${board.key}`}>{board.title1}</Link></td>
                     <td>{board.title2}</td>
                     <td>{board.title3}</td>
                     <td>{board.description}</td>
