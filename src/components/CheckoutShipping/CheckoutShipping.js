@@ -68,7 +68,7 @@ export default function CheckoutShipping() {
             </div>
 
             <div className='checkoutshipping_button'>
-              <Link style={{textDecoration: 'none'}} to='/Cart'>
+              <Link style={{textDecoration: 'none'}} to='/Apps'>
                 <span className='checkoutshipping_cancel_button' style={{ color: '#4A5568', width:'150px',  height: '50px', borderColor: '#F7FAFC', borderRadius:'10px', backgroundColor:'#F7FAFC', fontSize:'17px'}}>
                   Cancel order
                 </span>
