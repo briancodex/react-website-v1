@@ -261,9 +261,9 @@ function Navbar() {
                   </div>
                 </div>
               
-            </li>
+                </li>
             <li className='nav-item'>
-              <Link to='/Cart' className='nav-links' onClick={closeMobileMenu}
+              <Link to='/Apps' className='nav-links' onClick={closeMobileMenu}
               >
               <i class="fa-solid fa-cart-shopping fa-2x"></i>
               </Link>

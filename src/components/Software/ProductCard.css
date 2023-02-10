@@ -89,13 +89,13 @@ i {
     color: white;
     border-radius: 30px;
     font-size: 22px;
-    margin-top: 20px;
-    margin-left: 26px;
+    margin-top: 18px;
+    margin-left: 25px;
     padding: 10px 20px;
     position: absolute;
     text-decoration: none;
     font-weight: 600;
-    width: 255px;
+    width: 295.5px;
     align-items: center;
 }
 .btn-primary:hover{
