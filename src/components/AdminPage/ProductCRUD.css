@@ -42,6 +42,8 @@ table {
 }
 th {
   text-align: left;
+  background-color: black;
+  color:white
 }
 td {
   text-align: left;
@@ -51,8 +53,10 @@ th, td {
   text-align: left;
   border-bottom: 1px solid #ddd;
 }
-tr:hover {background-color: purple;}
-tr:nth-child(even) {background-color: #f2f2f2;
+tr:hover {background-color: plum;}
+
+table, th, td {
+  border: 1px solid;
 }
 
 .btn-delete{
