@@ -1,0 +1,103 @@
+*{
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+}
+
+.blog_rectangle{
+
+    background-color: #f3f0f0;
+}
+
+/*Top Banner*/
+.blog_top_Pic{
+    left: 0%;
+}
+
+.blog_pic{
+    height:100%;
+    width: 100%;
+  }
+
+.blogheader{
+    text-align:center;
+    font-size: 45px;
+    padding-top: 40px;
+}
+
+.blog_shouldI{
+    padding-top: 50px;
+}
+
+.blog_accounting{
+    height: 100%;
+    width: 100%;
+}
+
+.blog_abss{
+    text-align:left;
+    font-size: 45px;
+    padding-left: 20px;
+}
+
+.blog_read-morelink{
+    color: #86B8F9;
+    text-align:right;
+    font-size: 20px;
+    padding-right: 30px;
+}
+
+.blog_xero{
+
+    padding-top: 200px;
+}
+
+.blog_xerovs{
+    height: 100%;
+    width: 100%;
+}
+
+.blog_best{
+    text-align:left;
+    font-size: 45px;
+    padding-left: 20px;
+}
+
+.blog_readmore{
+    color: #86B8F9;
+    text-align:right;
+    font-size: 20px;
+    padding-right: 30px;
+}
+
+.blog_psg{
+    padding-top: 200px;
+    padding-bottom: 100px;
+}
+
+.blog_psgpic{
+    height:100%;
+    width: 100%;
+}
+
+.blog_productivity{
+    text-align:left;
+    font-size: 45px;
+    padding-left: 20px;
+}
+
+.blog_readmore-link{
+    color: #86B8F9;
+    text-align:right;
+    font-size: 20px;
+    padding-right: 30px;
+}
+
+@media only screen and (max-width: 1024px) {
+    body {
+      background: blue;
+    }
+
+    .blogheader {
+        font-size: 25px;
+    }
+}
+/* Show lecturer media query */

@@ -3,13 +3,33 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
+    "@emailjs/browser": "^3.10.0",
+    "@fortawesome/fontawesome-free": "^6.2.1",
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/free-regular-svg-icons": "^6.2.1",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "apexcharts": "^3.37.0",
+    "bundle-js": "^1.0.3",
+    "email-js": "^2.0.2",
+    "firebase": "^9.15.0",
+    "firebase-react-hooks": "^0.8.0",
     "react": "^16.13.1",
+    "react-apexcharts": "^1.4.0",
+    "react-bootstrap": "^2.7.0",
+    "react-credit-card": "^0.20.0",
+    "react-credit-cards": "^0.8.3",
     "react-dom": "^16.13.1",
+    "react-elastic-carousel": "^0.11.5",
+    "react-firebase-hooks": "^5.1.1",
+    "react-icons": "^4.7.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1"
+    "react-scripts": "^5.0.1",
+    "reactstrap": "^9.1.5",
+    "typescript": "^4.9.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -31,5 +51,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-plugin-react-html-attrs": "^3.0.5"
   }
 }

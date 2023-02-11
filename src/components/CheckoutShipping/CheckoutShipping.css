@@ -1,0 +1,242 @@
+.checkoutshipping_pic{
+    height:100%;
+    width: 100%;
+ 
+}
+.checkoutshipping_info{
+    position: relative;
+    height: 900px;
+}
+
+.checkoutshipping_rectangle{
+    display: inline-block;
+    background: #F7FAFC;
+    border-radius: 20px;
+    width: 45%;
+    height: 700px;
+    top: 50px;
+    bottom: 5%;
+    left: 6%;
+    right: 6%;
+    position: absolute;
+}
+
+.checkoutshipping_text{
+    display: inline-flex;
+    column-gap: 30px;
+    padding-top: 50px;
+    padding-left: 140px;
+    padding-right: 100px;
+}
+
+.checkoutshipping_header{
+    text-align: left;
+    font-size: 20px;
+    padding-left: 150px;
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+}
+
+.checkoutshipping_country{
+    padding-top: 20px;
+    padding-left: 170px;
+}
+
+.checkout_shipping_country_name{
+    padding-bottom: 10px;
+    color: #718096;
+}
+
+.checkout_shipping_textb{
+    width: 75%;
+    height: 50px;
+    top: 20%;
+    padding-top: 5px;
+    background: #E2E8F0;
+    border-radius: 10px;
+    border: white;
+    font-size: 17px;
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+    padding-left: 10px;
+}
+
+.checkoutshipping_name{
+    display: flex;
+    position: absolute;
+    column-gap: 210px;
+    padding-top: 30px;
+    padding-left: 170px;
+}
+
+.checkout_shipping_firstname_text{
+    padding-bottom: 10px;
+    color: #718096;
+}
+
+.checkout_shipping_firstname_textb{
+    width: 230px;
+    height: 50px;
+    padding-top: 5px;
+    background: #E2E8F0;
+    border-radius: 10px;
+    border: white;
+    font-size: 16px;
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+    padding-left: 10px;
+}
+
+.checkoutshipping_textbox{
+    display: inline-block;
+    position: absolute;
+    padding-top: 55px;
+    padding-left: 170px;
+}
+
+.checkout_shipping_lastname_text{
+    padding-bottom: 10px;
+    color: #718096;
+}
+
+.checkout_shipping_lastname_textb{
+    width: 230px;
+    height: 50px;
+    padding-top: 5px;
+    margin-left: 40px;
+    background: #E2E8F0;
+    border-radius: 10px;
+    border: white;
+    font-size: 16px;
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+    padding-left: 10px;
+}
+
+.checkoutshipping_address{
+    padding-top: 135px;
+    padding-left: 170px;
+}
+
+.checkout_shipping_address_name{
+    padding-bottom: 10px;
+    color: #718096;
+}
+
+.checkout_shipping_address_textb{
+    width: 75%;
+    height: 50px;
+    top: 20%;
+    padding-top: 5px;
+    background: #E2E8F0;
+    border-radius: 10px;
+    border: white;
+    font-size: 17px;
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+    padding-left: 10px;
+}
+
+.checkoutshipping_postal_phonenumber{
+    display: flex;
+    position: absolute;
+    column-gap: 150px;
+    padding-top: 30px;
+    padding-left: 170px;
+}
+
+.checkout_shipping_postalcode_text{
+    padding-bottom: 10px;
+    color: #718096;
+}
+
+.checkout_shipping_postalcode_textb{
+    width: 190px;
+    height: 50px;
+    padding-top: 5px;
+    background: #E2E8F0;
+    border-radius: 10px;
+    border: white;
+    font-size: 16px;
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+    padding-left: 10px;
+}
+
+.checkoutshipping_postal_phonenumber_textbox{
+    display: inline-block;
+    position: absolute;
+    padding-top: 55px;
+    padding-left: 170px;
+}
+
+.checkout_shipping_phonenumber_text{
+    padding-bottom: 10px;
+    color: #718096;
+}
+
+.checkout_shipping_phonenumber_textb{
+    width: 280px;
+    height: 50px;
+    padding-top: 5px;
+    margin-left: 30px;
+    background: #E2E8F0;
+    border-radius: 10px;
+    border: white;
+    font-size: 16px;
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+    padding-left: 10px;
+}
+
+.checkoutshipping_align-line{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 145px;
+}
+
+.checkoutshipping_button{
+    display: flex;
+    padding-top: 15px;
+    padding-left: 360px;
+}
+.checkoutshipping_cancel_button{
+    display: inline-flex;
+    padding-top: 15px;
+}
+
+.checkout_shipping_rectangle{
+    display: inline-block;
+    background: #F7FAFC;
+    border-radius: 20px;
+    top: 50px;
+    width: 38%;
+    height: 700px;
+    left: 55%;
+    right: 4%;
+    position: absolute;
+}
+
+.checkoutshipping_summary{
+    text-align: left;
+    font-size: 20px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    padding-left: 90px;
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+}
+
+.checkoutshipping_price_text{
+    text-align: justify;
+    line-height: 40px;
+    font-size: 18px;
+    padding-top: 250px;
+    padding-bottom: 30px;
+    padding-left: 90px;
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+}
+
+.checkoutshipping_price_total{
+    font-size: 20px;
+    padding-top: 20px;
+    padding-left: 90px;
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+}
+
+.co {
+    margin: auto;
+    text-align: center;
+}

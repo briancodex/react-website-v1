@@ -1,0 +1,124 @@
+.picture11{
+  height:100%;
+  width: 100%;
+}
+
+
+.Apicture12 {
+  height: 100%;
+  width: 100%;
+}
+
+.c_flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  
+}
+
+.right_row1{
+  position: center;
+  
+}
+
+.left_row1{
+  text-align: left;
+  padding-top: 50px;
+  font-size: 35px;
+  padding-left: 70px;
+  
+}
+
+.top_part1{
+  position: left;
+  font-size: 25px;
+}
+
+.bottom_part1{
+  text-align: left;
+  padding-right: 100px;
+}
+
+.b_flex {
+  display:flex;   
+}
+/* Why MYOB*/
+.text1 {
+  text-align: center;
+  font-size: 30px;
+}
+
+
+/*text below whymyob*/
+.label{
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.header {
+  padding-top: 10px;
+  background-color: #f3f0f0;
+}
+
+.icons
+{
+  background-color: rgb(231, 231, 231);
+}
+
+.paragraph{
+margin-left: 25%;
+margin-right:25%;
+text-align: center;
+font-family: "Lucida Console", "Courier New", monospace;
+font-size: 25px;
+
+}
+
+.grid1 {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+text-align: center;
+padding-top: 50px;
+padding-bottom: 20px;
+}
+
+.pictureAbtus {
+  height: 40rem;
+  width: 50rem;
+  
+}
+
+.last_row1{
+  display: flex;
+  font-size: 35px;
+  padding-bottom: 100px;
+}
+.lastbottom_part1{
+ 
+  padding-top: 0;
+  
+
+}
+
+.picturelast{
+  height:35rem;
+  width:50rem;
+}
+.rightpicture_row1{
+  position: center;
+  height: 75%;
+  width: 75%;
+}
+.pictureright{
+  padding-bottom: 150px;
+}
+
+.last_part1 {
+  padding-top: 40px;
+  padding-left: 30px;
+  
+}
+
+
+/*  */

@@ -1,0 +1,64 @@
+.contact1 {
+    height: 200px;
+    background-color: #4D096D;
+    display: flex;
+    color: white;
+    padding-top: 20px;
+    justify-content: space-between;
+  
+    
+}
+
+.cc {
+    font-size: 20px;
+}
+
+.contact_details {
+    font-size: 12px;
+}
+
+.socialIcon {
+    display: flex;
+    background-color: #4D096D;
+    height: 30px;
+    margin-top: 10px;
+    
+   
+}
+
+.socialIcon:hover {
+    cursor: pointer;
+}
+
+.footerlink {
+    color: white;
+    text-decoration: none;
+    padding: 4px;
+}
+
+.rightccd {
+    text-align:left;
+}
+
+.leftlogo {
+    text-align:left;
+}
+
+.contact {
+    padding-left: 150px;
+    padding-right: 150px;
+    background-color: #4D096D;
+}
+
+.socialIcon1 {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    margin-right: 1%;
+ 
+   
+}
+
+.fa-brands {
+    padding: 6px;
+}

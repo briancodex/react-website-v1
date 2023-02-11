@@ -1,0 +1,86 @@
+*{
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+}
+
+.topcart_Pic{
+    left: 0%;
+}
+
+.cart_pic{
+    height:100%;
+    width: 100%;
+
+  }
+.carticon{
+    position: relative;
+    right: 150px;
+}
+
+.cartheader{
+    text-align:center;
+    font-size: 45px;
+}
+
+.cartinfo{
+    position: relative;
+    height: 600px;
+}
+
+.cart_rectangle{
+    background: #F7FAFC;
+    border-radius: 20px;
+    width: 96%;
+    height: 500px;
+    top: 40px;
+    left: 2%;
+    right: 2%;
+    position:relative;
+}
+.cartgrid{
+    display: flex;
+    padding-top: 50px;
+    column-gap: 85px;
+    padding-left: 530px;
+    font-size: 18px;
+    font-family: 'Inter';
+    font-style: normal;
+    text-align: right;
+}
+
+.cart_text{
+    position: relative;
+    padding-left: 1270px;
+}
+
+.cart_total{
+    padding-top: 30px;
+    padding-left: 1270px;
+    font-size: 18px;
+}
+
+.cart_align-line{
+    display: flex;
+    column-gap:100px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.cart_alignline{
+    display: flex;
+    column-gap:100px;
+    padding-top: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 300px;
+}
+
+.cartbutton{
+    position: absolute;
+    right: 150px;
+    top: 400px;    
+}
+
+.t {
+    text-align: center;
+    margin: auto;
+}

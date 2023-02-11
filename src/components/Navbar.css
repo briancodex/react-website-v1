@@ -1,56 +1,58 @@
+* {
+  font-family: 'IBM Plex Sans Devanagari', sans-serif;
+}
+
 .navbar {
-  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
-  height: 80px;
+  background: white;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
   position: sticky;
-  top: 0;
-  z-index: 999;
+  
 }
 
 .navbar-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80px;
-  max-width: 1500px;
+ 
+  max-width: 100%;
+
 }
 
 .navbar-logo {
-  color: #fff;
-  justify-self: start;
+  color: black;
   margin-left: 20px;
   cursor: pointer;
-  text-decoration: none;
-  font-size: 2rem;
   display: flex;
   align-items: center;
 }
 
-.fa-typo3 {
-  margin-left: 0.5rem;
-  font-size: 1.8rem;
+.fa-user {
+  
+  margin: auto;
+ 
 }
+
 
 .nav-menu {
   display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-gap: 10px;
+  grid-template-columns: repeat(7, auto);
+  grid-gap: 15px;
   list-style: none;
   text-align: center;
-  width: 60vw;
+  width: 80vw;
   justify-content: end;
   margin-right: 2rem;
+  padding-bottom: 0.5rem;
 }
 
-.nav-item {
-  height: 80px;
-}
+
 
 .nav-links {
-  color: #fff;
+  color: black;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -58,101 +60,446 @@
   height: 100%;
 }
 
+
 .nav-links:hover {
-  border-bottom: 4px solid #fff;
-  transition: all 0.2s ease-out;
+  color: lightgreen;
 }
 
 .fa-bars {
-  color: #fff;
+  color: black;
 }
 
 .nav-links-mobile {
   display: none;
+ 
+}
+
+.btn--outline {
+  color:black;
+  border-color: black;
+  border-radius: 2rem;
+  font-size: 15px;
+  width: 130px;
+  height: 40px;
 }
 
 .menu-icon {
   display: none;
 }
 
-@media screen and (max-width: 960px) {
-  .NavbarItems {
-    position: relative;
+.photo {
+  width: 100px;
+  height: 50px;
+}
+
+.fa-soild {
+  color: black;
+  height: 20px;
+}
+
+.error {
+  color: red;
+  margin-top: -2%;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-content {
+  display: none;
+  position: absolute;
+}
+
+.menu-content a{
+  color: black;
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.dropdown:hover .menu-content {
+  display: block;
+  background-color: white;
+  text-decoration: none;
+  height: 130px;
+  border-radius: 0rem 0rem 1rem 1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.list_try {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
+
+.nav-links1 {
+  text-decoration: none;
+  color: black;
+}
+
+
+/* modal background */
+.modal { 
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0px;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  
+}
+/* modal background */
+
+
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 3% auto; /* 15% from the top and centered */
+  border: 1px solid #888;
+  width: 79%; /* Could be more or less, depending on screen size */
+  scroll-behavior: unset;
+  border-radius: 2rem;
+}
+
+.modal.footer {
+  padding-top: 20px;
+}
+
+.loginbtnmain1 {
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-color: black;
+  border-radius: 2rem;
+  background-color: white;
+}
+
+.loginbtn:hover {
+  cursor: pointer;
+}
+
+/* login section start */
+
+.logininput {
+  display: flex;
+ 
+}
+
+.login_pic {
+  height: 100%;
+  width: 260%;
+  border-radius: 0rem 2rem 2rem 0rem;
+}
+
+.login_pic1 {
+  height: 10%;
+  width: 20%;
+  border-radius: 2rem;
+  margin-left: 10px;
+  margin-top : 3px;
+}
+
+.rightlogin {
+  margin-right: 30%;
+}
+
+.logininputtry {
+  padding-left: 130px;
+  padding-right: 130px;
+}
+
+.logininput1 {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 10px;
+  border-radius: 0.5rem;
+  box-shadow: inset 0 0 3px grey;
+  background-color: #F6F6F6;
+  border-color: white;
+  padding-left: 10px;
+}
+
+.fa-square-facebook{
+  color: blue;
+}
+
+.fa-linkedin {
+  color: rgb(23, 23, 197);
+}
+
+.login_title{
+ text-align: center;
+}
+
+.title {
+  font-size: 45px;
+  
+}
+
+.model-links {
+  text-decoration: none;
+}
+
+
+.rmbmeandforget {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-left: 35px;
+  column-gap: 100px;
+  margin-top: 3%;
+}
+
+.submit {
+  width: 65%;
+  height: 30px;
+  border-radius: 0.5rem;
+  color: white;
+  background-color: rgb(129, 14, 129);
+  border-color: white;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.cracc {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-left: 85px;  
+}
+
+.submitting {
+  margin-left: 15%;
+}
+
+
+.submit1 {
+  margin-left: 3%;
+  margin-bottom: 5%;
+  background-color: purple;
+  border-color: white;
+  color:white;
+  border-radius: 0.5rem;
+  width: 65%;
+  height: 35px;
+  font-size: 15px;
+  margin-left: 9%;
+}
+
+.signoutbtn {
+  margin-left: 3%;
+  margin-bottom: 5%;
+  background-color: purple;
+  border-color: white;
+  color:white;
+  border-radius: 0.5rem;
+  width: 65%;
+  height: 35px;
+  font-size: 15px;
+  margin-left: 9%;
+}
+
+@media screen and (min-width: 1600px) {
+
+  .login_pic {
+    width: 258%;
+    height: 100%;
+    
+  }
+  
+  .modal-content {
+    width: 70%;
   }
 
-  .nav-menu {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 90vh;
-    position: absolute;
-    top: 80px;
-    left: -100%;
-    opacity: 1;
-    transition: all 0.5s ease;
-  }
-
-  .nav-menu.active {
-    background: #242222;
-    left: 0;
-    opacity: 1;
-    transition: all 0.5s ease;
-    z-index: 1;
-  }
-
-  .nav-links {
-    text-align: center;
-    padding: 2rem;
-    width: 100%;
-    display: table;
-  }
-
-  .nav-links:hover {
-    background-color: #fff;
-    color: #242424;
-    border-radius: 0;
-  }
-
-  .navbar-logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(25%, 50%);
-  }
-
-  .menu-icon {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 60%);
-    font-size: 1.8rem;
-    cursor: pointer;
-  }
-
-  .fa-times {
-    color: #fff;
-    font-size: 2rem;
-  }
-
-  .nav-links-mobile {
-    display: block;
-    text-align: center;
-    margin: 2rem auto;
-    border-radius: 4px;
+  .logininput1 {
     width: 80%;
-    text-decoration: none;
-    font-size: 1.5rem;
-    background-color: transparent;
-    color: #fff;
-    padding: 14px 20px;
-    border: 1px solid #fff;
-    transition: all 0.3s ease-out;
+    
   }
 
-  .nav-links-mobile:hover {
-    background: #fff;
-    color: #242424;
-    transition: 250ms;
+  .logininputtry {
+    margin-left: 25%;
+    margin-right: 15%;
+    font-size: 22px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0px;
   }
+
+  .rmbmeandforget {
+    margin-left: 11%;
+    column-gap: 50px;
+  }
+
+  .submit1 {
+    margin-left: 11%;
+    width: 59%;
+  }
+
+  .cracc {
+    margin-left: 17%;
+    padding-bottom: 20px;
+  }
+
+
+}
+/* login section end */
+
+/* Forget Password Section */
+.submit2 {
+  color: white;
+  background-color: purple;
+  margin-left: 20%;
+  width: 20.5rem;
+  border-radius: 0.5rem;
+  margin-top: 5%;
+  height: 35px;
+  margin-bottom: 5%;
+  border-color: white;
+}
+
+.forgetpasswordpage {
+  display: flex;
+  justify-content: space-between;
+}
+
+.forgettitle {
+  margin-top: 15%;
+  margin-left: 20%;
+  
+}
+.forgetpara {
+  margin-left: 20%;
+  margin-right: 20%;
+  font-size: 14px;
+}
+
+.forgetpasswordemail {
+  margin-left: 20%;
+  margin-right: 20%;
+  border-radius: 0.5rem;
+  height: 35px;
+  width: 20rem;
+  border-color: white;
+  box-shadow: inset 0 0 2px grey;
+  background-color: #F6F6F6;
+}
+
+.forgetemail {
+  margin-left: 20%;
+}
+
+.forgetpassword-link {
+  margin-left: 40%;
+  
+}
+
+.forgetpasswordgif {
+  border-radius: 0rem 2rem 2rem 0rem;
+}
+
+
+/* Forget Password Section End */
+
+.createaccountpage {
+  display:flex;
+}
+
+.login_pic3 {
+  height: 7%;
+  width: 15%;
+  margin-left: 20px;
+  margin-top: 10px
+}
+
+.createaccountheader {
+  text-align: center;
+  font-size: 45px;
+
+}
+.createaccountpara {
+  text-align: center;
+  margin-top: 5%;
+}
+
+.flname {
+  display: flex;
+  justify-content: space-between;
+  
+  font-size: 14px;
+  
+}
+
+.ciname {
+  font-size: 14px;
+
+}
+
+.flinput {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.flerror {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 18%;
+  margin-left: 8%;
+  
+}
+
+
+.createaccountinput {
+  margin-left: 15%;
+  margin-right: 10%;
+  margin-top: 2%;
+ 
+}
+
+.cinput {
+  width: 90%;
+  height: 25px;
+  border-radius: 0.5rem;
+  box-shadow: inset 0 0 3px grey;
+  background-color: #F6F6F6;
+  border-color: white;
+  margin-top: 0%;
+}
+
+.clinput {
+  width: 40%;
+  height: 25px;
+  border-radius: 0.5rem ;
+  background-color: #F6F6F6;
+  border-color: white;
+  box-shadow: inset 0 0 3px grey;
+}
+
+.submitcreate{
+  margin-top: 3%;
+  width: 75%;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 30px;
+  border-radius: 0.5rem;
+  color: white;
+  background-color: purple;
+  border-color: white;
+
+}
+
+.loginicon_navbar {
+  margin-top: 18%;
+}
+
+.error1 {
+  color: red;
+  margin-top: -0.5%;
+}
+
+.loginimageca {
+  border-radius: 0rem 2rem 2rem 0rem;
 }

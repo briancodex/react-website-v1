@@ -1,0 +1,102 @@
+* {
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+}
+
+.a_flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 100px;  
+    background-color: lightgrey;
+  
+  
+  }
+/*Top Banner*/
+.top_banner{
+    left: 0%;
+}
+
+.psgtopPic{
+    height:44rem;
+    width:105rem;
+  }
+
+.psgHeader{
+    text-align:center;
+    font-size: 45px;
+    padding-top: 40px;
+}
+
+/*Did you know?*/
+.psggif1{
+    padding-left: 120px;  
+    padding-top: 35px;
+    position:absolute;
+    height:650px;
+    width:650px;
+
+}
+.psgright1{
+    padding-left: 900px;  
+    padding-top: 145px;
+    
+} 
+.dyk{
+    font-size: 50px;
+}
+.dykcontent{
+    font-size: 30px;
+}
+/*PSG Guide*/
+.whatispsgsec{
+    padding-top: 55px;
+    padding-bottom: 20px;
+}
+.psgleft2{
+    padding-top: 300px;
+    position:absolute;
+    padding-left:120px;
+    font-size: 20px;
+}
+.whatispsg{
+    font-size: 50px;
+}
+.whatispsgcontent{
+    font-size: 25px;
+
+}
+.info{
+    padding-top: 50px;
+    font-size: 28px
+}
+.psgright2{
+    padding-left: 900px;  
+    padding-top: 300px;
+}
+
+.psgcrossShape {
+    position: absolute;
+    height: 56%;
+    width: 80%;
+}
+
+.contactinfo {
+    position: relative;
+    text-align: left;
+    padding-left: 54%;
+    padding-right: 100px;
+
+
+}
+
+.box {
+    background-color: #f0f0f0;
+    border-radius: 2rem;
+    padding-left: 23px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+.psgShape {
+    padding-bottom: 50px;
+}
