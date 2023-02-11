@@ -79,7 +79,7 @@ class ProductCRUD extends Component {
               <tbody>
                 {this.state.boards.map(board =>
                   <tr key={board.key}>
-                    <td><Link to={`/Edit/${board.key}`}>{board.title1}</Link></td>
+                    <td><b>{board.title1}</b></td>
                     <td>{board.title2}</td>
                     <td>{board.title3}</td>
                     <td>{board.description}</td>
