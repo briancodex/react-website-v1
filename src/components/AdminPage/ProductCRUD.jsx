@@ -72,7 +72,8 @@ class ProductCRUD extends Component {
                   <th>Description</th>
                   <th>Old Price</th>
                   <th>New Price</th>
-                  <th>Action</th>
+                  <th></th>
+                  <th></th>
                 </tr>
               </thead>
               <tbody>
